@@ -56,6 +56,7 @@ git merge origin/master
 ~~~  
 
 * En un solo paso:  
+
 `git pull`  
 
 
@@ -69,7 +70,6 @@ git merge origin/master
     3.Hacer commit.  
 
     4.Copiar el branch al repositorio remoto:  
-
 `git push -u origin branch_remoto`  
 * Copia:  
 
