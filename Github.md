@@ -3,6 +3,7 @@
 
 **Comandos GitHub I**  
 añadir repositorio remoto:  
+
 `git remove add origin url`  
 Ver repositorios remotos:  
 `git remove -v`  
