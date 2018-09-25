@@ -1,10 +1,10 @@
-##Ramas o *Branches*  
+# # Ramas o *Branches*  
 Es la forma para separar la linea actual de desarrollo con respecto a la principal. Normalmente representan versiones del software que posteriormente son integradas a la línea principal.
 
 ![Ramas](https://uialberto.files.wordpress.com/2016/11/gitflowui.png?w=616&h=381/ramas.png)  
 
 
-##Comandos Ramas I  
+# # Comandos Ramas I  
 * Ver listado de ramas:  
 `git branch`  
 
@@ -21,7 +21,7 @@ Es la forma para separar la linea actual de desarrollo con respecto a la princip
 `git diff nombre_rama..nombre_rama`  
 
 
-##Comandos Ramas II
+# # Comandos Ramas II
 * Ver ramas idénticas a la actual:  
 `git branch --merged`  
 
@@ -39,7 +39,7 @@ Es la forma para separar la linea actual de desarrollo con respecto a la princip
 `git merge --abort`  
 
 
-##Comandos Ramas III
+# # Comandos Ramas III
 * Almacenar cambios temporales:  
 `git stash save "Mensaje"`  
 
