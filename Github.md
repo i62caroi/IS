@@ -1,7 +1,7 @@
 **GitHub no es Git**
 ![fallo en la imagen](https://lh6.googleusercontent.com/Ry--MLieGMXkpHMcJGe9NhyGulLIXpXRE5xQB-_rt_u4BEzv06YNrBOHA3iXjUCoHTGPPdH1m4rDoF_tw9xlDaZgluV9pFsP9U4dU9p3OP4cHMxcTDx8jEksJevNUYbSMw)
 
-**Comandos GitHub**   I
+**Comandos GitHub I**  
 añadir repositorio remoto:  
 `git remove add origin url`  
 Ver repositorios remotos:  
@@ -14,7 +14,7 @@ Añadir cambios del repositorio remoto al local:
 `git pull`  
 
 
-# # # # Comandos GitHub II  
+**Comandos GitHub II**  
 Ver *branches* remotos:  
 `git branch -r`  
 Ver todos los *branches*:  
@@ -22,7 +22,7 @@ Ver todos los *branches*:
 Clonar un repositorio remoto:  
 `git clone url`  
 
-####Dar seguimiento a *branches* remotos  
+**Dar seguimiento a *branches* remotos**  
 * LOCAL--->REMOTO  
 1.Cambios en el repositorio local.  
 2.Commit de los cambios.  
@@ -41,7 +41,7 @@ git merge origin/master
 `git pull`  
 
 
-####Operaciones con *branches remotos*  
+**Operaciones con *branches* remotos**  
 * Creación:  
 1.Crear branch local.  
 2.Hacer cambios en dicho branch.  
