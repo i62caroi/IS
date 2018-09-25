@@ -1,4 +1,4 @@
-##Ramas o *Branches*
+##Ramas o *Branches*  
 Es la forma para separar la linea actual de desarrollo con respecto a la principal. Normalmente representan versiones del software que posteriormente son integradas a la línea principal.
 
 ![Ramas](https://uialberto.files.wordpress.com/2016/11/gitflowui.png?w=616&h=381/ramas.png)  
