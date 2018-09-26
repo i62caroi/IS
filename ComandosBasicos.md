@@ -18,10 +18,10 @@
 * Listado de la configuración:  
 `git config -- list`
 
-#Los tres estados de Git  
+# Los tres estados de Git  
 ![Los tres estados de Git](https://git-scm.com/figures/18333fig0106-tn.png/estados.png)
 
-#Comandos básicos I  
+# Comandos básicos I  
 * Iniciar repositorio en un directorio:  
 `git init` 
 
@@ -37,7 +37,7 @@
 * Historial de commits:  
 `git log`
 
-#Comandos básicos II
+# Comandos básicos II
 
 * Ayuda del listado anterior:  
 `git help log`
@@ -54,7 +54,7 @@
 * Ver cambios en el directorio:  
 `git status`
 
-#Comandos básicos III
+# Comandos básicos III
 
 * Ver diferencia entre ficheros en el directorio y el repositorio de git:  
 `git diff` 
@@ -70,7 +70,7 @@
 `git mv antiguo nuevo`   
 `git commit -m " Mensaje "`
 
-#Comandos básicos IV
+# Comandos básicos IV
 
 * Deshacer cambios con git:  
 `git checkout -- nombre_fichero`
@@ -87,7 +87,7 @@
 * Revertir un commit:  
 `git revert < id_commit >`
 
-#Comandos básicos V
+# Comandos básicos V
 
 * Deshacer multiples cambios en el repositorio:
 `git reset -- soft < id_commit >`
@@ -103,7 +103,7 @@
 * Ignorar archivos en el repositorio: 
 .gitignore
 
-#Comandos básicos VI
+# Comandos básicos VI
 
 * Listar el contenido del repositorio de git:  
 `git ls - tree master`  
@@ -118,7 +118,7 @@
 
  Para más opciones consultar documentaciónn de git.
 
-#Comandos básicos VII
+# Comandos básicos VII
 
 * Examinar el contenido de un commit:  
 `git show <id >`
