@@ -5,12 +5,12 @@
 * Para eclipse existen plugins integrados: [https://www.eclipse.org/egit] (https://www.eclipse.org/egit.)
 
 # Configuración básica
-* Nombre del adminstrador:
+* Nombre del adminstrador:  
 `git config -- global user . name " Antonio M. Durán Rosal "`
 
-* Correo electrónico:
+* Correo electrónico:  
 `git config -- global user . email aduran@uco . es`
-* Editor de texto:
+* Editor de texto:  
 `git config -- global core . editor " gedit "`
 
 * Color de la interfaz:  
@@ -31,7 +31,7 @@
 * Validar cambios en el repositorio:  
 `git commit -m " Mensaje "`
 
-* Hacer los dos pasos anteriores en uno:
+* Hacer los dos pasos anteriores en uno:  
 `git commit -am " Mensaje "`
 
 * Historial de commits:  
@@ -45,7 +45,7 @@
 * Listar los 5 commits m´as recientes:  
 `git log -n 5`
 
-* Listar los commits desde una fecha:
+* Listar los commits desde una fecha:  
 `git log -- since =2018 -09 -18`
 
 * Listar los commits por autor:  
@@ -59,7 +59,7 @@
 * Ver diferencia entre ficheros en el directorio y el repositorio de git:  
 `git diff` 
 
-* Ver diferencia entre ficheros en el staging y el repositorio:
+* Ver diferencia entre ficheros en el staging y el repositorio:  
 `git diff -- staged`
 
 * Eliminar archivos:   
@@ -78,10 +78,10 @@
 * Retirar archivos del staging:  
 `git reset HEAD nombre_fichero` 
 
-* Complementar ´ultimo commit:
+* Complementar último commit:  
 `git commit -- amend -m " Mensaje "`
 
-* Recuperar version de un fichero de commit antiguo:
+* Recuperar version de un fichero de commit antiguo:  
 `git checkout < id_commit > -- nombre_archivo`
 
 * Revertir un commit:  
@@ -89,7 +89,7 @@
 
 # Comandos básicos V
 
-* Deshacer multiples cambios en el repositorio:
+* Deshacer multiples cambios en el repositorio:  
 `git reset -- soft < id_commit >`
  `git reset -- mixed < id_commit >`
 `git reset -- hard < id_commit >`
