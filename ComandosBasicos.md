@@ -1,8 +1,8 @@
 # Instalación
 
-* Para instalar Git: [https://git-scm.com.] (https://git-scm.com.)
+* Para instalar Git: https://git-scm.com
 * En el curso se utilizará Git a través de líneas de comandos.
-* Para eclipse existen plugins integrados: [https://www.eclipse.org/egit] (https://www.eclipse.org/egit.)
+* Para eclipse existen plugins integrados: https://www.eclipse.org/egit
 
 # Configuración básica
 * Nombre del adminstrador:  
