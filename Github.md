@@ -2,39 +2,39 @@
 ![fallo en la imagen](https://lh6.googleusercontent.com/Ry--MLieGMXkpHMcJGe9NhyGulLIXpXRE5xQB-_rt_u4BEzv06YNrBOHA3iXjUCoHTGPPdH1m4rDoF_tw9xlDaZgluV9pFsP9U4dU9p3OP4cHMxcTDx8jEksJevNUYbSMw)
 
 **Comandos GitHub I**  
-* añadir repositorio remoto:  
+* Añadir repositorio remoto:  
 
-`git remove add origin url`  
+  `git remove add origin url`  
 
 * Ver repositorios remotos:  
 
-`git remove -v`  
+  `git remove -v`  
 
 * Eliminar repositorio remoto:  
 
-`git remote rm origin`  
+  `git remote rm origin`  
 
 * Añadir cambios del repositorio local al remoto:  
 
-`git push -u origin master`  
+  `git push -u origin master`  
 
 * Añadir cambios del repositorio remoto al local:  
 
-`git pull`  
+  `git pull`  
 
 
 **Comandos GitHub II**  
 * Ver *branches* remotos:  
 
-`git branch -r`  
+  `git branch -r`  
 
 * Ver todos los *branches*:  
 
-`git brach -a`  
+  `git brach -a`  
 
 * Clonar un repositorio remoto:  
 
-`git clone url`  
+  `git clone url`  
 
 **Dar seguimiento a *branches* remotos**  
 
@@ -45,7 +45,7 @@
     2.Commit de los cambios.  
 
     3.Añadir cambios a repositorio remoto:  
-`git push`  
+  `git push`  
 
 * REMOTO--->LOCAL  
 ~~~
@@ -57,7 +57,7 @@ git merge origin/master
 
 * En un solo paso:  
 
-`git pull`  
+  `git pull`  
 
 
 **Operaciones con *branches* remotos**  
@@ -70,11 +70,11 @@ git merge origin/master
     3.Hacer commit.  
 
     4.Copiar el branch al repositorio remoto:  
-`git push -u origin branch_remoto`  
+  `git push -u origin branch_remoto`  
 * Copia:  
 
-`git checkout -b local remoto`  
+  `git checkout -b local remoto`  
 
 * Eliminacion:  
 
-`git push origin --delete branch remoto`
+  `git push origin --delete branch remoto`
