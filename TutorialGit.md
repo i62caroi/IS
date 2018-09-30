@@ -1,10 +1,10 @@
-## Instalación
+# Instalación
 
 * Para instalar Git: https://git-scm.com
 * En el curso se utilizará Git a través de líneas de comandos.
 * Para eclipse existen plugins integrados: https://www.eclipse.org/egit
 
-## Configuración básica
+# Configuración básica
 * Nombre del adminstrador:  
 `git config -- global user . name " Antonio M. Durán Rosal "`
 
@@ -129,7 +129,7 @@
 * Comparar dos commits:  
 `git diff id .. id nombre_archivo`  
 
-## Ramas o *Branches*  
+# Ramas o *Branches*  
 Es la forma para separar la linea actual de desarrollo con respecto a la principal. Normalmente representan versiones del software que posteriormente son integradas a la línea principal.
 
 ![Ramas](https://uialberto.files.wordpress.com/2016/11/gitflowui.png?w=616&h=381/ramas.png)  
@@ -192,7 +192,7 @@ git stash pop nombre_stash
 
 ~~~
 
-## GitHub no es Git  
+# GitHub no es Git  
 ![fallo en la imagen](https://lh6.googleusercontent.com/Ry--MLieGMXkpHMcJGe9NhyGulLIXpXRE5xQB-_rt_u4BEzv06YNrBOHA3iXjUCoHTGPPdH1m4rDoF_tw9xlDaZgluV9pFsP9U4dU9p3OP4cHMxcTDx8jEksJevNUYbSMw)
 
 ## Comandos GitHub I  
