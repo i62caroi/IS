@@ -5,10 +5,10 @@
 * Nombre
 * Apellidos
 * DNI
-* Teléfono
-* Email de la universidad
-* Dirección
-* Curso más alto matriculado
 * Fecha de nacimiento
+* Teléfono
+* Dirección
+* Email de la universidad
+* Curso más alto matriculado
 * Equipo al que pertenece
 * La persona es lider o no
