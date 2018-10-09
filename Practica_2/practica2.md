@@ -5,6 +5,7 @@
 * Busqueda de usuario por DNI o por apellidos
 * Edicion de datos de usuario
 * Guardar datos en fichero binario
+* Inicializar el programa mostrando el menu
 * Busqueda en grupo
 * Opcion de eliminar un alumno por DNI o por apellido. En el caso de existir dos usuarios con el mismo apellido pedir el DNI
 * Realizar copia de seguridad siempre, o cada vez que el usuario quiera, en un fichero binario
@@ -15,7 +16,6 @@
 * La interfaz grafica será la consola de comandos
 * Sin autorellenado
 * Toda informacion obligatoria salvo el equipo y si es lider o no
-* Inicializar el programa mostrando el menu
 * Idioma obligatorio ESPAÑOL
 * Máximo 150 alumnos por fichero
 * Como máximo un lider por grupo
