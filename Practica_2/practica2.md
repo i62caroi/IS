@@ -3,6 +3,8 @@
 ## Funcionales
 
 * Busqueda de usuario por DNI o por apellidos
+* Añadir usuario
+* Cargar fichero binario
 * Edicion de datos de usuario
 * Guardar datos en fichero binario
 * Inicializar el programa mostrando el menu
@@ -20,7 +22,18 @@
 * Máximo 150 alumnos por fichero
 * Como máximo un lider por grupo
 * Unicamente introducir usuarios cuyo DNI no exista ya dentro del sistema
-* Los usuarios se deben mostrar por linea de comandos como minimo y luego, mediante markdown o fichero HTML, poder mostrar un unico alumno o todo un grupo
+* Los usuarios se deben mostrar por linea de comandos como minimo y luego, mediante markdown o fichero HTML, poder mostrar un unico alumno o todo un grupo  
+
+**Prioridad de los requisitos**
+
+1. Inicializar la app mostrando el menu
+2. Añadir usuario
+3. Guardar datos en fichero binario
+4. Cargar fichero binario
+5. Eliminar alumno por DNI o por apellidos
+6. Edicion de datos de usuario
+7. Busqueda de usuario por DNI o apellidos
+8. Busqueda en grupo
 
 **Datos que almacena la aplicacion**  
 
