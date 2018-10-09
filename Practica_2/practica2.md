@@ -34,6 +34,7 @@
 6. Editar datos de usuario
 7. Busqueda de usuario por DNI o apellidos
 8. Busqueda en grupo
+9. 
 
 **Datos que almacena la aplicacion**  
 
