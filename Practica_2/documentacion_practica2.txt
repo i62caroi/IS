@@ -1,0 +1,48 @@
+REQUISITOS PROYECTO FINAL:
+	-software que gestione los datos de los alumnos de la universidad.
+
+DATOS DEL ALUMNO:
+
+	-Nombre.
+	-Apellidos.
+	-DNI.
+	-telefono.
+	-email corporativo.
+	-direccion.
+	-curso mas alto matriculado.
+	-fecha nacimiento.
+	-equipo al que pertenece.
+	-esa persona es lider o no.
+
+PLATAFORMA:
+
+	-Minimo plataforma linux, si funciona en alguna otra mejor.
+
+FUNCIONES:
+
+	-busqueda de usuario por DNI o por apellido (minimo).
+	-Edicion de datos de usuario.
+	-Interfaz grafica la linea de comandos.
+	-Guardar datos en fichero Binario.
+	-Busqueda en grupo.
+	-Sin autorellenado.
+	-Toda informacion obligatoria salvo el equipo y si es lider o no.
+	-Opcion de eliminar un alumno por DNI o por apellido, si existen dos usuario con el mismo apellido, preguntar el DNI.
+	-Inicializar el programa mostrando el menu.
+	-realizar copia de seguridad siempre o cuando el usuario quiera en un fichero binario.
+	-Idioma obligatorio ESPAÑOL.
+	-Maximo 150 alumnos por fichero.
+	-Como maximo un lider por grupo.
+	-Unicamente introducir usuario cuyo DNI no exista ya dentro del sistema.
+	-Opcion de imprimir todos los usuarios del sistema ordenada por nombre o DNI o curso mas alto matriculado tanto ascendente como descendente
+
+	-Los usuario se pueden mostrar por linea de comandos(minimo) y luego mediante markdown o fichero HTML para un alumno como para todos como para un grupo.
+
+	
+
+ENTREGABLES:
+
+	-Documento de extraccion de requisitos, datos que debe almacenar la app,requisitos funcionales y no funcionales y su priorización.
+	-Historia de usuario.
+	-Casos de uso.
+

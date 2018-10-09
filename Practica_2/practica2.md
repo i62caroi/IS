@@ -31,7 +31,7 @@
 3. Guardar datos en fichero binario
 4. Cargar fichero binario
 5. Eliminar alumno por DNI o por apellidos
-6. Edicion de datos de usuario
+6. Editar datos de usuario
 7. Busqueda de usuario por DNI o apellidos
 8. Busqueda en grupo
 
