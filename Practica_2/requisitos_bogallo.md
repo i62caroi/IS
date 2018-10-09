@@ -7,7 +7,6 @@
 * Cargar fichero binario
 * Edicion de datos de usuario
 * Guardar datos en fichero binario
-* Inicializar el programa mostrando el menu
 * Busqueda en grupo
 * Opcion de eliminar un alumno por DNI o por apellido. En el caso de existir dos usuarios con el mismo apellido pedir el DNI
 * Realizar copia de seguridad siempre, o cada vez que el usuario quiera, en un fichero binario
@@ -16,6 +15,7 @@
 ## No funcionales
 
 * La interfaz grafica será la consola de comandos
+* Inicializar el programa mostrando el menu
 * Sin autorellenado
 * Toda informacion obligatoria salvo el equipo y si es lider o no
 * Idioma obligatorio ESPAÑOL
@@ -26,15 +26,13 @@
 
 **Prioridad de los requisitos**
 
-1. Inicializar la app mostrando el menu
-2. Añadir usuario
-3. Guardar datos en fichero binario
-4. Cargar fichero binario
-5. Eliminar alumno por DNI o por apellidos
-6. Editar datos de usuario
-7. Busqueda de usuario por DNI o apellidos
-8. Busqueda en grupo
-9. 
+1. Añadir usuario
+2. Guardar datos en fichero binario
+3. Cargar fichero binario
+4. Eliminar alumno por DNI o por apellidos
+5. Editar datos de usuario
+6. Busqueda de usuario por DNI o apellidos
+7. Busqueda en grupo 
 
 **Datos que almacena la aplicacion**  
 
