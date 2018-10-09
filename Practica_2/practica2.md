@@ -10,6 +10,18 @@
 * Realizar copia de seguridad siempre, o cada vez que el usuario quiera, en un fichero binario
 * Opcion de imprimir todos los usuarios del sistema ordenados por DNI, nombre o curso más alto matriculado tanto ascendente como descendente
 
+## No funcionales
+
+* La interfaz grafica será la consola de comandos
+* Sin autorellenado
+* Toda informacion obligatoria salvo el equipo y si es lider o no
+* Inicializar el programa mostrando el menu
+* Idioma obligatorio ESPAÑOL
+* Máximo 150 alumnos por fichero
+* Como máximo un lider por grupo
+* Unicamente introducir usuarios cuyo DNI no exista ya dentro del sistema
+* Los usuarios se deben mostrar por linea de comandos como minimo y luego, mediante markdown o fichero HTML, poder mostrar un unico alumno o todo un grupo
+
 **Datos que almacena la aplicacion**  
 
 * Nombre
