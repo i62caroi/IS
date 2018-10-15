@@ -1,27 +1,27 @@
 
-# PARTES INTERESADAS  
+# Partes interesadas  
 Las partes que intervienen son los profesores (usuario del sistema) y los alumnos, de quienes será la mayoría de la información tratada.  
 
-# DATOS QUE ALMACENA LA APLICACIÓN  
+# Datos que almacena la aplicación  
 * Profesor:  
-** usuario  
-** contraseña  
+  ** usuario  
+  ** contraseña  
 
 * Alumno:  
-** Nombre  
-** Apellidos  
-** DNI  
-** Fecha nacimiento  
-** Teléfono  
-** email  
-** Dirección  
-** Curso más alto en el que está matriculado  
-** Grupo  
-** Si es líder o no  
+  ** Nombre  
+  ** Apellidos  
+  ** DNI  
+  ** Fecha nacimiento  
+  ** Teléfono  
+  ** email  
+  ** Dirección  
+  ** Curso más alto en el que está matriculado  
+  ** Grupo  
+  ** Si es líder o no  
 
-# REQUISITOS  
+# Requisitos  
 
-## FUNCIONALES:  
+## Funcionales:  
 * Gestionar el registro de los alumnos.  
 * Gestionar la modificación de datos de los alumnos.  
 * Gestionar el borrado de alumnos.  
@@ -30,7 +30,7 @@ Las partes que intervienen son los profesores (usuario del sistema) y los alumno
 * Listar los alumnos.  
 	
 	
-## NO FUNCIONALES:  
+## No funcionales:  
 * Al iniciar la aplicación se mostrará un menú con las posibles acciones.  
 * Se tiene como interfaz obligatoria a la línea de comandos.  
 * La información se introducirá, como mínimo, por línea de comandos. Opcionalmente, mediante lenguaje markdown o html.  
@@ -49,7 +49,7 @@ Las partes que intervienen son los profesores (usuario del sistema) y los alumno
 * Los alumnos se pueden listar de forma ascendente o descendente por nombre, DNI, apellido o curso más alto en el que esté matriculado.  
 * Al listar los alumnos se puede mostrar toda su información o una lista reducida.  
 	
-# PRIORIZACIÓN DE REQUISITOS  
+# Priorización de requisitos  
 1. Añadir usuario.  
 2. Guardar datos en fichero binario.  
 3. Cargar fichero binario.  
