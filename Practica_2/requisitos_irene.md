@@ -3,21 +3,21 @@
 Las partes que intervienen son los profesores (usuario del sistema) y los alumnos, de quienes será la mayoría de la información tratada.  
 
 # Datos que almacena la aplicación  
-* Profesor:  
-  ** usuario  
-  ** contraseña  
+### Profesor:  
+  * usuario  
+  * contraseña  
 
-* Alumno:  
-  ** Nombre  
-  ** Apellidos  
-  ** DNI  
-  ** Fecha nacimiento  
-  ** Teléfono  
-  ** email  
-  ** Dirección  
-  ** Curso más alto en el que está matriculado  
-  ** Grupo  
-  ** Si es líder o no  
+### Alumno:  
+  * Nombre  
+  * Apellidos  
+  * DNI  
+  * Fecha nacimiento  
+  * Teléfono  
+  * email  
+  * Dirección  
+  * Curso más alto en el que está matriculado  
+  * Grupo  
+  * Si es líder o no  
 
 # Requisitos  
 
