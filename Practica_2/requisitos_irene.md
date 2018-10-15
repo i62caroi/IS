@@ -50,11 +50,11 @@ Las partes que intervienen son los profesores (usuario del sistema) y los alumno
 * Al listar los alumnos se puede mostrar toda su información o una lista reducida.  
 	
 # Priorización de requisitos  
-1. Añadir usuario.  
-2. Guardar datos en fichero binario.  
-3. Cargar fichero binario.  
-4. Buscar alumno por DNI o por apellidos.  
-5. Editar datos de usuario.  
-6. Eliminar usuario por DNI o apellido.  
-7. Buscar grupo.  
+**1.** Añadir usuario.  
+**2.** Guardar datos en fichero binario.  
+**3.** Cargar fichero binario.  
+**4.** Buscar alumno por DNI o por apellidos.  
+**5.** Editar datos de usuario.  
+**6.** Eliminar usuario por DNI o apellido.  
+**7.** Buscar grupo.  
 
