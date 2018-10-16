@@ -9,7 +9,7 @@
 * Dirección
 * Email de la universidad
 * Curso más alto matriculado
-* Equipo al que pertenece
+* Grupo al que pertenece
 * La persona es lider o no
 
 # Requisitos  
@@ -29,38 +29,39 @@
 
 ## No funcionales
 
-* La interfaz grafica será la consola de comandos
-* Inicializar el programa mostrando el menu
-* Sin autorellenado
-* Toda informacion obligatoria salvo el equipo y si es lider o no
-* Idioma obligatorio ESPAÑOL
-* Máximo 150 alumnos por fichero
-* Como máximo un lider por grupo
-* Unicamente introducir usuarios cuyo DNI no exista ya dentro del sistema
-* Los usuarios se deben mostrar por linea de comandos como minimo y luego, mediante markdown o fichero HTML, poder mostrar un unico alumno o todo un grupo
-* Opcion de imprimir todos los usuarios del sistema ordenados por DNI, nombre o curso más alto matriculado tanto ascendente como descendente
-* Opcion de eliminar un alumno por DNI o por apellido. En el caso de existir dos usuarios con el mismo apellido pedir el DNI
-* Realizar copia de seguridad siempre, o cada vez que el usuario quiera, en un fichero binario
-* Busqueda de alumno por DNI o por apellidos
-* Al buscar un alumno decir si es lider o no
-* Guardar datos en fichero binario
-* Cargar fichero binario
-* Busqueda por grupo mostrar alumnos de ese grupo y el lider
-* Al listar los alumnos se puede mostrar toda su informacion o una lista reducida
-* Software lo mas sencillo posible
-* Al buscar un alumno por apellido si se encuentran dos alumnos con el mismo apellido mostrar ambos alumnos
+* La interfaz grafica será la consola de comandos.
+* Inicializar el programa mostrando el menú.
+* Sin autorellenado.
+* Toda la informacion del alumno, excepto su grupo y si es lider o no, es obligatoria.
+* La aplicación debe mostrarse, como mínimo, en español. 
+* La aplicación acepta un máximo de 150 alumnos. 
+* Un grupo puede no tener líder o solo 1. 
+* Únicamente introducir usuarios cuyo DNI no exista ya dentro del sistema.
+* La información se mostrará, como mínimo, por línea de comandos. Opcionalmente, mediante lenguaje markdown o html. 
+* Se podrá mostrar un unico alumno o todo un grupo.
+* Los alumnos se pueden listar de forma ascendente o descendente por nombre, DNI, apellido o curso más alto en el que esté matriculado.
+* El borrado de alumnos se realizará por apellido o DNI. Si hay dos alumnos con el mismo apellido, se pedirá el DNI del alumno que se quiera borrar. 
+* Deberá guardar o cargar, según quiera el usuario, una copia de seguridad de la base de datos en un fichero binario. 
+* Búsqueda de alumno por DNI o por apellidos.
+* Al buscar un alumno decir si es lider o no.
+* Guardar datos en fichero binario.
+* Cargar fichero binario.
+* Al buscar un grupo se muestran los alumnos que pertenecen a ese grupo y el líder.  
+* Al listar los alumnos se puede mostrar toda su informacion o una lista reducida.
+* Software lo mas sencillo posible.
+* Al buscar un alumno por apellido si se encuentran dos alumnos con el mismo apellido mostrar ambos alumnos.
 
 # Prioridad de los requisitos
 
-1. Seleccionar en el menú
-2. Añadir usuario
-3. Guardar datos
-4. Editar datos de usuario
-5. Cargar fichero
-6. Busqueda de usuario/s
-7. Busqueda por grupo 
-8. Eliminar alumno/s
-9. Listar alumnos
-10. Realizar copia de seguridad 
+**1.** Seleccionar en el menú
+**2.** Añadir usuario
+**3.** Guardar datos
+**4.** Editar datos de usuario
+**5.** Cargar fichero
+**6.** Busqueda de usuario/s
+**7.** Busqueda por grupo 
+**8.** Eliminar alumno/s
+**9.** Listar alumnos
+**10.** Realizar copia de seguridad 
 
 
