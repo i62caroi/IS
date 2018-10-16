@@ -3,14 +3,15 @@
 ## Funcionales
 
 * Seleccion por menú
-* Busqueda de alumno/s
+* Busqueda de alumno
+* Busqueda por grupo
 * Añadir alumno
 * Cargar fichero
 * Edicion de datos del alumno
 * Guardar datos
 * Eliminar alumno
 * Realizar copia de seguridad
-* Mostrar alumnos del sistema
+* Listar alumnos del sistema
 
 ## No funcionales
 
@@ -26,23 +27,29 @@
 * Opcion de imprimir todos los usuarios del sistema ordenados por DNI, nombre o curso más alto matriculado tanto ascendente como descendente
 * Opcion de eliminar un alumno por DNI o por apellido. En el caso de existir dos usuarios con el mismo apellido pedir el DNI
 * Realizar copia de seguridad siempre, o cada vez que el usuario quiera, en un fichero binario
-* Opcion de imprimir todos los usuarios del sistema ordenados por DNI, nombre o curso más alto matriculado tanto ascendente como descendente
 * Busqueda de alumno por DNI o por apellidos
+* Al buscar un alumno decir si es lider o no
 * Guardar datos en fichero binario
-* Cargar fichero un fichero binario
-* Busqueda en grupo
+* Cargar fichero binario
+* Busqueda por grupo mostrar alumnos de ese grupo y el lider
+* Al listar los alumnos se puede mostrar toda su informacion o una lista reducida
+* Software lo mas sencillo posible
+* Al buscar un alumno por apellido si se encuentran dos alumnos con el mismo apellido mostrar ambos alumnos
 
 **Prioridad de los requisitos**
 
-1. Añadir usuario
-2. Guardar datos
-3. Cargar fichero binario
-4. Eliminar alumno por DNI o por apellidos
-5. Editar datos de usuario
-6. Busqueda de usuario por DNI o apellidos
-7. Busqueda en grupo 
+1. Seleccionar en el menú
+2. Añadir usuario
+3. Guardar datos
+4. Editar datos de usuario
+5. Cargar fichero
+6. Busqueda de usuario/s
+7. Busqueda por grupo 
+8. Eliminar alumno/s
+9. Listar alumnos
+10. Realizar copia de seguridad 
 
-**Datos que almacena la aplicacion**  
+**Datos que almacena la aplicacion**
 
 * Nombre
 * Apellidos
