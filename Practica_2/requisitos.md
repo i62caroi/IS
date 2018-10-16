@@ -53,15 +53,15 @@
 
 # Prioridad de los requisitos
 
-**1.** Seleccionar en el menú
-**2.** Añadir usuario
-**3.** Guardar datos
-**4.** Editar datos de usuario
-**5.** Cargar fichero
-**6.** Busqueda de usuario/s
-**7.** Busqueda por grupo 
-**8.** Eliminar alumno/s
-**9.** Listar alumnos
-**10.** Realizar copia de seguridad 
+**1.** Seleccionar en el menú  
+**2.** Añadir usuario  
+**3.** Guardar datos  
+**4.** Editar datos de usuario  
+**5.** Cargar fichero  
+**6.** Busqueda de usuario/s  
+**7.** Busqueda por grupo  
+**8.** Eliminar alumno/s  
+**9.** Listar alumnos  
+**10.** Realizar copia de seguridad   
 
 
