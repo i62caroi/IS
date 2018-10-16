@@ -1,3 +1,17 @@
+
+# Datos que almacena la aplicacion
+
+* Nombre
+* Apellidos
+* DNI
+* Fecha de nacimiento
+* Teléfono
+* Dirección
+* Email de la universidad
+* Curso más alto matriculado
+* Equipo al que pertenece
+* La persona es lider o no
+
 # Requisitos  
 
 ## Funcionales
@@ -36,7 +50,7 @@
 * Software lo mas sencillo posible
 * Al buscar un alumno por apellido si se encuentran dos alumnos con el mismo apellido mostrar ambos alumnos
 
-**Prioridad de los requisitos**
+# Prioridad de los requisitos
 
 1. Seleccionar en el menú
 2. Añadir usuario
@@ -49,15 +63,4 @@
 9. Listar alumnos
 10. Realizar copia de seguridad 
 
-**Datos que almacena la aplicacion**
 
-* Nombre
-* Apellidos
-* DNI
-* Fecha de nacimiento
-* Teléfono
-* Dirección
-* Email de la universidad
-* Curso más alto matriculado
-* Equipo al que pertenece
-* La persona es lider o no
