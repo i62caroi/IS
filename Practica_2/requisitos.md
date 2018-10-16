@@ -36,7 +36,7 @@
 * La aplicación debe mostrarse, como mínimo, en español. 
 * La aplicación acepta un máximo de 150 alumnos. 
 * Un grupo puede no tener líder o solo 1. 
-* Únicamente introducir usuarios cuyo DNI no exista ya dentro del sistema.
+* Únicamente introducir alumnos cuyo DNI no exista ya dentro del sistema.
 * La información se mostrará, como mínimo, por línea de comandos. Opcionalmente, mediante lenguaje markdown o html. 
 * Se podrá mostrar un único alumno o todo un grupo.
 * Los alumnos se pueden listar de forma ascendente o descendente por nombre, DNI, apellido o curso más alto en el que esté matriculado.
@@ -54,11 +54,11 @@
 # Prioridad de los requisitos
 
 **1.** Seleccionar en el menú  
-**2.** Añadir usuario  
+**2.** Añadir alumno  
 **3.** Guardar datos  
-**4.** Editar datos de usuario  
+**4.** Editar datos de alumno  
 **5.** Cargar fichero  
-**6.** Busqueda de usuario/s  
+**6.** Busqueda de alumno/s  
 **7.** Busqueda por grupo  
 **8.** Eliminar alumno/s  
 **9.** Listar alumnos  
