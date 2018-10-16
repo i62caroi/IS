@@ -4,13 +4,13 @@
 
 * Seleccion por menú
 * Busqueda de alumno/s
-* Añadir usuario
-* Cargar fichero binario
-* Edicion de datos de usuario
+* Añadir alumno
+* Cargar fichero
+* Edicion de datos del alumno
 * Guardar datos
 * Eliminar alumno
 * Realizar copia de seguridad
-* Mostrar usuarios del sistema
+* Mostrar alumnos del sistema
 
 ## No funcionales
 
@@ -35,7 +35,7 @@
 **Prioridad de los requisitos**
 
 1. Añadir usuario
-2. Guardar datos en fichero binario
+2. Guardar datos
 3. Cargar fichero binario
 4. Eliminar alumno por DNI o por apellidos
 5. Editar datos de usuario
