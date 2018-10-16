@@ -2,7 +2,7 @@
 
 ## Funcionales
 
-* Seleccion por menús
+* Seleccion por menú
 * Busqueda de alumno/s
 * Añadir usuario
 * Cargar fichero binario
