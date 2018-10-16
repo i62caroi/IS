@@ -2,15 +2,15 @@
 
 ## Funcionales
 
-* Busqueda de usuario por DNI o por apellidos
+* Seleccion por menús
+* Busqueda de alumno/s
 * Añadir usuario
 * Cargar fichero binario
 * Edicion de datos de usuario
-* Guardar datos en fichero binario
-* Busqueda en grupo
-* Opcion de eliminar un alumno por DNI o por apellido. En el caso de existir dos usuarios con el mismo apellido pedir el DNI
-* Realizar copia de seguridad siempre, o cada vez que el usuario quiera, en un fichero binario
-* Opcion de imprimir todos los usuarios del sistema ordenados por DNI, nombre o curso más alto matriculado tanto ascendente como descendente
+* Guardar datos
+* Eliminar alumno
+* Realizar copia de seguridad
+* Mostrar usuarios del sistema
 
 ## No funcionales
 
@@ -22,7 +22,15 @@
 * Máximo 150 alumnos por fichero
 * Como máximo un lider por grupo
 * Unicamente introducir usuarios cuyo DNI no exista ya dentro del sistema
-* Los usuarios se deben mostrar por linea de comandos como minimo y luego, mediante markdown o fichero HTML, poder mostrar un unico alumno o todo un grupo  
+* Los usuarios se deben mostrar por linea de comandos como minimo y luego, mediante markdown o fichero HTML, poder mostrar un unico alumno o todo un grupo
+* Opcion de imprimir todos los usuarios del sistema ordenados por DNI, nombre o curso más alto matriculado tanto ascendente como descendente
+* Opcion de eliminar un alumno por DNI o por apellido. En el caso de existir dos usuarios con el mismo apellido pedir el DNI
+* Realizar copia de seguridad siempre, o cada vez que el usuario quiera, en un fichero binario
+* Opcion de imprimir todos los usuarios del sistema ordenados por DNI, nombre o curso más alto matriculado tanto ascendente como descendente
+* Busqueda de alumno por DNI o por apellidos
+* Guardar datos en fichero binario
+* Cargar fichero un fichero binario
+* Busqueda en grupo
 
 **Prioridad de los requisitos**
 
