@@ -25,7 +25,7 @@ Como usuario quiero poder añadir un alumno
 
 Quiero poder añadir un alumno
 
-Debo introducir los campos obligatorios: Nombre, Apellidos, DNI, Fecha de nacimiento, Telefono, Direccion, Email de la Universidad, Curso mas alto matriculado
+Debo introducir los campos obligatorios: Nombre, Apellidos, DNI, Fecha de nacimiento, Teléfono, Dirección, Email de la Universidad, Curso más alto matriculado
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -55,7 +55,7 @@ Como usuario quiero poder modificar los datos de un alumno
 
 Quiero poder modificar cualquier dato de cualquier alumno 
 
-Antes de nada se debe hacer la busqueda de dicho alumno y para ello dicha busqueda se puede realizar por apellido, DNI o grupo. Un vez encontrado apareceran los datos del alumno para poder modificarlos
+Antes de nada, se debe hacer la búsqueda de dicho alumno y para ello dicha búsqueda se puede realizar por apellido, DNI o grupo. Una vez encontrado aparecerán los datos del alumno para poder modificarlos
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -69,7 +69,7 @@ Como usuario quiero poder cargar un fichero
 
 ## (REVERSO)
 
-Quiero poder cargar un fichero (en cual ya haya en el datos o no)
+Quiero poder cargar un fichero (en cual ya haya en él, datos o no)
 
 Debo introducir el nombre del fichero para poder cargarlo
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -85,12 +85,12 @@ Como usuario quiero poder buscar un alumno
 
 Quiero poder buscar un alumno
 
-Para realizar la busqueda debe introducirse uno de los siguientes parametros: DNI, Apellido o Grupo.
+Para realizar la búsqueda debe introducirse uno de los siguientes parámetros: DNI, Apellido o Grupo.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ## (ANVERSO)
-##### ID: 007 Busqueda por grupo 
+##### ID: 007 Búsqueda por grupo 
 
 Como usuario quiero poder visualizar los alumnos pertenecientes a un grupo 
 
@@ -98,7 +98,7 @@ Como usuario quiero poder visualizar los alumnos pertenecientes a un grupo
 
 ## (REVERSO)
 
-Quiero poder visualizar todos los alumnos pertenecientes a un grupo concreto e identificar cual es el lider del grupo
+Quiero poder visualizar todos los alumnos pertenecientes a un grupo concreto e identificar cual es el líder del grupo
 
 Debo introducir el numero de grupo
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -114,7 +114,7 @@ Como usuario quiero poder eliminar un alumno
 
 Quiero poder eliminar uno alumno
 
-Para ello primero debemos saber que alumno es el que vamos a borrar, mediante la introduccion del campo apellido y en caso de haber varios con los mismos apellidos, se introduciria el campo DNI
+Para ello primero debemos saber que alumno es el que vamos a borrar, mediante la introducción del campo apellido y en caso de haber varios con los mismos apellidos, se introduciría el campo DNI
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -127,7 +127,7 @@ Como usuario quiero poder visualizar una lista con todos los alumnos
 
 ## (REVERSO)
 
-Quiero poder visualizar un lista con todos los alumnos y habra dos tipos de lista para poder mostrar, una de ellas será reducida, en la que solo se mostraran los campos mas importantes y otra lista en la que se mostraran todos los campos del alumno
+Quiero poder visualizar una lista con todos los alumnos y habrá dos tipos de lista para poder mostrar, una de ellas será reducida, en la que solo se mostraran los campos más importantes y otra lista en la que se mostrarán todos los campos del alumno
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -141,4 +141,5 @@ Como usuario quiero poder realizar una copia de seguridad
 
 ## (REVERSO)
 
-Se realizara una copia de seguridad de los datos de los alumnos a traves del guardado en un fichero binario
+Se realizará una copia de seguridad de los datos de los alumnos a través del guardado en un fichero binario
+
