@@ -21,6 +21,9 @@ Como usuario quiero ver las funcionalidades del programa y poder elegir entre un
 ***
 
 
+
+
+
 ## (ANVERSO)
 
 **ID:** 002 **Añadir alumno**
@@ -44,6 +47,9 @@ Como usuario quiero poder añadir un alumno.
 ***
 
 
+
+
+
 ## (ANVERSO)
 
 **ID:** 003 **Guardar Datos** 
@@ -65,15 +71,44 @@ Como usuario quiero poder guardar los datos.
 ***
 
 
+
+
+
 ## (ANVERSO)
 
-**ID:** 004 **Editar datos de alumno** 
+**ID:** 004 **Buscar alumno**
+
+***
+
+Como usuario quiero poder buscar un alumno. 
+
+**Prioridad:** 4
+
+***
+
+## (REVERSO)
+
+***
+
+* Quiero poder buscar un alumno.
+
+* Para realizar la búsqueda debe introducirse uno de los siguientes parámetros: DNI, Apellido o Grupo.
+
+***
+
+
+
+
+
+## (ANVERSO)
+
+**ID:** 005 **Editar datos de alumno** 
 
 ***
 
 Como usuario quiero poder modificar los datos de un alumno. 
 
-**Prioridad:** 4
+**Prioridad:** 5
 
 ***
 
@@ -88,9 +123,12 @@ Como usuario quiero poder modificar los datos de un alumno.
 ***
 
 
+
+
+
 ## (ANVERSO)
 
-**ID:** 005 **Cargar Fichero**
+**ID:** 006 **Cargar Fichero**
 
 ***
 
@@ -111,27 +149,7 @@ Como usuario quiero poder cargar un fichero.
 ***
 
 
-## (ANVERSO)
 
-**ID:** 006 **Buscar alumno**
-
-***
-
-Como usuario quiero poder buscar un alumno. 
-
-**Prioridad:** 6
-
-***
-
-## (REVERSO)
-
-***
-
-* Quiero poder buscar un alumno.
-
-* Para realizar la búsqueda debe introducirse uno de los siguientes parámetros: DNI, Apellido o Grupo.
-
-***
 
 
 ## (ANVERSO)
@@ -142,7 +160,7 @@ Como usuario quiero poder buscar un alumno.
 
 Como usuario quiero poder visualizar los alumnos pertenecientes a un grupo. 
 
-**Prioridad:** 7
+**Prioridad:** 5
 
 ***
 
@@ -157,6 +175,9 @@ Como usuario quiero poder visualizar los alumnos pertenecientes a un grupo.
 ***
 
 
+
+
+
 ## (ANVERSO)
 
 **ID:** 008 **Eliminar alumno**
@@ -165,7 +186,7 @@ Como usuario quiero poder visualizar los alumnos pertenecientes a un grupo.
 
 Como usuario quiero poder eliminar un alumno. 
 
-**Prioridad:** 8
+**Prioridad:** 6
 
 ***
 
@@ -180,6 +201,9 @@ Como usuario quiero poder eliminar un alumno.
 ***
 
 
+
+
+
 ## (ANVERSO)
 
 **ID:** 009 **Listar alumnos** 
@@ -188,7 +212,7 @@ Como usuario quiero poder eliminar un alumno.
 
 Como usuario quiero poder visualizar una lista con todos los alumnos.
 
-**Prioridad:** 9
+**Prioridad:** 6
 
 ***
 
@@ -201,6 +225,9 @@ Como usuario quiero poder visualizar una lista con todos los alumnos.
 ***
 
 
+
+
+
 ## (ANVERSO)
 
 **ID:** 010 **Realizar copia de seguridad** 
@@ -209,7 +236,7 @@ Como usuario quiero poder visualizar una lista con todos los alumnos.
 
 Como usuario quiero poder realizar una copia de seguridad.
 
-**Prioridad:** 10
+**Prioridad:** 7
 
 ***
 
