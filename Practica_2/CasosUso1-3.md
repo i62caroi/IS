@@ -1,10 +1,12 @@
-## Mostar Menu
+## Mostrar Menu
 
-**ID:** 001
+**ID:** 001 
+
 **Breve descripción:** El sistema muestra al usuario las diversas funcionalidades del sistema.
 
-**Actores principales:** Usuario.
-**Actores secundarios:** Alumn@.
+
+**Actores principales:** Usuario.  
+**Actores secundarios:** Alumno/a.
 
 **Precondiciones:**
 
@@ -22,5 +24,5 @@
 1. El sistema muestra por pantalla un menú con todas las funcionalidades del sistema.
 
 
-**Flujo alternativo:**
+**Flujo alternativo:**  
 2.a. En caso de no existir en el sistema la funcionalidad que el usuario ha introducido por teclado, se mostrará un mensaje de error por pantalla y se volverá a mostrar el menú.
