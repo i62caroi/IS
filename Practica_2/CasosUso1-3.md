@@ -1,6 +1,6 @@
 ## Mostrar Menú
 
-**ID:** 001 
+**ID:** 001   
 **Breve descripción:** El sistema muestra al usuario las diversas funcionalidades del sistema.
 
 
