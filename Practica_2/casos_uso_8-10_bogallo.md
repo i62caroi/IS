@@ -1,4 +1,4 @@
-#Eliminar alumno  
+## Eliminar alumno  
 
 **ID:008**
 **Breve descripción: El sistema elimina un alumno del sistema**
@@ -27,7 +27,7 @@
 2. En caso de no existir el alumno en el sistema se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestion no existe en el sistema
 
 
-#Listar alumnos  
+## Listar alumnos  
 
 **ID:009**
 **Breve descripción: El sistema muestra por pantalla todos los alumnos registrados**
