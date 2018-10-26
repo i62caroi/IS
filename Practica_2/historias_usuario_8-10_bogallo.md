@@ -1,4 +1,4 @@
-#Eliminar alumno  
+## Eliminar alumno  
 
 **ID:008**
 **Breve descripción: El sistema elimina un alumno del sistema**
