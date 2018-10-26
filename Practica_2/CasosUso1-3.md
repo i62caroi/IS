@@ -99,5 +99,5 @@
 
 **Flujo alternativo:** 
 
-2.b. En caso haber algun tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redigiría automáticamente al menu inicio del programa donde se estará mostrando las funcionalidades del sistema.
-2.a. En caso de tener lugar un error más concreto, como por ejemplo problemas en la introducción del nombre del fichero, en lugar de redireccionar al menú del sistema, se pedirá de nuevo al usuario que rellene el campo.  
+2.a. En caso haber algun tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redigiría automáticamente al menu inicio del programa donde se estará mostrando las funcionalidades del sistema.  
+2.b. En caso de tener lugar un error más concreto, como por ejemplo problemas en la introducción del nombre del fichero, en lugar de redireccionar al menú del sistema, se pedirá de nuevo al usuario que rellene el campo.  
