@@ -63,10 +63,10 @@
 ## Realizar copia de seguridad
 
 **ID:010**
-**Breve descripción:El sistema guarda todos los datos registrados en un fichero binario**
+**Breve descripción: El sistema guarda todos los datos registrados en un fichero binario**
 
-**Actores principales:Usuario**
-**Actores secundarios:ninguno**
+**Actores principales: Usuario**
+**Actores secundarios: Ninguno**
 
 **Precondiciones:**
 
