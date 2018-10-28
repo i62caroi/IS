@@ -1,10 +1,10 @@
 ## Eliminar alumno  
 
-**ID:008**
-**Breve descripción: El sistema elimina un alumno del sistema**
+**ID:** 008
+**Breve descripción:** El sistema elimina un alumno del sistema
 
-**Actores principales:Usuario**
-**Actores secundarios:Alumno/a**
+**Actores principales:** Usuario
+**Actores secundarios:** Alumno/a
 
 **Precondiciones:**
 
@@ -30,11 +30,11 @@
 
 ## Listar alumnos  
 
-**ID:009**
-**Breve descripción: El sistema muestra por pantalla todos los alumnos registrados**
+**ID:** 009
+**Breve descripción:** El sistema muestra por pantalla todos los alumnos registrados
 
-**Actores principales:Usuario**
-**Actores secundarios:Alumnos/as**
+**Actores principales:** Usuario
+**Actores secundarios:** Alumnos/as
 
 **Precondiciones:**
 
@@ -62,11 +62,11 @@
 
 ## Realizar copia de seguridad
 
-**ID:010**
-**Breve descripción:El sistema guarda todos los datos registrados en un fichero binario**
+**ID:** 010
+**Breve descripción:** El sistema guarda todos los datos registrados en un fichero binario
 
-**Actores principales:Usuario**
-**Actores secundarios:ninguno**
+**Actores principales:** Usuario
+**Actores secundarios:** ninguno
 
 **Precondiciones:**
 
