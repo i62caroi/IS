@@ -1,9 +1,9 @@
 ## Eliminar alumno  
 
-**ID:** 008
+**ID:** 008    
 **Breve descripción:** El sistema elimina un alumno del sistema
 
-**Actores principales:** Usuario
+**Actores principales:** Usuario    
 **Actores secundarios:** Alumno/a
 
 **Precondiciones:**
@@ -23,17 +23,17 @@
 
 **Flujo alternativo:**
 
-1.a. En el caso de existir un error al seleccion la funcionalidad se mostraria un mensaje de error por la pantalla .   
-2.a. En caso de existir dos alumnos con el mismo apellido, se le pedira al usuario el dni del alumno que en cuestión se desea eliminar para filtrar las coincidencias .   
-2.b. En caso de no existir el alumno en el sistema se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestion no existe en el sistema . 
+1.a. En el caso de existir un error al seleccion la funcionalidad se mostraria un mensaje de error por la pantalla    
+2.a. En caso de existir dos alumnos con el mismo apellido, se le pedira al usuario el dni del alumno que en cuestión se desea eliminar para filtrar las coincidencias 
+2.b. En caso de no existir el alumno en el sistema se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestion no existe en el sistema  
 
 
 ## Listar alumnos  
 
-**ID:** 009
+**ID:** 009    
 **Breve descripción:** El sistema muestra por pantalla todos los alumnos registrados
 
-**Actores principales:** Usuario
+**Actores principales:** Usuario   
 **Actores secundarios:** Alumnos/as
 
 **Precondiciones:**
@@ -62,10 +62,10 @@
 
 ## Realizar copia de seguridad
 
-**ID:** 010
+**ID:** 010    
 **Breve descripción:** El sistema guarda todos los datos registrados en un fichero binario
 
-**Actores principales:** Usuario
+**Actores principales:** Usuario    
 **Actores secundarios:** ninguno
 
 **Precondiciones:**
