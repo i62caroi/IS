@@ -23,9 +23,9 @@
 
 **Flujo alternativo:**
 
-1.a. En el caso de existir un error al seleccion la funcionalidad se mostraria un mensaje de error por la pantalla
-2.a. En caso de existir dos alumnos con el mismo apellido, se le pedira al usuario el dni del alumno que en cuestión se desea eliminar para filtrar las coincidencias
-2.b. En caso de no existir el alumno en el sistema se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestion no existe en el sistema
+1.a. En el caso de existir un error al seleccion la funcionalidad se mostraria un mensaje de error por la pantalla .   
+2.a. En caso de existir dos alumnos con el mismo apellido, se le pedira al usuario el dni del alumno que en cuestión se desea eliminar para filtrar las coincidencias .   
+2.b. En caso de no existir el alumno en el sistema se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestion no existe en el sistema . 
 
 
 ## Listar alumnos  
@@ -56,7 +56,7 @@
 
 **Flujo alternativo:**
 
-1-2.a. En el caso de existir un error al seleccion la funcionalidad se mostraria un mensaje de error por la pantalla
+1-2.a. En el caso de existir un error al seleccion la funcionalidad se mostraria un mensaje de error por la pantalla .   
 3.a. En caso de no existir alumnos registrados se mostrará un mensaje de error
 
 
