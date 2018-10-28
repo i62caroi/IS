@@ -28,5 +28,5 @@
 
 **Flujo alternativo:**
 
-**2.a.** En caso de existir dos alumnos con el mismo apellido, se le pedirá al usuario el DNI del alumno que se desea eliminar para filtrar las coincidencias. 
+**2.a.** En caso de existir dos alumnos con el mismo apellido, se le pedirá al usuario el DNI del alumno que se desea eliminar para filtrar las coincidencias.  
 **2.b.** En caso de no existir el alumno en el sistema, se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestión no existe en el sistema.
