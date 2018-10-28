@@ -22,4 +22,9 @@
 
 **Postcondiciones:**  
 
-1. El sistema, en caso de no haber ocurrido ningún problema, mostrará la información del grupo.
+1. El sistema, en caso de no haber ocurrido ningún problema, mostrará la información del grupo.  
+
+
+**Flujo alternativo:**  
+
+**3.a.** En caso de haber ocurrido algún tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redirigiría automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.

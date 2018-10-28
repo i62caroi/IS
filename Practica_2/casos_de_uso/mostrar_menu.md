@@ -5,7 +5,8 @@
 
 
 **Actores principales:** Usuario.  
-**Actores secundarios:** Alumno/a. (Aqui no estoy seguro si es necesario actor secundario alumno)
+**Actores secundarios:** Ninguno.
+
 
 **Precondiciones:**
 
@@ -16,7 +17,7 @@
 **Flujo principal:**
 
 1. El caso de uso empieza cuando el usuario inicia el sistema, ya que en el momento que el sistema está inicializado, la primera función que se ejecuta es mostrar el menú con las funcionalidades del sistema.
-2. El sistema recoge por teclado la funcion que ha elegido el usuario y la ejecuta (siempre y cuando dicha funcion se encuentre en el sistema).
+2. El sistema recoge por teclado la función que ha elegido el usuario y la ejecuta, siempre y cuando dicha funcion se encuentre en el sistema.
 
 
 **Postcondiciones:**
@@ -26,4 +27,4 @@
 
 **Flujo alternativo:**    
 
-2.a. En caso de no existir en el sistema la funcionalidad que el usuario ha introducido por teclado, se mostrará un mensaje de error por pantalla y se volverá a mostrar el menú.
+**2.a.** En caso de no existir en el sistema la funcionalidad que el usuario ha introducido por teclado, se mostrará un mensaje de error por pantalla y se volverá a mostrar el menú.
