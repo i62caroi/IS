@@ -1,8 +1,8 @@
 ## Explicacion del diagrama de clase
 
 **Clases**
-* Persona
-  **Datos privador**
+* Persona  
+  **Datos privado**
    * Nombre : string
 * Alumno
 * Profesor
