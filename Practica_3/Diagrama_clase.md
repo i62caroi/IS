@@ -2,6 +2,8 @@
 
 **Clases**
 * Persona
+  **Datos privador**
+   * Nombre : string
 * Alumno
 * Profesor
 * Agenda
