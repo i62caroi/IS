@@ -3,7 +3,7 @@
 * Profesores
 * Alumnos
 
-# Datos que almacena la aplicacion
+# Datos que almacena la aplicación
 
 * Nombre
 * Apellidos
