@@ -4,7 +4,7 @@
 **Breve descripción:** El sistema guarda todos los datos registrados en un fichero binario.
 
 
-**Actores principales:** Usuario.
+**Actores principales:** Usuario.  
 **Actores secundarios:** Ninguno.
 
 
