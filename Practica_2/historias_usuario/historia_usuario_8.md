@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 008 **Eliminar alumno**
+**ID:** 008 **Realizar copia de seguridad** 
 
 ***
 
-Como usuario quiero poder eliminar un alumno. 
+Como usuario quiero poder realizar una copia de seguridad.
 
-**Prioridad:** 6
+**Prioridad:** 7
 
 ***
 
@@ -14,8 +14,8 @@ Como usuario quiero poder eliminar un alumno.
 
 ***
 
-* Quiero poder eliminar uno alumno.
+* Quiero poder realizar una copia de seguridad en un fichero binario.
 
-* Para ello, primero debemos saber qué alumno es el que vamos a borrar. Al introducir el apellido, y en el caso en que hubiera dos alumnos con el mismo apellido, se deberá introducir también el DNI del que queremos borrar.
+* No debo poder realizar la copia de seguridad en un fichero que no exista.
 
 ***

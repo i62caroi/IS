@@ -1,4 +1,8 @@
 
+# Partes interesadas
+* Profesores
+* Alumnos
+
 # Datos que almacena la aplicacion
 
 * Nombre
@@ -16,9 +20,7 @@
 
 ## Funcionales
 
-* Selección por menú
 * Búsqueda de alumno
-* Búsqueda por grupo
 * Añadir alumno
 * Cargar fichero
 * Edición de datos del alumno
@@ -29,39 +31,24 @@
 
 ## No funcionales
 
-* La interfaz grafica será la consola de comandos.
-* Inicializar el programa mostrando el menú.
+* La interfaz gráfica será la consola de comandos.
 * Sin autorellenado.
-* Toda la informacion del alumno, excepto su grupo y si es líder o no, es obligatoria.
 * La aplicación debe mostrarse, como mínimo, en español. 
 * La aplicación acepta un máximo de 150 alumnos. 
-* Un grupo puede no tener líder o solo 1. 
-* Únicamente introducir alumnos cuyo DNI no exista ya dentro del sistema.
-* La información se mostrará, como mínimo, por línea de comandos. Opcionalmente, mediante lenguaje markdown o html. 
-* Se podrá mostrar un único alumno o todo un grupo.
-* Los alumnos se pueden listar de forma ascendente o descendente por nombre, DNI, apellido o curso más alto en el que esté matriculado.
-* El borrado de alumnos se realizará por apellido o DNI. Si hay dos alumnos con el mismo apellido, se pedirá el DNI del alumno que se quiera borrar. 
-* Deberá guardar o cargar, según quiera el usuario, una copia de seguridad de la base de datos en un fichero binario. 
-* Búsqueda de alumno por DNI o por apellidos.
-* Al buscar un alumno, decir si es líder o no.
+* La información se mostrará por línea de comandos y mediante lenguaje markdown o html. 
 * Guardar datos en fichero binario.
-* Cargar fichero binario.
-* Al buscar un grupo, se muestran los alumnos que pertenecen a ese grupo y el líder.  
-* Al listar los alumnos, se puede mostrar toda su informacion o una lista reducida.
-* Software lo mas sencillo posible.
-* Al buscar un alumno por apellido, si se encuentran dos alumnos con el mismo apellido, mostrar ambos alumnos.
+* Software lo más sencillo posible.
+
 
 # Prioridad de los requisitos
-
-**1.** Seleccionar en el menú  
-**2.** Añadir alumno  
-**3.** Guardar datos  
-**4.** Editar datos de alumno  
-**5.** Cargar fichero  
-**6.** Busqueda de alumno/s  
-**7.** Busqueda por grupo  
-**8.** Eliminar alumno/s  
-**9.** Listar alumnos  
-**10.** Realizar copia de seguridad   
+ 
+**1.** Añadir alumno  
+**2.** Guardar datos  
+**3.** Búsqueda de alumno/s   
+**4.** Editar datos de alumno    
+**5.** Cargar fichero    
+**6.** Eliminar alumno  
+**7.** Listar alumnos  
+**8.** Realizar copia de seguridad   
 
 

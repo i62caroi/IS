@@ -1,6 +1,6 @@
 ## Cargar fichero
 
-**ID:** 006  
+**ID:** 005  
 **Breve descripción:** Funcionalidad del sistema que nos permite cargar un fichero vacío o con datos.  
 
 
@@ -9,7 +9,7 @@
 
 **Precondiciones:**  
 
-1. El sistema y todas sus funcionalidades deben de funcionar correctamente.  
+1. El fichero que se va a cargar debe existir. 
 
 
 
@@ -27,4 +27,4 @@
 
 **Flujo alternativo:**  
 
-**3.a.** En caso de haber ocurrido algún tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redirigiría automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.
+**3.a.** En caso de haber ocurrido algún tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redirigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.

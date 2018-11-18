@@ -1,10 +1,10 @@
 ## (ANVERSO)
 
-**ID:** 003 **Guardar Datos** 
+**ID:** 003 **Buscar alumno**
 
 ***
 
-Como usuario quiero poder guardar los datos. 
+Como usuario quiero poder buscar un alumno o un grupo. 
 
 **Prioridad:** 3
 
@@ -14,6 +14,8 @@ Como usuario quiero poder guardar los datos.
 
 ***
 
-* Quiero poder guardar los datos de los alumnos que he introducido.
+* Quiero poder buscar un alumno o un grupo.
+
+* Quiero poder introducir el DNI o el apellido del alumno o el grupo de alumnos que quiero buscar.
 
 ***

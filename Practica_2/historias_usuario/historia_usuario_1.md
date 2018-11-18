@@ -1,10 +1,10 @@
 ## (ANVERSO)
 
-**ID:** 001 **Mostrar menú**
+**ID:** 001 **Añadir alumno**
 
 ***
 
-Como usuario quiero ver las funcionalidades del programa y poder elegir entre una de ellas.
+Como usuario quiero poder añadir un alumno.
 
 **Prioridad:** 1
 
@@ -14,8 +14,16 @@ Como usuario quiero ver las funcionalidades del programa y poder elegir entre un
 
 ***
 
-* Quiero poder visualizar todas las funcionalidades del programa.
+* Quiero poder añadir un alumno.
 
-* Quiero poder seleccionar una de las funcionalidades.
+* Quiero poder introducir los datos obligatorios del alumno: Nombre, Apellidos, DNI, Fecha de nacimiento, Teléfono, Dirección, Email y Curso más alto matriculado.
+
+* Quiero poder introducir los datos no obligatorios del alumno: Grupo al que pertenece y si es líder o no.
+
+* No debo poder añadir un alumno cuyo DNI o email ya exista.
+
+* No debo poder marcar un alumno como líder si su grupo ya tiene líder.
+
+* No debo poder añadir un alumno si ya hay 150 alumnos en el sistema.
 
 ***

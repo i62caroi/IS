@@ -1,10 +1,10 @@
 ## (ANVERSO)
 
-**ID:** 002 **Añadir alumno**
+**ID:** 002 **Guardar Datos** 
 
 ***
 
-Como usuario quiero poder añadir un alumno.
+Como usuario quiero poder guardar los datos. 
 
 **Prioridad:** 2
 
@@ -14,8 +14,6 @@ Como usuario quiero poder añadir un alumno.
 
 ***
 
-* Quiero poder añadir un alumno.
-
-* Debo introducir los campos obligatorios: Nombre, Apellidos, DNI, Fecha de nacimiento, Teléfono, Dirección, Email de la Universidad y Curso más alto matriculado.
+* Quiero poder guardar los datos de los alumnos que he introducido.
 
 ***

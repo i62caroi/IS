@@ -1,10 +1,10 @@
 ## (ANVERSO)
 
-**ID:** 005 **Editar datos de alumno** 
+**ID:** 005 **Cargar Fichero**
 
 ***
 
-Como usuario quiero poder modificar los datos de un alumno. 
+Como usuario quiero poder cargar un fichero.
 
 **Prioridad:** 5
 
@@ -14,8 +14,10 @@ Como usuario quiero poder modificar los datos de un alumno.
 
 ***
 
-* Quiero poder modificar cualquier dato de cualquier alumno. 
+* Quiero poder cargar un fichero en el cual ya hubiera, o no, datos.
 
-* Antes de nada, se debe hacer la búsqueda de dicho alumno. Dicha búsqueda se puede realizar por apellido, DNI o grupo. Una vez encontrado, aparecerán los datos del alumno para poder modificarlos.
+* Quiero poder introducir el nombre del fichero para poder cargarlo.
+
+* No debo poder cargar un fichero que no exista.
 
 ***

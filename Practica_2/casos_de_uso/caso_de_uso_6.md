@@ -1,6 +1,6 @@
 ## Eliminar alumno  
 
-**ID:** 008    
+**ID:** 006    
 **Breve descripción:** El sistema elimina un alumno de la base de datos.
 
 
@@ -10,8 +10,7 @@
 
 **Precondiciones:**
 
-1. Se debe poder seleccionar la opción de "eliminar alumno" en el menú principal.
-2. Se debe poder buscar a cualquier alumno por su apellido o DNI.
+1. El alumno que se quiera eliminar debe existir en el sistema.
 
 
 **Flujo principal:**
@@ -28,5 +27,5 @@
 
 **Flujo alternativo:**
 
-**2.a.** En caso de existir dos alumnos con el mismo apellido, se le pedirá al usuario el DNI del alumno que se desea eliminar para filtrar las coincidencias.  
-**2.b.** En caso de no existir el alumno en el sistema, se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestión no existe en el sistema.
+**2.a.** En caso de existir varios alumnos con el mismo apellido, se le pedirá al usuario el DNI del alumno que se desea eliminar.
+**2.b.** En caso de no existir el alumno en el sistema, se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestión no existe en el sistema y se redirigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.

@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 007 **Búsqueda por grupo** 
+**ID:** 007 **Listar alumnos** 
 
 ***
 
-Como usuario quiero poder visualizar los alumnos pertenecientes a un grupo. 
+Como usuario quiero poder visualizar una lista con todos los alumnos.
 
-**Prioridad:** 5
+**Prioridad:** 6
 
 ***
 
@@ -14,8 +14,12 @@ Como usuario quiero poder visualizar los alumnos pertenecientes a un grupo.
 
 ***
 
-* Quiero poder visualizar todos los alumnos pertenecientes a un grupo concreto e identificar cuál es el líder del grupo.
+* Quiero poder visualizar una lista con todos los alumnos. 
 
-* Debo introducir el número de grupo.
+* Quiero poder escoger el tipo de lista: reducida o completa.
+
+* Quiero poder escoger la forma de listado: ascendente o descendente.
+
+* Quiero poder escoger el campo por el cual ordenar: nombre, DNI, apellido o curso más alto.
 
 ***

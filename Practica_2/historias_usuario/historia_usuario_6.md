@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 006 **Cargar Fichero**
+**ID:** 006 **Eliminar alumno**
 
 ***
 
-Como usuario quiero poder cargar un fichero.
+Como usuario quiero poder eliminar un alumno. 
 
-**Prioridad:** 5
+**Prioridad:** 6
 
 ***
 
@@ -14,8 +14,12 @@ Como usuario quiero poder cargar un fichero.
 
 ***
 
-* Quiero poder cargar un fichero en el cual ya hubiera, o no, datos.
+* Quiero poder eliminar un alumno.
 
-* Debo introducir el nombre del fichero para poder cargarlo.
+* Quiero poder introducir el apellido del alumno.
+
+* Quiero poder introducir el DNI del alumno.
+
+* No debo poder eliminar un alumno que ya no exista.
 
 ***
