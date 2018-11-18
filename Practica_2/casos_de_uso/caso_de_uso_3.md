@@ -22,7 +22,7 @@
 
 **Postcondiciones:**  
 
-1. El sistema, en caso de existir el alumno indicado y de no haber ocurrido ningún problema, mostrará la información del alumno.  
+* El sistema, en caso de existir el alumno indicado y de no haber ocurrido ningún problema, mostrará la información del alumno.  
 
 
 **Flujo alternativo:**  

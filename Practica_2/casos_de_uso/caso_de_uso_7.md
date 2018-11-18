@@ -23,7 +23,7 @@
 
 **Postcondiciones:**
 
-1. El sistema muestra todos los alumnos del sistema.
+* El sistema muestra todos los alumnos del sistema.
 
 
 **Flujo alternativo:**

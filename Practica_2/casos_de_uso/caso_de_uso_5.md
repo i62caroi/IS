@@ -22,7 +22,7 @@
 
 **Postcondiciones:**  
 
-1. El sistema, en caso de no haber ocurrido ningún error, carga el fichero indicado.  
+* El sistema, en caso de no haber ocurrido ningún error, carga el fichero indicado.  
 
 
 **Flujo alternativo:**  

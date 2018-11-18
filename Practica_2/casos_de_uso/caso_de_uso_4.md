@@ -22,7 +22,7 @@
 
 **Postcondiciones:**  
 
-1. Una vez haya finalizado sin error alguno todo el proceso de modificación de datos por parte del usuario, se guardarán los datos modificados en el sistema.
+* Una vez haya finalizado sin error alguno todo el proceso de modificación de datos por parte del usuario, se guardarán los datos modificados en el sistema.
 
 
 **Flujo alternativo:**    

@@ -22,7 +22,7 @@
 
 **Postcondiciones:**
 
-1. El sistema, en caso de no haber ocurrido ningun error, eliminará al alumno de la base de datos.
+* El sistema, en caso de no haber ocurrido ningun error, eliminará al alumno de la base de datos.
 
 
 **Flujo alternativo:**

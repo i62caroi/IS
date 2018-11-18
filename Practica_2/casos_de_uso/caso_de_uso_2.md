@@ -23,7 +23,7 @@
 
 **Postcondiciones:**
 
-1. Una vez haya finalizado sin error alguno todo el proceso, se guardarán los datos en el fichero y se redigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.  
+* Una vez haya finalizado sin error alguno todo el proceso, se guardarán los datos en el fichero y se redigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.  
 
 
 **Flujo alternativo:** 

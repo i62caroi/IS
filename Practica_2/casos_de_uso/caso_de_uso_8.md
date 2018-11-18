@@ -11,13 +11,17 @@
 **Precondiciones:**
 
 1. Deben existir alumnos registrados en la base de datos.
-2. El fichero en el que se vaya a realizar la copia de seguridad debe existir.
 
 
 **Flujo principal:**
 
 1. El caso de uso empieza cuando se elige la funcionalidad del sistema "Realizar copia de seguridad".
 2. Se crea un fichero binario con toda la información guardada en la base de datos (datos de los alumnos).
+
+
+**Postcondiciones:**
+
+* Se crea la copia de seguridad.
 
 
 **Flujo alternatio:**
