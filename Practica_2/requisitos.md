@@ -42,9 +42,9 @@
 
 # Prioridad de los requisitos
  
-**1.** Añadir alumno  
-**2.** Guardar datos  
-**3.** Búsqueda de alumno/s   
+**1.** Búsqueda de alumno/s  
+**2.** Añadir alumno  
+**3.** Guardar datos   
 **4.** Editar datos de alumno    
 **5.** Cargar fichero    
 **6.** Eliminar alumno  
