@@ -27,4 +27,5 @@
 
 **Flujo alternativo:**  
 
-**3.a.** En caso de haber ocurrido algún tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redirigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.
+**3.a.** En caso de que la función no encuentre en el sistema un fichero con el nombre introducido por el usuario, el sistema mostrará un mensaje de error y se cargará de nuevo la funcion "cargar fichero".  
+**3.b.** En caso de haber ocurrido algún tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redirigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.
