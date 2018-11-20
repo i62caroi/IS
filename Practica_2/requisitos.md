@@ -36,8 +36,8 @@
 * La aplicación debe mostrarse, como mínimo, en español. 
 * La aplicación acepta un máximo de 150 alumnos. 
 * La información se mostrará por línea de comandos y mediante lenguaje markdown o html. 
-* Guardar datos en fichero binario.
-* Software lo más sencillo posible.
+* Los datos serán guardados en  un fichero binario.
+* El programa será lo más sencillo posible.
 
 
 # Prioridad de los requisitos
