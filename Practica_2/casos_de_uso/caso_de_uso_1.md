@@ -28,7 +28,7 @@
 
 **Flujo alternativo:**    
 
-**2.a.** En caso de existir ese DNI y, por tanto, ese alumno, el sistema muestra un mensaje diciendo que ya existe ese alumno y se redigiría automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.    
+**2.a.** En caso de existir ese DNI y, por tanto, ese alumno, el sistema muestra un mensaje diciendo que ya existe ese alumno y se cargaría de nuevo la función de añadir alumno.    
 **3.a.** En caso de haber algún tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redigiría automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.  
 
 
