@@ -3,8 +3,8 @@
 ### Clases
 
 
-**Persona**
-* Parte privada:
+  **Persona**
+* Parte privada:  
 nombre : string
 apellidos : string
 direccion : string
