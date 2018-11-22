@@ -27,6 +27,7 @@
 
 **Flujo alternativo:**  
  
-**2.a.** En caso de existir varios alumnos con el mismo apellido, se le pedirá al usuario el DNI del alumno que se desea buscar. 
-**2.b.** En caso de querer buscar un grupo, se introducirá su identificador y se mostrarán los alumnos que pertenezcan al mismo, así como su líder, si es que lo tiene.
+**2.a.** En caso de existir varios alumnos con el mismo apellido, se mostrará la información de todos esos alumnos.  
+**2.b.** En caso de querer buscar por DNI, se introducirá el mismo y se mostrará la información del alumno que corresponda.  
+**2.c.** En caso de querer buscar un grupo, se introducirá su identificador y se mostrarán los alumnos que pertenezcan al mismo, así como su líder, si es que lo tiene.  
 **3.a.** En caso de no existir dicho alumno o grupo en el sistema, se mostrará por pantalla un mensaje de error diciendo que el alumno o grupo en cuestión no existe en el sistema y se redirigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.  
