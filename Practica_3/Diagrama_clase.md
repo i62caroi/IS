@@ -1,4 +1,4 @@
-## Explicacion del diagrama de clase
+## Explicacion del diagrama de clases
 
 En este diagrama de clase tenemos los siguientes objetos:
 * Clase Persona
