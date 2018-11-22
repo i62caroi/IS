@@ -61,7 +61,7 @@ Ademas de las heredadas por la clase persona (nombre,apellidos,email)
 **Comentarios:**
 La clase alumno hereda los metodos y variables de la clase persona, de este metodo podemos tener acceso a todas las varibles necesarias, por otro lado, como podemos observar los metodos no son más que una manera de poder acceder o modificar a las variables de la clase alumno debido a que no podriamos acceder directamente a ellas por estar en la parte privada (encapsulamiento)
 
-###Clase Profesor
+### Clase Profesor
 
 **La clase profesor tiene las siguientes variables:**
 
@@ -80,7 +80,7 @@ Ademas de las heredadas por la clase persona (nombre,apellidos,email)
 La clase Profesor tambien hereda las varibles y los metodos de la clase persona por el mismo motivo que lo hace tambien la clase alumno.
 
 
-###Clase Agenda
+### Clase Agenda
 
 **La clase Agenda tiene las sigueintes variables:**
 
