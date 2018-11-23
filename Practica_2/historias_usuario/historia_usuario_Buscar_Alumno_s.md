@@ -1,6 +1,6 @@
 ## (ANVERSO)
 
-**ID:** 003 **Buscar alumno**
+**ID:** 003 **Buscar alumno/s**
 
 ***
 
