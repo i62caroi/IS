@@ -24,7 +24,6 @@
 * Añadir alumno
 * Cargar fichero
 * Edición de datos del alumno
-* Guardar datos
 * Eliminar alumno
 * Realizar copia de seguridad
 * Listar alumnos del sistema
@@ -43,12 +42,11 @@
 # Prioridad de los requisitos
  
 **1.** Búsqueda de alumno/s  
-**2.** Añadir alumno  
-**3.** Guardar datos   
-**4.** Editar datos de alumno    
-**5.** Cargar fichero    
-**6.** Eliminar alumno  
-**7.** Listar alumnos  
-**8.** Realizar copia de seguridad   
+**2.** Añadir alumno     
+**3.** Editar datos de alumno    
+**4.** Cargar fichero    
+**5.** Eliminar alumno  
+**6.** Listar alumnos  
+**7.** Realizar copia de seguridad   
 
 
