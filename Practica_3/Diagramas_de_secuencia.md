@@ -16,10 +16,11 @@ El profesor informa al sistema de que va a buscar un alumno. El sistema internam
 
 ### Añadir alumno
 
-El profesor informa al sistema de que va a añadir un alumno. El sistema internamente se prepara y cuando está listo le pide al profesor el DNI del alumno para comprobar, antes de nada, si el alumno ya está registrado en el sistema: 
+El profesor informa al sistema de que va a añadir un alumno. El sistema comprueba si hay espacio en la agenda, en cuyo caso le pide al profesor el DNI del alumno para comprobar, antes de nada, si el alumno ya está registrado en el sistema: 
   - Si no está registrado en el sistema, le pide los datos del nuevo alumno al profesor (nombre, apellidos, dni, ... , etc) y los va guardando uno a uno en el registro (agenda). 
   - En caso de existir una coincidencia, el sistema informa al profesor mediante un mensaje de que el alumno que desea insertar ya está registrado en el sistema.
-  - En caso de haber ya 150 alumnos registrados, el sistema informa al profesor mediante un mensaje de que la agenda está completa y no se puede añadir ningún alumno más.
+
+En caso de haber ya 150 alumnos registrados, el sistema informa al profesor mediante un mensaje de que la agenda está completa y no se puede añadir ningún alumno más.
 
   
 ### Editar alumno
