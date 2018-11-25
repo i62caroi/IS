@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 007 **Listar alumnos** 
+**ID:** 006 **Listar alumnos** 
 
 ***
 
 Como usuario quiero poder visualizar una lista con todos los alumnos.
 
-**Prioridad:** 6
+**Prioridad:** 5
 
 ***
 

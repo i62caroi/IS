@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 005 **Cargar Fichero**
+**ID:** 004 **Cargar Fichero**
 
 ***
 
 Como usuario quiero poder cargar un fichero.
 
-**Prioridad:** 5
+**Prioridad:** 4
 
 ***
 

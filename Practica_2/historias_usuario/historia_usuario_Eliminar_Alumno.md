@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 006 **Eliminar alumno**
+**ID:** 005 **Eliminar alumno**
 
 ***
 
 Como usuario quiero poder eliminar un alumno. 
 
-**Prioridad:** 6
+**Prioridad:** 5
 
 ***
 

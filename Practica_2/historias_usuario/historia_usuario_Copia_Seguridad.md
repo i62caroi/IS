@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 008 **Realizar copia de seguridad** 
+**ID:** 007 **Realizar copia de seguridad** 
 
 ***
 
 Como usuario quiero poder realizar una copia de seguridad.
 
-**Prioridad:** 7
+**Prioridad:** 6
 
 ***
 

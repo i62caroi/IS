@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 003 **Buscar alumno/s**
+**ID:** 001 **Buscar alumno/s**
 
 ***
 
 Como usuario quiero poder buscar un alumno o un grupo. 
 
-**Prioridad:** 3
+**Prioridad:** 1
 
 ***
 

@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 001 **Añadir alumno**
+**ID:** 002 **Añadir alumno**
 
 ***
 
 Como usuario quiero poder añadir un alumno.
 
-**Prioridad:** 1
+**Prioridad:** 2
 
 ***
 

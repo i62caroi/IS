@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 004 **Editar datos de alumno** 
+**ID:** 003 **Editar datos de alumno** 
 
 ***
 
 Como usuario quiero poder modificar los datos de un alumno. 
 
-**Prioridad:** 4
+**Prioridad:** 3
 
 ***
 
