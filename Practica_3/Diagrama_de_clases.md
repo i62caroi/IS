@@ -23,7 +23,7 @@ Cada uno con sus variables y métodos propios, que se explicarán a continuació
 * Lider : Almacenará si el alumno es líder o no.  
 
 
-**Métodos de la clase Alumno**
+**Métodos de la clase Alumno:**
 
 * getNombre() : Para que podamos obtener el valor de la variable *Nombre*.  
 * setNombre() : Para que podamos modificar el valor de la variable *Nombre*.  
@@ -46,7 +46,7 @@ Cada uno con sus variables y métodos propios, que se explicarán a continuació
 * getLider() : método para poder obtener el valor de la variable *Lider*.  
 * setLider () : método para poder modificar el valor de la variable *Lider*.  
 
-**Comentarios:**
+**Comentarios:**  
 Como podemos observar, los métodos no son más que una manera de acceder o modificar las variables de la clase Alumno debido a que no podemos acceder directamente a ellas por estar en la parte privada (encapsulamiento).
 
 ### Clase Profesor
@@ -65,7 +65,7 @@ Como podemos observar, los métodos no son más que una manera de acceder o modi
 * Cargar_copia_seguridad() : método para cargar una copia de seguridad en el sistema. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden cargar copias de seguridad.
 * Guardar_copia_seguridad() : método para realizar una copia de seguridad del sistema. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden realizar la copia de seguridad.
 
-**Comentarios:**
+**Comentarios:**  
 Se han introducido en el sistema unas credenciales de los profesores para distinguir entre profesor *<coordinador>* y *<ayudante>*, ya que el sistema tiene ligadas sus credenciales al tipo correspondiente, permitiendo así solo a los coordinadores el acceso a las copias de seguridad. 
 
 
@@ -75,7 +75,7 @@ Se han introducido en el sistema unas credenciales de los profesores para distin
 
 * Lista_alumno : que contendrá la lista de todos los alumnos en el registro.
 
-**Metodos de la clase Agenda:**
+**Métodos de la clase Agenda:**
 
 * Anadir_alumno() : método para añadir un alumno al sistema. 
 * Editar_alumno() : método para modificar los datos de un alumno.  
@@ -83,7 +83,7 @@ Se han introducido en el sistema unas credenciales de los profesores para distin
 * Eliminar_alumno() : método para eliminar un alumno.
 * Listar_alumnos() : método para mostrar por pantalla la lista de los alumnos registrados.
 
-**Comentarios:**
+**Comentarios:**  
 Aquí tenemos las funciones que podrá pedir el profesor al sistema para gestionar los alumnos.
 
 
