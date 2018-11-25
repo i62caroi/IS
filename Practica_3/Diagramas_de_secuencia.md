@@ -13,7 +13,7 @@ El profesor informa al sistema de que va a buscar un alumno. El sistema comprueb
    - En caso de que exista, el sistema muestra por pantalla los alumnos que pertenecen a ese grupo y el líder, si es que lo tiene.
    - En caso de no encontrarlo, el sistema mostrará un mensaje por pantalla informando al profesor de que el grupo no existe.
 
-En caso de no haber alumnos en la agenda, el sistema mostrará un mensaje pr pantalla indicando que no hay alumnos registrados en el sistema, por lo que no se pueden buscar.
+En caso de no haber alumnos en la agenda, el sistema mostrará un mensaje por pantalla indicando que no hay alumnos registrados en el sistema, por lo que no se pueden buscar.
   
 
 ### Añadir alumno
