@@ -61,12 +61,10 @@ Como podemos observar, los métodos no son más que una manera de acceder o modi
 **Métodos de la clase Profesor:**
 
 * Cargar_fichero() : método que permite cargar en el sistema un fichero binario con el registro de alumnos en su interior.
-* Guardar_fichero() : étodo para guardar el registro de alumnos existente en el sistema, en un fichero binario.
-* Cargar_copia_seguridad() : método para cargar una copia de seguridad en el sistema. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden cargar copias de seguridad.
 * Guardar_copia_seguridad() : método para realizar una copia de seguridad del sistema. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden realizar la copia de seguridad.
 
 **Comentarios:**  
-Se han introducido en el sistema unas credenciales de los profesores para distinguir entre profesor *<coordinador>* y *<ayudante>*, ya que el sistema tiene ligadas sus credenciales al tipo correspondiente, permitiendo así solo a los coordinadores el acceso a las copias de seguridad. 
+Se han introducido en el sistema unas credenciales de los profesores para distinguir entre profesor *<coordinador>* y *<ayudante>*, ya que el sistema tiene ligadas sus credenciales al tipo correspondiente, permitiendo así solo a los coordinadores realizar las copias de seguridad. 
 
 
 ### Clase Agenda
