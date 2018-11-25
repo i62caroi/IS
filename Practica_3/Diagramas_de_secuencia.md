@@ -1,6 +1,6 @@
 ### Buscar alumno/s
 
-El profesor informa al sistema de que va a buscar un alumno. El sistema internamente se prepara y cuando está listo le da dos opciones al profesor:  
+El profesor informa al sistema de que va a buscar un alumno. El sistema comprueba que hay alumnos en la agenda y le da dos opciones al profesor:  
 * Buscar alumno: el sistema le da opción al profesor de buscar por dos campos:
    * Por apellidos: el sistema le pide al profesor que introduzca los apellidos del alumno que desea buscar. Tras introducir los apellidos, el sistema comprueba si los apellidos se encuentran registrados: 
       - En caso de coincidir solo con un alumno, el sistema muestra por pantalla los datos de dicho alumno. 
@@ -12,6 +12,8 @@ El profesor informa al sistema de que va a buscar un alumno. El sistema internam
 * Buscar grupo: el sistema le pide al profesor que introduzca el grupo de alumnos que desea buscar. Tras introducirlo, el sistema comprueba si existe el grupo; es decir, si hay algún alumno cuyo grupo asignado sea el introducido:
    - En caso de que exista, el sistema muestra por pantalla los alumnos que pertenecen a ese grupo y el líder, si es que lo tiene.
    - En caso de no encontrarlo, el sistema mostrará un mensaje por pantalla informando al profesor de que el grupo no existe.
+
+En caso de no haber alumnos en la agenda, el sistema mostrará un mensaje pr pantalla indicando que no hay alumnos registrados en el sistema, por lo que no se pueden buscar.
   
 
 ### Añadir alumno
