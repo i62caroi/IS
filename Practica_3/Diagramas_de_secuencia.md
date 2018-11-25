@@ -3,15 +3,15 @@
 El profesor informa al sistema de que va a buscar un alumno. El sistema internamente se prepara y cuando está listo le da dos opciones al profesor:  
 * Buscar alumno: el sistema le da opción al profesor de buscar por dos campos:
    * Por apellidos: el sistema le pide al profesor que introduzca los apellidos del alumno que desea buscar. Tras introducir los apellidos, el sistema comprueba si los apellidos se encuentran registrados: 
-   - En caso de coincidir solo con un alumno, el sistema muestra por pantalla los datos de dicho alumno. 
-   - En caso de existir varios alumnos con los mismos apellidos, el sistema muestra los datos de todos ellos.
-   - En caso de no encontrarse los apellidos registrados, el sistema mostrará un mensaje por pantalla informando al profesor de que el alumno no se encuentra registrado en el sistema.
+      - En caso de coincidir solo con un alumno, el sistema muestra por pantalla los datos de dicho alumno. 
+      - En caso de existir varios alumnos con los mismos apellidos, el sistema muestra los datos de todos ellos.
+      - En caso de no encontrarse los apellidos registrados, el sistema mostrará un mensaje por pantalla informando al profesor de que el alumno no se encuentra registrado en el sistema.
    * Por DNI: el sistema le pide al profesor que introduzca el DNI del alumno que desea buscar. Tras introducirlo, el sistema comprueba si el DNI se encuentra en el sistema:
-   - En caso afirmativo, muestra por pantalla los datos de dicho alumno. 
-   - En caso de no encontrar el DNI, el sistema mostrará un mensaje por pantalla informando al profesor de que el alumno no se encuentra registrado en el sistema.
+      - En caso afirmativo, muestra por pantalla los datos de dicho alumno. 
+       - En caso de no encontrar el DNI, el sistema mostrará un mensaje por pantalla informando al profesor de que el alumno no se encuentra registrado en el sistema.
 * Buscar grupo: el sistema le pide al profesor que introduzca el grupo de alumnos que desea buscar. Tras introducirlo, el sistema comprueba si existe el grupo; es decir, si hay algún alumno cuyo grupo asignado sea el introducido:
-  - En caso de que exista, el sistema muestra por pantalla los alumnos que pertenecen a ese grupo y el líder, si es que lo tiene.
-  - En caso de no encontrarlo, el sistema mostrará un mensaje por pantalla informando al profesor de que el grupo no existe.
+   - En caso de que exista, el sistema muestra por pantalla los alumnos que pertenecen a ese grupo y el líder, si es que lo tiene.
+   - En caso de no encontrarlo, el sistema mostrará un mensaje por pantalla informando al profesor de que el grupo no existe.
   
 
 ### Añadir alumno
@@ -42,7 +42,7 @@ El profesor informa al sistema de que va a cargar un fichero binario. El sistema
 
 El profesor informa al sistema de que va a eliminar un alumno. El sistema internamente se prepara y cuando está listo le pide al profesor que introduzca los apellidos del alumno que desea eliminar. Tras introducir los apellidos, el sistema verifica que los apellidos están en el sistema: 
   - En caso afirmativo, borra al alumno del registro e informa mediante un mensaje por pantalla de que el alumno ha sido eliminado.  
-    - En caso de no encontrar los apellidos, el sistema mostrará un mensaje por pantalla diciendo que el alumno no se encuentra registrado en el sistema. 
+  - En caso de no encontrar los apellidos, el sistema mostrará un mensaje por pantalla diciendo que el alumno no se encuentra registrado en el sistema. 
   - En caso de que coincidan varias personas con los mismos apellidos, el sistema pedirá al profesor el DNI del alumno que desee eliminar. Tras introducir los datos, el sistema borrará al alumno del registro y mostrará un mensaje por pantalla informando de que el alumno ha sido eliminado.
   
   
@@ -51,7 +51,8 @@ El profesor informa al sistema de que va a eliminar un alumno. El sistema intern
 El profesor informa al sistema de que va a listar a los alumnos. El sistema internamente comprueba si hay alumnos en la agenda y, en caso de que haya, le pide al profesor que escoja entre dos opciones:  
 * Lista reducida: en esta opción el sistema mostrará la información mínima de cada alumno. El sistema le pide al profesor que escoja un campo mediante el cual ordenar (*Nombre*, *Dni*, *Apellidos* o *Curso_mas_alto*). Un vez escogido el campo, el sistema le pide al profesor que escoja la forma de listar (ascendente o descendente). Un vez escogida la forma, el sistema mostrará la información mínima de los alumnos, ordenados por el campo escogido y de la forma indicada.  
 * Lista completa: en esta opción el sistema mostrará toda la información de todos los alumnos. El sistema le pide al profesor que escoja un campo mediante el cual ordenar (*Nombre*, *Dni*, *Apellidos* o *Curso_mas_alto*). Un vez escogido el campo, el sistema le pide al profesor que escoja la forma de listar (ascendente o descendente). Un vez escogida la forma, el sistema mostrará toda la información de los alumnos, ordenados por el campo escogido y de la forma indicada.  
-  - En caso de no haber alumnos en la agenda, el sistema mostrará un mensaje por pantalla indicando que no hay alumnos para listar.
+
+En caso de no haber alumnos en la agenda, el sistema mostrará un mensaje por pantalla indicando que no hay alumnos para listar.
 
 
 ### Realizar copia de seguridad
