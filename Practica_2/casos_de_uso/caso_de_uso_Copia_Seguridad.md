@@ -1,6 +1,6 @@
 ## Realizar copia de seguridad
 
-**ID:** 008
+**ID:** 007
 **Breve descripción:** El sistema guarda todos los datos registrados en un fichero binario.
 
 

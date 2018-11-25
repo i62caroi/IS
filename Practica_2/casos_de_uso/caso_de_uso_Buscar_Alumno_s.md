@@ -1,6 +1,6 @@
 ## Buscar alumno/s  
 
-**ID:** 003  
+**ID:** 001  
 **Breve descripción:** Funcionalidad del sistema que nos permite buscar información sobre un alumno o un grupo.  
 
 **Actores principales:** Usuario.  

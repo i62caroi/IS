@@ -1,6 +1,6 @@
 ## Listar alumnos  
 
-**ID:** 007    
+**ID:** 006    
 **Breve descripción:** El sistema muestra por pantalla todos los alumnos registrados.
 
 

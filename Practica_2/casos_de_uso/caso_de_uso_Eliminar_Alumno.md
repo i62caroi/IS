@@ -1,6 +1,6 @@
 ## Eliminar alumno  
 
-**ID:** 006    
+**ID:** 005    
 **Breve descripción:** El sistema elimina un alumno de la base de datos.
 
 

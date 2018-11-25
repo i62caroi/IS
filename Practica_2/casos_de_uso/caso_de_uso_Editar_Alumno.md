@@ -1,6 +1,6 @@
 ## Editar datos de alumno  
 
-**ID:** 004  
+**ID:** 003  
 **Beve descripción:** Funcionalidad del sistema que nos permite modificar los datos de un alumno.  
 
 
