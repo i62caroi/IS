@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include"codigo_ANADIR_ALUMNO.h"
+#include"codigoANADIRALUMNO.h"
 using namespace std;
 
 
