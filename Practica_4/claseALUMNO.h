@@ -5,7 +5,7 @@
 using namespace std;
 
 
-class Anadir_alumno{
+class Alumno{
 
 	private:
 
@@ -48,5 +48,5 @@ class Anadir_alumno{
 		inline void setCurso_mas_alto(int n_curso){curso_mas_alto_=n_curso;};
 		inline void setGrupo(int n_grupo){grupo_=n_grupo;};
 		void setLider();
-}
+};
 #endif
