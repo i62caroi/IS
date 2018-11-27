@@ -4,7 +4,7 @@
 
 ***
 
-Como usuario quiero poder registrarme en el sistema y obtener unas credenciales.
+Como usuario quiero poder registrarme en el sistema.
 
 **Prioridad:** 1
 
