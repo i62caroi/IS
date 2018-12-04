@@ -53,7 +53,7 @@
 **6.** Listar alumnos  
 **7.** Cargar fichero  
 **8.** Realizar copia de seguridad  
-**9.** Editar datos de alumno 
+**9.** Editar datos de alumno   
 **10.** Buscar alumno  
 
 
