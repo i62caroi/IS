@@ -22,7 +22,7 @@
   
 **Postcondiciones:**  
   
-* Una vez haya finalizado sin error alguno todo el proceso de registro, las credenciales del nuevo usuario se guardarán en un fichero binario, que ya contiene las credenciales de los demás usuarios, y se redirigirá automáticamente al menú de inicio del programa donde se muestran las demás funcionalidades del sistema, dando por iniciada la sesión del usuario.  
+* Una vez haya finalizado sin error alguno todo el proceso de registro, las credenciales del nuevo usuario (obligatoriamente profesor ayudante) se guardarán en un fichero binario, que ya contiene las credenciales de los demás usuarios (incluido el coordinador), y se redirigirá automáticamente al menú de inicio del programa donde se muestran las demás funcionalidades del sistema, dando por iniciada la sesión del usuario.  
 
 
 **Flujo alternativo:**

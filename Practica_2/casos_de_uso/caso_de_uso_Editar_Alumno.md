@@ -28,6 +28,6 @@
 **Flujo alternativo:**    
 
 **2.a.** En caso de existir varios alumnos con el mismo apellido, se le pedirá al usuario el DNI del alumno que se desea editar.  
-**2.b.** En caso de no existir el alumno en el sistema, se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestión no existe en el sistema y se cargará de nuevo la función editar alumno.  
+**2.b.** En caso de no existir el alumno en la agenda, se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestión no existe en la agenda y se cargará de nuevo la función editar alumno.  
 **3.a.** En caso de haber algún tipo de fallo en la funcionalidad del sistema, se mostraría un mensaje de error al usuario y se redigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.  
 
