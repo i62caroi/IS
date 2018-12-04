@@ -63,3 +63,19 @@ El profesor informa al sistema de que va crear una copia de seguridad. El sistem
   - En caso de que exista, el sistema lo sobreescribirá con los datos que tenía guardados en la agenda.
   - En caso de que el fichero no exista, el sistema creará un fichero nuevo con ese nombre y guardará los datos de la agenda en el mismo.
   - En caso de no haber datos en la agenda, el sistema mostrará un mensaje por pantalla indicando que no existen alumnos en el sistema, por lo que no se puede realizar la copia de seguridad.
+  
+  
+### Registrar usuario
+
+El profesor informa al sistema de que quiere registrarse como nuevo usuario. El sistema le pide al profesor que introduzca el nickname que desee tener. Tras introducirlo, el sistema comprueba si ya existe un usuario con ese nickname:  
+  - En caso de no existir, el sistema le pide al profesor la contraseña y , tras ser introducida, guarda ambas credenciales en un fichero binario que las contiene todas.  
+  - En caso de que ya exista, el sistema informa al profesor mediante un mensaje de que ese nickname ya existe, por lo que debe escoger otro.  
+  
+  
+### Iniciar sesión
+
+El profesor informa al sistema de que va a iniciar sesión. El sistema se prepara internamente y le pide al profesor el nickname y la contraseña. Tras introducirlos, el sistema comprueba si existen:  
+  - En caso de que existan, el sistema debe ver si ambos son correctos o si, por el contrario, uno de ellos es erróneo.  
+    - Si ambos son correctos, el sistema inicia sesión.  
+    - Si uno de ellos no lo es, el sistema vuelve a pedir al profesor que los introduzca.  
+  - En caso de no existir, el sistema informa mediante un mensaje de que ese usuario no está registrado.  

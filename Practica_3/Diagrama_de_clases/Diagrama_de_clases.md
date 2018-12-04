@@ -53,7 +53,7 @@ Como podemos observar, los métodos no son más que una manera de acceder o modi
 
 **La clase profesor tiene las siguientes variables:**
 
-* user : variable que contendrá el nickname del profesor para acceder al sistema.  
+* nickname : variable que contendrá el nombre de usuario del profesor para acceder al sistema.  
 * password : variable que contendrá la contraseña del profesor para acceder al sistema.  
 * Tipo : variable que contendrá si el profesor es coordinador o ayudante.
 
@@ -62,6 +62,8 @@ Como podemos observar, los métodos no son más que una manera de acceder o modi
 
 * Cargar_fichero() : método que permite cargar en el sistema un fichero binario con el registro de alumnos en su interior.
 * Guardar_copia_seguridad() : método para realizar una copia de seguridad del sistema. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden realizar la copia de seguridad.
+* Registrar_usuario() : método para registrar a un nuevo usuario en el sistema.
+* Iniciar_sesion() : método para iniciar sesión en el sistema.
 
 **Comentarios:**  
 Se han introducido en el sistema unas credenciales de los profesores para distinguir entre profesor *<coordinador>* y *<ayudante>*, ya que el sistema tiene ligadas sus credenciales al tipo correspondiente, permitiendo así solo a los coordinadores realizar las copias de seguridad. 
