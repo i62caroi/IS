@@ -47,13 +47,13 @@
  
 **1.** Iniciar sesión  
 **2.** Registrar usuario       
-**3.** Editar datos de alumno    
+**3.** Añadir alumno     
 **4.** Mostrar alumno  
 **5.** Eliminar alumno  
 **6.** Listar alumnos  
 **7.** Cargar fichero  
 **8.** Realizar copia de seguridad  
-**9.** Añadir alumno
+**9.** Editar datos de alumno 
 **10.** Buscar alumno  
 
 
