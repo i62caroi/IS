@@ -24,9 +24,11 @@
 * Mostrar alumno
 * Añadir alumno
 * Cargar fichero
+* Guardar fichero
 * Editar alumno
 * Eliminar alumno
 * Realizar copia de seguridad
+* Cargar copia de seguridad
 * Listar alumnos del sistema
 * Registrar usuario
 * Iniciar sesión
@@ -38,12 +40,12 @@
 * La aplicación debe mostrarse, como mínimo, en español. 
 * La aplicación acepta un máximo de 150 alumnos. 
 * La información se mostrará por línea de comandos y mediante lenguaje markdown o html. 
-* Los datos serán guardados en  un fichero binario.
+* Los datos serán guardados en un fichero binario.
 * El programa será lo más sencillo posible.
-* Inicialmente se dispondrá de un fichero binario donde se encontrarán las credenciales del profesor coordinador introducidos anteriormente a mano por el administrador. Los siguientes usuarios que se registren serán automáticamente de tipo ayudante pues solo puede haber un profesor coordinador.
+* Inicialmente se dispondrá de un fichero binario donde se encontrarán las credenciales del profesor coordinador introducidas anteriormente a mano por el administrador. Los siguientes usuarios que se registren serán automáticamente de tipo ayudante pues solo puede haber un profesor coordinador.
 
 
-# Prioridad de los requisitos
+# Prioridad de los requisitos (para el usuario)
  
 **1.** Iniciar sesión  
 **2.** Registrar usuario       
@@ -52,8 +54,10 @@
 **5.** Eliminar alumno  
 **6.** Listar alumnos  
 **7.** Cargar fichero  
-**8.** Realizar copia de seguridad  
-**9.** Editar datos de alumno   
-**10.** Buscar alumno  
+**8.** Guardar fichero  
+**9.** Realizar copia de seguridad  
+**10.** Cargar copia de seguridad  
+**11.** Editar datos de alumno   
+**12.** Buscar alumno  
 
 

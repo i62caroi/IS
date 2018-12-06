@@ -16,7 +16,7 @@
 **Flujo principal:**  
   
 1. El caso de uso empieza cuando el usuario elige la funcionalidad del sistema "Iniciar sesión".  
-2. El usuario introduce su *nickname* y su *password*, y el sistema comprueba que esas credenciales existen.  
+2. El usuario introduce su *nickname* y su *password*, y el sistema comprueba que esas credenciales existen en el fichero binario que las contiene. Estas credenciales están relacionadas con el tipo de profesor, por lo que el sistema sabe automáticamente qué tipo de profesor es y qué funionalidades puede ofrecerle.  
 3. Si existen, se inicia la sesión del usuario.  
   
   
