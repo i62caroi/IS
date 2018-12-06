@@ -6,7 +6,7 @@
 
 Como usuario quiero poder cargar un fichero.
 
-**Prioridad:** 4
+**Prioridad:** 5
 
 ***
 
@@ -14,7 +14,7 @@ Como usuario quiero poder cargar un fichero.
 
 ***
 
-* Quiero poder cargar un fichero en el cual ya hubiera, o no, datos.
+* Quiero poder cargar un fichero en el cual ya hubiera datos.
 
 * Quiero poder introducir el nombre del fichero para poder cargarlo.
 

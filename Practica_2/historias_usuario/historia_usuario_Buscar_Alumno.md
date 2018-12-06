@@ -1,12 +1,12 @@
 ## (ANVERSO)
 
-**ID:** 001 **Buscar alumno/s**
+**ID:** 001 **Buscar alumno**
 
 ***
 
-Como usuario quiero poder buscar un alumno o un grupo. 
+Como usuario quiero poder utilizar alguna funcionalidad que haga uso de buscar un alumno o un grupo. 
 
-**Prioridad:** 1
+**Prioridad:** 6
 
 ***
 
@@ -14,8 +14,6 @@ Como usuario quiero poder buscar un alumno o un grupo.
 
 ***
 
-* Quiero poder buscar un alumno o un grupo.
-
-* Quiero poder introducir el DNI o el apellido del alumno o el grupo de alumnos que quiero buscar.
+* Quiero poder introducir la información necesaria (apellido, DNI o grupo) para que se pueda buscar.
 
 ***

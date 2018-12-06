@@ -6,7 +6,7 @@
 
 Como usuario quiero poder visualizar una lista con todos los alumnos.
 
-**Prioridad:** 5
+**Prioridad:** 4
 
 ***
 
@@ -21,5 +21,7 @@ Como usuario quiero poder visualizar una lista con todos los alumnos.
 * Quiero poder escoger la forma de listado: ascendente o descendente.
 
 * Quiero poder escoger el campo por el cual ordenar: nombre, DNI, apellido o curso más alto.
+
+* Quiero poder visualizar la lista tanto por pantalla como en un fichero markdown o html.
 
 ***
