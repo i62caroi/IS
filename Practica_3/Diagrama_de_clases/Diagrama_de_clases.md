@@ -1,9 +1,10 @@
 ## Explicación del diagrama de clases
 
 En este diagrama de clase tenemos los siguientes objetos:
-* Clase Alumno
-* Clase Profesor
-* Clase Agenda
+* Clase Alumno  
+* Clase Profesor  
+* Clase FicheroCredenciales  
+* Clase Agenda  
 
 Cada uno con sus variables y métodos propios, que se explicarán a continuación:
 
@@ -11,7 +12,7 @@ Cada uno con sus variables y métodos propios, que se explicarán a continuació
 
 **La clase alumno tiene las siguientes variables:**
  
-* Nombre: Almacenará el nombre del alumno.  
+* Nombre : Almacenará el nombre del alumno.  
 * Apellidos : Almacenará los apellidos del alumno.  
 * email: Contendrá el email del alumno.  
 * Direccion : Almacenará la dirección del alumno.  
@@ -51,37 +52,46 @@ Como podemos observar, los métodos no son más que una manera de acceder o modi
 
 ### Clase Profesor
 
-**La clase profesor tiene las siguientes variables:**
+**La clase profesor tiene la siguiente variable:**
 
-* nickname : variable que contendrá el nombre de usuario del profesor para acceder al sistema.  
-* password : variable que contendrá la contraseña del profesor para acceder al sistema.  
-* Tipo : variable que contendrá si el profesor es coordinador o ayudante.
+* puntero_agenda : Un puntero a la agenda que contiene los datos de los alumnos.  
 
 
 **Métodos de la clase Profesor:**
 
 * Cargar_fichero() : método que permite cargar en el sistema un fichero binario con el registro de alumnos en su interior.
+* Guardar_fichero() : método que permite guardar en un fichero binario el registro de alumnos que contiene la agenda.  
+* Cargar_copia_de_seguridad() : método que permite cargar en el sistema una copia de seguridad. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden cargar la copia de seguridad.  
 * Guardar_copia_seguridad() : método para realizar una copia de seguridad del sistema. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden realizar la copia de seguridad.
 * Registrar_usuario() : método para registrar a un nuevo usuario en el sistema.
 * Iniciar_sesion() : método para iniciar sesión en el sistema.
 
+### Clase FicheroCredenciales
+
+**La clase FicheroCredenciales tiene las siguientes variables:**
+
+* nickname : contiene el nombre de usuario de cada profesor.  
+* password : contiene la contraseña de cada usuario.  
+* tipo : contiene el tipo de profesor que es cada usuario.  
+
 **Comentarios:**  
-Se han introducido en el sistema unas credenciales de los profesores para distinguir entre profesor *<coordinador>* y *<ayudante>*, ya que el sistema tiene ligadas sus credenciales al tipo correspondiente, permitiendo así solo a los coordinadores realizar las copias de seguridad. 
+Se han introducido en el sistema unas credenciales de los profesores para distinguir entre profesor *<coordinador>* y *<ayudante>*, ya que el sistema tiene ligadas sus credenciales al tipo correspondiente, permitiendo así solo al coordinador, introducido manualmente por el administrador, realizar o cargar las copias de seguridad. 
 
 
 ### Clase Agenda
 
-**La clase Agenda tiene las siguientes variables:**
+**La clase Agenda tiene la siguiente variable:**
 
 * Lista_alumno : que contendrá la lista de todos los alumnos en el registro.
 
 **Métodos de la clase Agenda:**
 
 * Anadir_alumno() : método para añadir un alumno al sistema. 
-* Editar_alumno() : método para modificar los datos de un alumno.  
-* Buscar_alumno() : método para buscar un alumno en el sistema.  
+* Editar_alumno() : método para modificar los datos de un alumno.   
 * Eliminar_alumno() : método para eliminar un alumno.
-* Listar_alumnos() : método para mostrar por pantalla la lista de los alumnos registrados.
+* Mostrar_alumno() : método para mostrar la información de un alumno o grupo del sistema. 
+* Listar_alumnos() : método para mostrar por pantalla la lista de los alumnos registrados.  
+* Buscar : método llamado a partir de alguno de los anteriores, excepto listar, para buscar internamente en el sistema, ya sea por DNI, apellido o grupo, si el alumno o grupo existe o no.
 
 **Comentarios:**  
 Aquí tenemos las funciones que podrá pedir el profesor al sistema para gestionar los alumnos.

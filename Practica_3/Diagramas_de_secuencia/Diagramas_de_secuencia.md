@@ -1,15 +1,15 @@
-### Buscar alumno/s
+### Mostrar alumno/s
 
-El profesor informa al sistema de que va a buscar un alumno. El sistema comprueba que hay alumnos en la agenda y le da dos opciones al profesor:  
-* Buscar alumno: el sistema le da opción al profesor de buscar por dos campos:
-   * Por apellidos: el sistema le pide al profesor que introduzca los apellidos del alumno que desea buscar. Tras introducir los apellidos, el sistema comprueba si los apellidos se encuentran registrados: 
+El profesor informa al sistema de que mostrar la información de un alumno o grupo. El sistema comprueba que hay alumnos en la agenda y le da dos opciones al profesor:  
+* Mostrar alumno: el sistema le da opción al profesor de buscar por dos campos:
+   * Por apellidos: el sistema le pide al profesor que introduzca los apellidos del alumno que desea mostrar. Tras introducir los apellidos, el sistema comprueba si los apellidos se encuentran registrados: 
       - En caso de coincidir solo con un alumno, el sistema muestra por pantalla los datos de dicho alumno. 
       - En caso de existir varios alumnos con los mismos apellidos, el sistema muestra los datos de todos ellos.
       - En caso de no encontrarse los apellidos registrados, el sistema mostrará un mensaje por pantalla informando al profesor de que el alumno no se encuentra registrado en el sistema.
-   * Por DNI: el sistema le pide al profesor que introduzca el DNI del alumno que desea buscar. Tras introducirlo, el sistema comprueba si el DNI se encuentra en el sistema:
+   * Por DNI: el sistema le pide al profesor que introduzca el DNI del alumno que desea mostrar. Tras introducirlo, el sistema comprueba si el DNI se encuentra en el sistema:
       - En caso afirmativo, muestra por pantalla los datos de dicho alumno. 
-       - En caso de no encontrar el DNI, el sistema mostrará un mensaje por pantalla informando al profesor de que el alumno no se encuentra registrado en el sistema.
-* Buscar grupo: el sistema le pide al profesor que introduzca el grupo de alumnos que desea buscar. Tras introducirlo, el sistema comprueba si existe el grupo; es decir, si hay algún alumno cuyo grupo asignado sea el introducido:
+      - En caso de no encontrar el DNI, el sistema mostrará un mensaje por pantalla informando al profesor de que el alumno no se encuentra registrado en el sistema.
+* Mostrar grupo: el sistema le pide al profesor que introduzca el grupo de alumnos que desea mostrar. Tras introducirlo, el sistema comprueba si existe el grupo; es decir, si hay algún alumno cuyo grupo asignado sea el introducido:
    - En caso de que exista, el sistema muestra por pantalla los alumnos que pertenecen a ese grupo y el líder, si es que lo tiene.
    - En caso de no encontrarlo, el sistema mostrará un mensaje por pantalla informando al profesor de que el grupo no existe.
 

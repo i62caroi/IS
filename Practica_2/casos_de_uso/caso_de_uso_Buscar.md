@@ -1,4 +1,4 @@
-## Buscar alumno  
+## Buscar  
 
 **ID:** 001  
 **Breve descripción:** Función de la agenda que comprueba internamente la existencia de un alumno o grupo.
@@ -8,7 +8,7 @@
 
 **Precondiciones:**  
 
-1. Alguna de las funcionalidades "Añadir alumno", "Editar alumno", "Eliminar alumno", "Mostrar alumno" o "Listar alumnos" debe haber sido seleccionada anteriormente por el usuario para que la agenda haga uso de esta función.  
+1. Alguna de las funcionalidades "Añadir alumno", "Editar alumno", "Eliminar alumno" o "Mostrar alumno" debe haber sido seleccionada anteriormente por el usuario para que la agenda haga uso de esta función.  
 
 
 

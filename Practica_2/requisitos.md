@@ -20,7 +20,7 @@
 
 ## Funcionales
 
-* Buscar alumno
+* Buscar  
 * Mostrar alumno
 * Añadir alumno
 * Cargar fichero
@@ -58,6 +58,6 @@
 **9.** Realizar copia de seguridad  
 **10.** Cargar copia de seguridad  
 **11.** Editar datos de alumno   
-**12.** Buscar alumno  
+**12.** Buscar   
 
 

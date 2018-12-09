@@ -17,7 +17,7 @@
 **Flujo principal:**
 
 1. El caso de uso empieza cuando el usuario elige la funcionalidad del sistema "Añadir alumno".
-2. El usuario introduce el DNI o el email para que la agenda compruebe si ya existe.
+2. El usuario introduce el DNI para que la agenda compruebe si ya existe.
 3. Si no existe el alumno, el sistema va mostrando uno a uno los campos de dicho nuevo alumno a rellenar por el usuario y va recogiendo los datos introducidos por teclado. Los datos obligatorios son: Nombre, Apellidos, DNI, Fecha de nacimiento, Teléfono, Dirección, Email y Curso más alto matriculado. Por otro lado, los datos no obligatorios son: Grupo al que pertenece y si es líder o no (no puede serlo de un grupo que ya tenga uno).
 
 
