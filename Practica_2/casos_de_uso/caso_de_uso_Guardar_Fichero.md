@@ -1,19 +1,19 @@
 ## Guardar fichero
 
-**ID:** 011
-**Breve descripción:** Funcionalidad del sistema que nos permite guardar los datos en un fichero binario.
+**ID:** 011  
+**Breve descripción:** Funcionalidad del sistema que nos permite guardar los datos en un fichero binario.  
 
 
-**Actores principales:** Usuario.
-**Actores secundarios:** Ninguno.
+**Actores principales:** Usuario.  
+**Actores secundarios:** Ninguno.  
 
 
-**Precondiciones:**
+**Precondiciones:**  
 
-1. Deben existir alumnos registrados en la base de datos.
+1. Deben existir alumnos registrados en la base de datos.  
 
 
-**Flujo principal:**
+**Flujo principal:**  
 
 1. El caso de uso empieza cuando se elige la funcionalidad del sistema "Guardar fichero".
 2. La funcionalidad comprueba si hay datos en la agenda.
