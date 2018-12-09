@@ -45,7 +45,7 @@
 * Inicialmente se dispondrá de un fichero binario donde se encontrarán las credenciales del profesor coordinador introducidas anteriormente a mano por el administrador. Los siguientes usuarios que se registren serán automáticamente de tipo ayudante pues solo puede haber un profesor coordinador.
 
 
-# Prioridad de los requisitos (para el usuario)
+# Prioridad de los requisitos  
  
 **1.** Iniciar sesión  
 **2.** Registrar usuario       
