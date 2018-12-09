@@ -16,5 +16,5 @@
 |9				 |Iniciar sesión				 |2 horas					 |9|
 |8				 |Registrar usuario				 |2 horas					 |10|
 |5				 |Eliminar alumno	    		 |1 hora					 |11|
-|6				 |Lista alumnos					 |1 hora					 |12|
+|6				 |Listar alumnos					 |1 hora					 |12|
 
