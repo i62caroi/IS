@@ -49,15 +49,15 @@
  
 **1.** Iniciar sesión  
 **2.** Registrar usuario       
-**3.** Añadir alumno     
-**4.** Mostrar alumno  
-**5.** Eliminar alumno  
-**6.** Listar alumnos  
-**7.** Cargar fichero  
-**8.** Guardar fichero  
-**9.** Realizar copia de seguridad  
-**10.** Cargar copia de seguridad  
-**11.** Editar datos de alumno   
+**3.** Añadir alumno   
+**4.** Editar datos de alumno  
+**5.** Mostrar alumno  
+**6.** Eliminar alumno  
+**7.** Listar alumnos  
+**8.** Cargar fichero  
+**9.** Guardar fichero  
+**10.** Realizar copia de seguridad  
+**11.** Cargar copia de seguridad     
 **12.** Buscar   
 
 
