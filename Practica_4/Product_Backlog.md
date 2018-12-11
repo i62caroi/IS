@@ -13,9 +13,10 @@
 |11				 |Guardar Fichero				 |3 horas					 |5|
 |2				 |Añadir alumno					 |2 horas					 |6|
 |3				 |Editar datos de alumno		 |2 horas					 |7|
-|10				 |Mostrar alumno				 |2 hora 					 |8|
+|10				 |Mostrar alumno				 |2 horas 					 |8|
 |9				 |Iniciar sesión				 |2 horas					 |9|
 |8				 |Registrar usuario				 |2 horas					 |10|
-|5				 |Eliminar alumno	    		 |2 hora					 |11|
-|6				 |Listar alumnos					 |2 hora					 |12|
+|5				 |Eliminar alumno	    		 |2 horas					 |11|
+|6				 |Listar alumnos					 |2 horas					 |12|
+|14        |Crear Menú          |2 horas            |13|
 
