@@ -5,6 +5,7 @@
 
 |ID              |Historia de Usuario            |Estimación                 |Prioridad
 |----------------|-------------------------------|---------------------------|-----------------------|
+|13        |Definición de cabeceras           |5 horas          |0|
 |1				 |Buscar          				 |2 horas         			 |1|
 |4				 |Cargar fichero   		         |3 horas					 |2|
 |12				 |Cargar copia de seguridad		 |3 horas					 |3|
