@@ -11,3 +11,5 @@ using namespace std;
 void menu(string user, string password, string tipo);
 
 void mostrarAlumno(list<Alumno>&lista);
+
+void editarAlumno(list<Alumno>&lista);

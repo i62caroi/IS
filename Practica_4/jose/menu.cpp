@@ -9,13 +9,17 @@ using namespace std;
 
 
 void mostrarAlumno(list<Alumno>&lista){
-	//MOSTRAR ALUMNO
 	char apellidochar[255];
-	char dnichar[50];
+
+	string apellido;
+	string dni;
 
 	int tamList=lista.size();
 	int aux=lista.max_size();
 
+	Alumno p;
+
+	
 	cout<<"Tamano --> "<<tamList<<endl;
 	cout<<"Tamano maximo --> "<<aux<<endl;
 
@@ -26,23 +30,51 @@ void mostrarAlumno(list<Alumno>&lista){
 	cin.getline(apellidochar, 255,'\n');
 
 	//Paso de char a string
-	string apellido = apellidochar;
+	apellido = apellidochar;
 	cout<<"Apellido introducido STRING--> "<<apellido<<endl;
 
-
-	for (int i = 0; i < tamList; ++i)
+	list<Alumno>::iterator it;
+	
+	for (it=lista.begin(); it!=lista.end(); it++)
 	{
-		lista[i].getApellidos()
+		if(apellido==it->getApellidos()){
+
+			cout<<it->getNombre()<<endl;
+			cout<<it->getApellidos()<<endl;
+			cout<<it->getEmail()<<endl;
+			cout<<it->getDireccion()<<endl;
+			cout<<it->getDni()<<endl;
+			cout<<it->getFecha_nacimiento()<<endl;
+			cout<<it->getTelefono()<<endl;
+			cout<<it->getCurso_mas_alto()<<endl;
+			cout<<it->getGrupo()<<endl;
+			cout<<it->getLider()<<endl;
+
+
+
+		}
 		
-	}
+	} 
+	
 
 
+	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
 
-	//Aquí tenemos que pasarle el string apellido a la funcion que lo busca 
-	//If no encontramos por apellido o hay coincidencia hacemos la busqueda por 
+	cin>>dni;
+
+	//Paso de char a string
+	cout<<"DNI introducido STRING--> "<<dni<<endl;
 
 
 }
+
+void editarAlumno(list<Alumno>&lista){
+
+
+}
+
+
+
 
 
 void menu(string user, string password, string tipo)
@@ -103,6 +135,10 @@ void menu(string user, string password, string tipo)
 			break;
 
 		case 3:
+
+		{
+			editarAlumno(listaAlumnos);
+		}
 
 			break;
 
