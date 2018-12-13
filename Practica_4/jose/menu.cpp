@@ -101,12 +101,18 @@ void editarAlumno(list<Alumno>&lista){
 	cin.ignore();
 	cin.getline(apellidochar, 255,'\n');
 
+	apellido=apellidochar;
+
 	list<Alumno>::iterator it;
 
+	for (it=lista.begin(); it!=lista.end(); it++)
+	{
+		if(apellido==it->getApellidos()){	
+			//Aqui editamos los campos del alumno
 
+		}
 
-
-
+	}
 
 
 	//Si se produce la coincidendia de apellidos
@@ -114,10 +120,20 @@ void editarAlumno(list<Alumno>&lista){
 	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
 	cin>>dni;
 
+	for (it=lista.begin(); it!=lista.end(); it++)
+	{
+		if(dni==it->getDni()){
+			//Aqui editamos los campos del alumno
+		}
+
+	}
+
 	//Paso de char a string
 	cout<<"DNI introducido STRING--> "<<dni<<endl;
 
 }
+
+
 
 void eliminarAlumno(list<Alumno>&lista){
 
@@ -127,9 +143,21 @@ void eliminarAlumno(list<Alumno>&lista){
 	string dni;
 
 
-	cout<<"Introduzca los apellidos del alumno a mostrar(editar)"<<endl;
+	cout<<"Introduzca los apellidos del alumno a eliminar(editar)"<<endl;
 	cin.ignore();
 	cin.getline(apellidochar, 255,'\n'); 
+
+	apellido=apellidochar;
+
+	list<Alumno>::iterator it;
+
+	for (it=lista.begin(); it!=lista.end(); it++)
+	{
+		if(apellido==it->getApellidos()){
+
+			//Aqui eliminamos al alumno
+		}
+	}
 
 
 
@@ -141,6 +169,15 @@ void eliminarAlumno(list<Alumno>&lista){
 
 	//Paso de char a string
 	cout<<"DNI introducido STRING--> "<<dni<<endl;
+
+
+	for (it=lista.begin(); it!=lista.end(); it++)
+	{
+		if(dni==it->getDni()){
+			//Aqui eliminamos al alumno
+
+		}
+	}
 }
 
 
