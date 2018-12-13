@@ -1,15 +1,54 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <list>
+
 #include "menu.h"
+#include "claseALUMNO.h"
 using namespace std;
 
 
+void mostrarAlumno(list<Alumno>&lista){
+	//MOSTRAR ALUMNO
+	char apellidochar[255];
+	char dnichar[50];
 
-int menu()
+	int tamList=lista.size();
+	int aux=lista.max_size();
+
+	cout<<"Tamano --> "<<tamList<<endl;
+	cout<<"Tamano maximo --> "<<aux<<endl;
+
+
+	cout<<"Introduzca los apellidos del alumno a mostrar"<<endl;
+
+	cin.ignore();
+	cin.getline(apellidochar, 255,'\n');
+
+	//Paso de char a string
+	string apellido = apellidochar;
+	cout<<"Apellido introducido STRING--> "<<apellido<<endl;
+
+
+	for (int i = 0; i < tamList; ++i)
+	{
+		lista[i].getApellidos()
+		
+	}
+
+
+
+	//Aquí tenemos que pasarle el string apellido a la funcion que lo busca 
+	//If no encontramos por apellido o hay coincidencia hacemos la busqueda por 
+
+
+}
+
+
+void menu(string user, string password, string tipo)
 {
 
-	list<alumno> listaAlumnos;
+	list<Alumno>listaAlumnos;
 
 
 
@@ -51,31 +90,7 @@ int menu()
 
 		case 1:
 		{
-			//MOSTRAR ALUMNO
-			char apellidochar[255];
-			char dnichar[50];
-
-			cout<<"Introduzca el apellido del alumno a mostrar"<<endl;
-
-			cin.ignore();
-			cin.getline(apellidochar, 255,'\n');
-
-			//Paso de char a string
-			string apellido = apellidochar;
-			cout<<"Apellido introducido STRING--> "<<apellido<<endl;
-
-
-			//Aquí tenemos que pasarle el string apellido a la funcion que lo busca 
-			//If no encontramos por apellido o hay coincidencia hacemos la busqueda por 
-
-			
-
-
-
-
-
-
-
+			mostrarAlumno(listaAlumnos);
 
 		}
 
@@ -112,10 +127,14 @@ int menu()
 		case 9:
 
 			break;
+
+		default:
+
+			cout<<"El numero introducido es incorrecto"<<endl;
 	}
 
 
-	return 0; 
+	
 }
 
 
