@@ -12,9 +12,11 @@ int main(){
 
 	list<Alumno>listaAlumnos;
 
-	mostrarAlumno(listaAlumnos);
+	//mostrarAlumno(listaAlumnos);
+
+	//editarAlumno(listaAlumnos);
 
 
-	//menu("usuairo", "tipo", "password");
+	menu("usuairo", "tipo", "password");
 
 }

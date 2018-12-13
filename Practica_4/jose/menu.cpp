@@ -70,6 +70,23 @@ void mostrarAlumno(list<Alumno>&lista){
 
 void editarAlumno(list<Alumno>&lista){
 
+	char apellidochar[255];
+
+	string apellido;
+	string dni;
+
+
+	cout<<"Introduzca los apellidos del alumno a mostrar(editar)"<<endl;
+	cin.ignore();
+	cin.getline(apellidochar, 255,'\n');
+
+
+
+	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
+	cin>>dni;
+
+	//Paso de char a string
+	cout<<"DNI introducido STRING--> "<<dni<<endl;
 
 }
 
@@ -86,39 +103,45 @@ void menu(string user, string password, string tipo)
 
 	int opcion;
 
-	//IMPRESION DEL MENÚ
+	do{
 
-	cout<<"Las distintas funcionalidades del sistema son:"<<endl<<endl;
+		//IMPRESION DEL MENÚ
 
-	cout<<"[1]  Mostrar un alumno/a"<<endl;
+		cout<<"Las distintas funcionalidades del sistema son:"<<endl<<endl;
 
-	cout<<"[2]  Añadir alumno/a"<<endl;
+		cout<<"[1]  Mostrar un alumno/a"<<endl;
 
-	cout<<"[3]  Editar datos alumno/a"<<endl;
+		cout<<"[2]  Añadir alumno/a"<<endl;
 
-	cout<<"[4]  Eliminar alumno/a"<<endl;
+		cout<<"[3]  Editar datos alumno/a"<<endl;
 
-	cout<<"[5]  Listar alumnos/as"<<endl;
+		cout<<"[4]  Eliminar alumno/a"<<endl;
 
-	cout<<"[6]  Cargar fichero"<<endl;
+		cout<<"[5]  Listar alumnos/as"<<endl;
 
-	cout<<"[7]  Guardar fichero"<<endl;
+		cout<<"[6]  Cargar fichero"<<endl;
 
-	cout<<"[8]  Realizar copia de seguridad"<<endl;
+		cout<<"[7]  Guardar fichero"<<endl;
 
-	cout<<"[9]  Cargar copia de seguridad"<<endl<<endl;
+		cout<<"[8]  Realizar copia de seguridad"<<endl;
+
+		cout<<"[9]  Cargar copia de seguridad"<<endl;
+
+		cout<<"[10] Salir del menú"<<endl<<endl;
 
 
 
-	//RECOGIDA DE LA OPCIÓN ELEGIDA
 
-	cout<<"Introduce el número de la opcion elegida"<<endl;
+		//RECOGIDA DE LA OPCIÓN ELEGIDA
 
-	cin >> opcion;
+		cout<<"Introduce el número de la opcion elegida"<<endl;
 
-	//SWITCH CON CADA UNA DE LAS FUNCIONES
+		cin >> opcion;
 
-	switch(opcion){
+		//SWITCH CON CADA UNA DE LAS FUNCIONES
+	
+	
+		switch(opcion){
 
 		case 1:
 		{
@@ -164,10 +187,23 @@ void menu(string user, string password, string tipo)
 
 			break;
 
+		case 10:
+			cout<<"Fin de programa"<<endl;
+			exit(-1);
+
+			break;
+
 		default:
 
 			cout<<"El numero introducido es incorrecto"<<endl;
-	}
+
+			break;
+
+		}
+
+	} while ((opcion>0)&&(opcion<11));
+
+	
 
 
 	
