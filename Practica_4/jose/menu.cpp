@@ -33,6 +33,7 @@ void mostrarAlumno(list<Alumno>&lista){
 	apellido = apellidochar;
 	cout<<"Apellido introducido STRING--> "<<apellido<<endl;
 
+	//Utilizamos un iterador para realizar la busqueda por apellido del alumno
 	list<Alumno>::iterator it;
 	
 	for (it=lista.begin(); it!=lista.end(); it++)
@@ -56,14 +57,34 @@ void mostrarAlumno(list<Alumno>&lista){
 		
 	} 
 	
+/*------------------------------------------------------------*/
 
+	//Si se produce la coincidendia de apellidos
 
 	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
-
 	cin>>dni;
 
-	//Paso de char a string
 	cout<<"DNI introducido STRING--> "<<dni<<endl;
+
+	for (it=lista.begin(); it!=lista.end(); it++)
+	{
+		if(dni==it->getDni()){
+
+			cout<<it->getNombre()<<endl;
+			cout<<it->getApellidos()<<endl;
+			cout<<it->getEmail()<<endl;
+			cout<<it->getDireccion()<<endl;
+			cout<<it->getDni()<<endl;
+			cout<<it->getFecha_nacimiento()<<endl;
+			cout<<it->getTelefono()<<endl;
+			cout<<it->getCurso_mas_alto()<<endl;
+			cout<<it->getGrupo()<<endl;
+			cout<<it->getLider()<<endl;
+		}
+		
+	}
+
+
 
 
 }
@@ -80,7 +101,15 @@ void editarAlumno(list<Alumno>&lista){
 	cin.ignore();
 	cin.getline(apellidochar, 255,'\n');
 
+	list<Alumno>::iterator it;
 
+
+
+
+
+
+
+	//Si se produce la coincidendia de apellidos
 
 	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
 	cin>>dni;
@@ -88,6 +117,30 @@ void editarAlumno(list<Alumno>&lista){
 	//Paso de char a string
 	cout<<"DNI introducido STRING--> "<<dni<<endl;
 
+}
+
+void eliminarAlumno(list<Alumno>&lista){
+
+	char apellidochar[255];
+
+	string apellido;
+	string dni;
+
+
+	cout<<"Introduzca los apellidos del alumno a mostrar(editar)"<<endl;
+	cin.ignore();
+	cin.getline(apellidochar, 255,'\n'); 
+
+
+
+
+	//Si se produce la coincidendia de apellidos
+
+	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
+	cin>>dni;
+
+	//Paso de char a string
+	cout<<"DNI introducido STRING--> "<<dni<<endl;
 }
 
 

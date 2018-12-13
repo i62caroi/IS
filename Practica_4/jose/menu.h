@@ -13,3 +13,5 @@ void menu(string user, string password, string tipo);
 void mostrarAlumno(list<Alumno>&lista);
 
 void editarAlumno(list<Alumno>&lista);
+
+void eliminarAlumno(list<Alumno>&lista);
