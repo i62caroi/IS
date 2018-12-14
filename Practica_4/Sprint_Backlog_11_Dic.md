@@ -3,9 +3,9 @@
 
 ### Crear Menú
 * Tarea 1: Menú inicial  
-	- La hará Antonio Bogallo Fernández (bogallo)
+	- La hará Antonio Bogallo Fernández 
 * Tarea 2: Menú principal
-	- La hará José Domínguez García (i62dogaj)
+	- La hará José Domínguez García 
 
 ### Buscar
 * Tarea 1: Búsqueda por DNI
@@ -39,19 +39,19 @@
 
 ### Editar datos de alumno
 * Tarea 1: Buscar alumno 
-	- La hará José Domínguez García (i62dogaj)  
+	- La hará José Domínguez García   
 * Tarea 2: Editar datos de alumno
-	- La hará José Domínguez García (i62dogaj)  
+	- La hará José Domínguez García   
 
 ### Mostrar alumno/s
 * Tarea 1: Buscar alumno
-	- La hará José Domínguez García (i62dogaj)  
+	- La hará José Domínguez García   
 * Tarea 2: Buscar grupo
-	- La hará José Domínguez García (i62dogaj)  
+	- La hará José Domínguez García   
 * Tarea 3: Mostrar alumno
-	- La hará José Domínguez García (i62dogaj) 
+	- La hará José Domínguez García 
 * Tarea 4: Mostrar grupo
-	- La hará José Domínguez García (i62dogaj) 
+	- La hará José Domínguez García  
 
 ### Iniciar sesión
 * Tarea 1: Comprobar usuario
@@ -67,13 +67,13 @@
 
 ### Eliminar alumno
 * Tarea 1: Buscar alumno
-	- La hará José Domínguez García (i62dogaj)  
+	- La hará José Domínguez García  
 * Tarea 2: Eliminar alumno
-	- La hará José Domínguez García (i62dogaj) 
+	- La hará José Domínguez García  
 
 ### Listar alumnos
 * Tarea 1: Opciones lista
-	- La hará
+	- La hará José Domínguez García  
 * Tarea 2: Listar alumnos
-	- La hará
+	- La hará José Domínguez García   
 
