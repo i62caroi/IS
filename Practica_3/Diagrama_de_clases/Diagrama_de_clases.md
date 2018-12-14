@@ -3,7 +3,6 @@
 En este diagrama de clase tenemos los siguientes objetos:
 * Clase Alumno  
 * Clase Profesor  
-* Clase FicheroCredenciales  
 * Clase Agenda  
 
 Cada uno con sus variables y métodos propios, que se explicarán a continuación:
@@ -64,20 +63,8 @@ Como podemos observar, los métodos no son más que una manera de acceder o modi
 * Cargar_copia_de_seguridad() : método que permite cargar en el sistema una copia de seguridad. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden cargar la copia de seguridad.  
 * Guardar_copia_seguridad() : método para realizar una copia de seguridad del sistema. Se le debe pasar la variable *tipo* debido a que solo los profesores de tipo *<coordinador>* pueden realizar la copia de seguridad.
 * Registrar_usuario() : método para registrar a un nuevo usuario en el sistema.
-* Iniciar_sesion() : método para iniciar sesión en el sistema.
-
-### Clase FicheroCredenciales
-
-**La clase FicheroCredenciales tiene las siguientes variables:**
-
-* nickname : contiene el nombre de usuario de cada profesor.  
-* password : contiene la contraseña de cada usuario.  
-* tipo : contiene el tipo de profesor que es cada usuario.  
-
-**Comentarios:**  
-Se han introducido en el sistema unas credenciales de los profesores para distinguir entre profesor *<coordinador>* y *<ayudante>*, ya que el sistema tiene ligadas sus credenciales al tipo correspondiente, permitiendo así solo al coordinador, introducido manualmente por el administrador, realizar o cargar las copias de seguridad. 
-
-
+* Iniciar_sesion() : método para iniciar sesión en el sistema.  
+  
 ### Clase Agenda
 
 **La clase Agenda tiene la siguiente variable:**
