@@ -185,11 +185,17 @@ void eliminarAlumno(list<Alumno>&lista){
 
 void listarAlumnos(list<Alumno>&lista){
 
+	//LISTAR ALUMNOS POR TERMINAL
+	//Estructura de tabla
+	printf("LISTA DE ALUMNOS\n");
 
 
-	//LISTAR ALUMNOS MEDIANTE ARCHIVO HTML
-
+	//LISTAR ALUMNOS MEDIANTE ARCHIVO ****HTML****
+/*
 	int n_alumnos=lista.size();
+	
+	string nombre="Jose";
+	string apellidos="Dominguez Garcia";
 
 	ofstream ficheroSalida;
 
@@ -200,11 +206,23 @@ void listarAlumnos(list<Alumno>&lista){
 
 
 	//Introduccion de datos en html mediante el recorrido de la lista (falta comprobar su funcionamiento)
-	ficheroSalida << "<html><head><title>Lista de Alumnos</title></head><body><h1 align=center>LISTA DE ALUMNOS</h1><table border=5  align=center><tr><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Dirección</th><th>DNI</th><th>Fecha Nacimiento</th><th>Teléfono</th><th>Curso más alto</th><th>Grupo</th><th>Líder</th></tr>";
+	ficheroSalida << "<html><head><title>Lista de Alumnos</title></head><body><h1 align=center>LISTA DE ALUMNOS</h1><table border=5  align=center><tr><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Direccion</th><th>DNI</th><th>Fecha Nacimiento</th><th>Telefono</th><th>Curso mas alto</th><th>Grupo</th><th>Lider</th></tr>";
 
-	for (int i = 0; i < n_alumnos; ++i)
+
+	//Supuesto correcta funcion, falta probarla
+	list<Alumno>::iterator it;
+
+	for (it=lista.begin(); it!=lista.end(); it++)
 	{
-		ficheroSalida <<
+		ficheroSalida << "<tr><td>"<<it->getNombre()<<"</td><td>"<<it->getApellidos()<<"</td><td>"<<it->getEmail()<<"</td><td>"<<it->getDireccion()<<"</td><td>"<<it->getDni()<<"</td><td>"<<it->getFecha_nacimiento()<<"</td><td>"<<it->getTelefono()<<"</td><td>"<<it->getCurso_mas_alto()<<"</td><td>"<<it->getGrupo()<<"</td><td>"<<it->getLider()<<"</td></tr>";
+	}
+
+
+	//Prueba que funciona
+	for (int i = 0; i < 5; ++i)
+	{
+				ficheroSalida << "<tr><td>"<<nombre<<"</td><td>"<<apellidos<<"</td><td>"<<it->getEmail()<<"</td><td>"<<it->getDireccion()<<"</td><td>"<<it->getDni()<<"</td><td>"<<it->getFecha_nacimiento()<<"</td><td>"<<it->getTelefono()<<"</td><td>"<<it->getCurso_mas_alto()<<"</td><td>"<<it->getGrupo()<<"</td><td>"<<it->getLider()<<"</td></tr>";
+
 	}
 
 
@@ -214,7 +232,9 @@ void listarAlumnos(list<Alumno>&lista){
 	system("open temporal.html");
 
 	sleep(1);
+
 	system("rm temporal.html");
+	*/
 }
 
 
