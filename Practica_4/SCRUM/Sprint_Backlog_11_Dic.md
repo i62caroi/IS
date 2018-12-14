@@ -1,79 +1,33 @@
 
 ## Sprint Backlog (11-Dic-18)  
 
-### Crear Menú
-* Tarea 1: Menú inicial  
-	- La hará Antonio Bogallo Fernández 
-* Tarea 2: Menú principal
-	- La hará José Domínguez García 
+| Product Backlog Item    	| Tareas                                             | Tareas comenzadas      | Completado              |
+|-------------------------------|----------------------------------------------------|------------------------|-------------------------|
+| Creación Agenda inicial 	| Crear fichero binario con alumnos: Irene Casares   | Crear fichero          | Crear fichero           |
+| Creación Agenda inicial 	| Leer fichero binario de alumno: Irene Casares      | Leer fichero           | Leer fichero            |
+| Buscar                  	| Búsqueda por DNI:                                  |                        |                         |
+| Buscar                	| Búsqueda por apellidos:			     |		              |		                |
+| Buscar		  	| Búsqueda por grupo:				     |		              |	                        |
+| Cargar fichero		| Cargar fichero:				     |		 	      |		                |
+| Cargar copia de seguridad     | Cargar copia de seguridad:                         |                        |                         |
+| Crear copia de seguridad      | Crear copia de seguridad:                          |                        |                         |
+| Guardar fichero               | Guardar fichero:                                   |                        |                         |
+| Añadir alumno			| Comprobar alumno:				     |		              |                         |
+| Añadir alumno			| Añadir alumno: Antonio Bogallo		     | Añadir alumno          |                         |
+| Editar datos de alumno	| Buscar alumno: José Domínguez			     | Buscar alumno	      | Buscar alumno           |
+| Editar datos de alumno	| Editar datos de alumno: José Domínguez	     | Editar datos de alumno | Editar datos de alumno  |
+| Mostrar alumno/s		| Buscar alumno: José Domínguez			     | Buscar alumno          | Buscar alumno           |
+| Mostrar alumno/s		| Buscar grupo: José Domínguez			     | Buscar grupo           | Buscar grupo            |
+| Mostrar alumno/s		| Mostrar alumno: José Domínguez		     | Mostrar alumno         | Mostrar alumno          |
+| Mostrar alumno/s		| Mostrar grupo: José Domínguez			     | Mostrar grupo          | Mostrar grupo           |
+| Iniciar sesión		| Comprobar usuario: Antonio Bogallo		     | Comprobar usuario      | Comprobar usuario       |
+| Iniciar sesión		| Iniciar sesión: Antonio Bogallo		     | Iniciar sesión         | Iniciar sesión          |
+| Registrar usuario		| Comprobar usuario:				     |                        |                         |
+| Registrar usuario		| Registrar usuario:				     |                        |                         |
+| Eliminar alumno		| Buscar alumno: José Domínguez			     | Buscar alumno          | Buscar alumno           |
+| Eliminar alumno		| Eliminar alumno: José Domínguez		     | Eliminar alumno        | Eliminar alumno         |
+| Listar alumnos		| Opciones lista: José Domínguez		     | Opciones lista         | Opciones lista          |
+| Listar alumnos		| Listar alumnos: José Domínguez		     | Listar alumnos         | Listar alumnos          |
 
-### Buscar
-* Tarea 1: Búsqueda por DNI
-	- La hará
-* Tarea 2: Búsqueda por apellido
-	- La hará
-* Tarea 3: Búsqueda por grupo
-	- La hará
 
-### Cargar fichero
-* Tarea 1: Cargar fichero
-	- La hará
-
-### Cargar copia de seguridad
-* Tarea 1: Cargar copia de seguridad
-	- La hará
-
-### Crear copia de seguridad
-* Tarea 1: Crear copia de seguridad
-	- La hará
-
-### Guardar fichero
-* Tarea 1: Guardar fichero
-	- La hará
-
-### Añadir alumno
-* Tarea 1: Comprobar alumno
-	- La hará
-* Tarea 2: Añadir alumno
-	- La hará
-
-### Editar datos de alumno
-* Tarea 1: Buscar alumno 
-	- La hará José Domínguez García   
-* Tarea 2: Editar datos de alumno
-	- La hará José Domínguez García   
-
-### Mostrar alumno/s
-* Tarea 1: Buscar alumno
-	- La hará José Domínguez García   
-* Tarea 2: Buscar grupo
-	- La hará José Domínguez García   
-* Tarea 3: Mostrar alumno
-	- La hará José Domínguez García 
-* Tarea 4: Mostrar grupo
-	- La hará José Domínguez García  
-
-### Iniciar sesión
-* Tarea 1: Comprobar usuario
-	- La hará
-* Tarea 2: Iniciar sesión
-	- La hará
-
-### Registrar usuario
-* Tarea 1: Comprobar usuario
-	- La hará
-* Tarea 2: Registrar usuario
-	- La hará
-
-### Eliminar alumno
-* Tarea 1: Buscar alumno
-	- La hará José Domínguez García  
-* Tarea 2: Eliminar alumno
-	- La hará José Domínguez García  
-
-### Listar alumnos
-* Tarea 1: Opciones lista
-	- La hará José Domínguez García  
-* Tarea 2: Listar alumnos
-	- La hará José Domínguez García   
-
+ 
