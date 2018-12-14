@@ -16,7 +16,7 @@ Como usuario quiero poder eliminar un alumno.
 
 * Quiero poder eliminar un alumno.
 
-* Quiero poder introducir el apellido del alumno.
+* Quiero poder introducir los apellidos del alumno.
 
 * Quiero poder introducir el DNI del alumno.
 

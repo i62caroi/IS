@@ -14,7 +14,7 @@ Como usuario quiero poder visualizar la información de un alumno o varios, así
 
 ***  
 
-* Quiero poder introducir el apellido del alumno/s a mostrar.
+* Quiero poder introducir los apellidos del alumno/s a mostrar.
 
 * Quiero poder introducir el DNI del alumno a mostrar.
 
