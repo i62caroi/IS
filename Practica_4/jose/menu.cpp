@@ -1,7 +1,11 @@
 #include <iostream>
+#include <list>
+#include <fstream>
+
 #include <stdlib.h>
 #include <string.h>
-#include <list>
+#include <unistd.h>
+
 
 #include "menu.h"
 #include "claseALUMNO.h"
@@ -33,6 +37,7 @@ void mostrarAlumno(list<Alumno>&lista){
 	apellido = apellidochar;
 	cout<<"Apellido introducido STRING--> "<<apellido<<endl;
 
+
 	//Utilizamos un iterador para realizar la busqueda por apellido del alumno
 	list<Alumno>::iterator it;
 	
@@ -50,9 +55,6 @@ void mostrarAlumno(list<Alumno>&lista){
 			cout<<it->getCurso_mas_alto()<<endl;
 			cout<<it->getGrupo()<<endl;
 			cout<<it->getLider()<<endl;
-
-
-
 		}
 		
 	} 
@@ -83,11 +85,11 @@ void mostrarAlumno(list<Alumno>&lista){
 		}
 		
 	}
-
-
-
-
 }
+
+
+
+
 
 void editarAlumno(list<Alumno>&lista){
 
@@ -162,7 +164,7 @@ void eliminarAlumno(list<Alumno>&lista){
 
 
 
-	//Si se produce la coincidendia de apellidos
+	//Si se produce la coincidendia de apellidos entonces pedidos al usuario que introduzca el dni por teclado
 
 	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
 	cin>>dni;
@@ -178,6 +180,41 @@ void eliminarAlumno(list<Alumno>&lista){
 
 		}
 	}
+}
+
+
+void listarAlumnos(list<Alumno>&lista){
+
+
+
+	//LISTAR ALUMNOS MEDIANTE ARCHIVO HTML
+
+	int n_alumnos=lista.size();
+
+	ofstream ficheroSalida;
+
+	ficheroSalida.open("temporal.html");
+
+	//Ejemplo de archivo html todo introducido manualmente (Es decir, así no se hace, es unicamente una comprobación de formato)
+	//ficheroSalida << "<html><head><title>Lista de Alumnos</title></head><body><h1 align=center>LISTA DE ALUMNOS</h1><table border=5  align=center><tr><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Dirección</th><th>DNI</th><th>Fecha Nacimiento</th><th>Teléfono</th><th>Curso más alto</th><th>Grupo</th><th>Líder</th></tr><tr><td>Robert</td><td>Downey Jr</td><td>i62dogaj@uco.es</td><td>Callese Viejo Lesbiano</td><td>738924341V</td><td>23/2/1912</td><td>824238324</td><td>3</td><td>1</td><td>No</td></tr></table></body></html>";
+
+
+	//Introduccion de datos en html mediante el recorrido de la lista (falta comprobar su funcionamiento)
+	ficheroSalida << "<html><head><title>Lista de Alumnos</title></head><body><h1 align=center>LISTA DE ALUMNOS</h1><table border=5  align=center><tr><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Dirección</th><th>DNI</th><th>Fecha Nacimiento</th><th>Teléfono</th><th>Curso más alto</th><th>Grupo</th><th>Líder</th></tr>";
+
+	for (int i = 0; i < n_alumnos; ++i)
+	{
+		ficheroSalida <<
+	}
+
+
+	ficheroSalida.close();
+
+	sleep(1);
+	system("open temporal.html");
+
+	sleep(1);
+	system("rm temporal.html");
 }
 
 
@@ -236,29 +273,31 @@ void menu(string user, string password, string tipo)
 		case 1:
 		{
 			mostrarAlumno(listaAlumnos);
-
 		}
-
 			break;
 
 
 		case 2:
-
+		{
 			cout<<"Funcion 2"<<endl;
+		}
 			break;
 
-		case 3:
 
+		case 3:
 		{
 			editarAlumno(listaAlumnos);
 		}
-
 			break;
+
 
 		case 4:
 
 			break;
 		case 5:
+		{
+			listarAlumnos(listaAlumnos);
+		}
 
 			break;
 		case 6:

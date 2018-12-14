@@ -15,3 +15,5 @@ void mostrarAlumno(list<Alumno>&lista);
 void editarAlumno(list<Alumno>&lista);
 
 void eliminarAlumno(list<Alumno>&lista);
+
+void listarAlumnos(list<Alumno>&lista);

@@ -16,7 +16,9 @@ int main(){
 
 	//editarAlumno(listaAlumnos);
 
+	listarAlumnos(listaAlumnos);
 
-	menu("usuairo", "tipo", "password");
+
+	//menu("usuairo", "tipo", "password");
 
 }
