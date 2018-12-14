@@ -39,19 +39,19 @@
 
 ### Editar datos de alumno
 * Tarea 1: Buscar alumno 
-	- La hará
+	- La hará José Domínguez García (i62dogaj)  
 * Tarea 2: Editar datos de alumno
-	- La hará
+	- La hará José Domínguez García (i62dogaj)  
 
 ### Mostrar alumno/s
 * Tarea 1: Buscar alumno
-	- La hará
+	- La hará José Domínguez García (i62dogaj)  
 * Tarea 2: Buscar grupo
-	- La hará
+	- La hará José Domínguez García (i62dogaj)  
 * Tarea 3: Mostrar alumno
-	- La hará
+	- La hará José Domínguez García (i62dogaj) 
 * Tarea 4: Mostrar grupo
-	- La hará
+	- La hará José Domínguez García (i62dogaj) 
 
 ### Iniciar sesión
 * Tarea 1: Comprobar usuario
@@ -67,12 +67,13 @@
 
 ### Eliminar alumno
 * Tarea 1: Buscar alumno
-	- La hará
+	- La hará José Domínguez García (i62dogaj)  
 * Tarea 2: Eliminar alumno
-	- La hará
+	- La hará José Domínguez García (i62dogaj) 
 
 ### Listar alumnos
 * Tarea 1: Opciones lista
 	- La hará
 * Tarea 2: Listar alumnos
 	- La hará
+
