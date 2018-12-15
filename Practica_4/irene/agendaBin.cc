@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
+#include <stdlib.h>
 using namespace std;
 
 const unsigned int MAX_1 = 50;
@@ -99,73 +100,98 @@ int main(){
 	
 	cout<<"1. Escribir alumnos"<<endl;
 	cout<<"2. Leer alumnos"<<endl;
+	cout<<"3. Salir"<<endl;
 	cout<<" "<<endl;
 	cout<<"Escoja opción:"<<endl;
 	cin>>opcion;
 	cout<<" "<<endl;
 	
-	if(opcion == 1){
-
-		//ALUMNO 1
-		strcpy(a1.nombre, "Álvaro");
-		strcpy(a1.apellidos, "Gómez García");
-		strcpy(a1.email, "i62gogaa");
-		strcpy(a1.direccion, "Avenida de Andalucía, 3");
-		strcpy(a1.dni, "23785749K");
-		strcpy(a1.fecha_nacimiento, "11-03-96");
-		a1.telefono = 683940376;
-		a1.curso_mas_alto = 3;
-		a1.grupo = 15;
-		a1.lider = 1;
+	do{
 	
-		//ALUMNO 2
-		strcpy(a2.nombre, "Carlos");
-		strcpy(a2.apellidos, "Gómez García");
-		strcpy(a2.email, "i62gogac");
-		strcpy(a2.direccion, "Avenida de Cádiz, 5");
-		strcpy(a2.dni, "13583745S");
-		strcpy(a2.fecha_nacimiento, "04-10-97");
-		a2.telefono = 684960306;
-		a2.curso_mas_alto = 3;
-		a2.grupo = 15;
-		a2.lider = 0;
-	
-		//ALUMNO 3
-		strcpy(a3.nombre, "Rafael");
-		strcpy(a3.apellidos, "Cano Marín");
-		strcpy(a3.email, "i42camar");
-		strcpy(a3.direccion, "Calle Gloria Fuertes, 1, 3-C");
-		strcpy(a3.dni, "25384729J");
-		strcpy(a3.fecha_nacimiento, "04-12-99");
-		a3.telefono = 785910676;
-		a3.curso_mas_alto = 2;
-		a3.grupo = 20;
-		a3.lider = 0;
-	
-		//ALUMNO 4
-		strcpy(a4.nombre, "Ana");
-		strcpy(a4.apellidos, "López Casares");
-		strcpy(a4.email, "i62locaa");
-		strcpy(a4.direccion, "Carretera de Cádiz, 25");
-		strcpy(a4.dni, "34017531S");
-		strcpy(a4.fecha_nacimiento, "04-09-98");
-		a4.telefono = 657920076;
-		a4.curso_mas_alto = 2;
-		a4.grupo = 24;
-		a4.lider = 1;
-
-
-		escribirFich(a1);
-		escribirFich(a2);
-		escribirFich(a3);
-		escribirFich(a4);
+		switch(opcion){
 		
-	}
-	else{
-		if(opcion == 2){
-			leerFich(a);
+			case 1:
+
+				//ALUMNO 1
+				strcpy(a1.nombre, "Álvaro");
+				strcpy(a1.apellidos, "Gómez García");
+				strcpy(a1.email, "i62gogaa");
+				strcpy(a1.direccion, "Avenida de Andalucía, 3");
+				strcpy(a1.dni, "23785749K");
+				strcpy(a1.fecha_nacimiento, "11-03-96");
+				a1.telefono = 683940376;
+				a1.curso_mas_alto = 3;
+				a1.grupo = 15;
+				a1.lider = 1;
+	
+				//ALUMNO 2
+				strcpy(a2.nombre, "Carlos");
+				strcpy(a2.apellidos, "Gómez García");
+				strcpy(a2.email, "i62gogac");
+				strcpy(a2.direccion, "Avenida de Cádiz, 5");
+				strcpy(a2.dni, "13583745S");
+				strcpy(a2.fecha_nacimiento, "04-10-97");
+				a2.telefono = 684960306;
+				a2.curso_mas_alto = 3;
+				a2.grupo = 15;
+				a2.lider = 0;
+	
+				//ALUMNO 3
+				strcpy(a3.nombre, "Rafael");
+				strcpy(a3.apellidos, "Cano Marín");
+				strcpy(a3.email, "i42camar");
+				strcpy(a3.direccion, "Calle Gloria Fuertes, 1, 3-C");
+				strcpy(a3.dni, "25384729J");
+				strcpy(a3.fecha_nacimiento, "04-12-99");
+				a3.telefono = 785910676;
+				a3.curso_mas_alto = 2;
+				a3.grupo = 20;
+				a3.lider = 0;
+	
+				//ALUMNO 4
+				strcpy(a4.nombre, "Ana");
+				strcpy(a4.apellidos, "López Casares");
+				strcpy(a4.email, "i62locaa");
+				strcpy(a4.direccion, "Carretera de Cádiz, 25");
+				strcpy(a4.dni, "34017531S");
+				strcpy(a4.fecha_nacimiento, "04-09-98");
+				a4.telefono = 657920076;
+				a4.curso_mas_alto = 2;
+				a4.grupo = 24;
+				a4.lider = 1;
+
+
+				escribirFich(a1);
+				escribirFich(a2);
+				escribirFich(a3);
+				escribirFich(a4);
+		
+				break;
+				
+				
+			case 2:
+				
+				leerFich(a);
+				break;
+				
+				
+			default:
+				
+				exit(0);
+		
 		}
-	}
+		
+		opcion = 0;
+	
+		cout<<"1. Escribir alumnos"<<endl;
+		cout<<"2. Leer alumnos"<<endl;
+		cout<<"3. Salir"<<endl;
+		cout<<" "<<endl;
+		cout<<"Escoja opción:"<<endl;
+		cin>>opcion;
+		cout<<" "<<endl;
+		
+	}while(opcion != 3);
 	
 	
 }
