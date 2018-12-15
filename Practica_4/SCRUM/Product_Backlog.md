@@ -3,7 +3,7 @@
 
 
 
-|ID              |Historia de Usuario            |Estimación                 |Prioridad
+|ID              |Ítems            |Estimación                 |Prioridad
 |----------------|-------------------------------|---------------------------|-----------------------|
 |13        |Definición de cabeceras           |2 horas          |0|
 |1				 |Buscar          				 |2 horas         			 |1|
