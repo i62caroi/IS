@@ -23,6 +23,10 @@
 	
 	void crear_coordinador();
 	
-	bool buscar_coordinador(struct Datos_usuario p);
+	bool check_coordinador(struct Datos_usuario p);
+	
+	bool check_user(struct Datos_usuario p);
+	
+	bool check_credenciales(struct Datos_usuario p);
 
 #endif

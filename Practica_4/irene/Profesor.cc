@@ -31,16 +31,20 @@ void Profesor::Crear_copia_seguridad(char tipo) {
 
 void Profesor::Registrar_usuario(struct Datos_usuario p) {
 
-	strcpy(p.tipo, "ayudante");
+	if(check_user(p) == false){
+		strcpy(p.tipo, "ayudante");
 
-	ofstream file;
+		ofstream file;
 	
-	file.open("credenciales.bin", ios::out | ios::app | ios::binary);
+		file.open("credenciales.bin", ios::out | ios::app | ios::binary);
 	
-	file.write((char *)&p, sizeof(p));
+		file.write((char *)&p, sizeof(p));
 	
-	file.close();
-	
+		file.close();
+	}
+	else{
+		cout<<"	Este usuario ya existe"<<endl;
+	}	
 	
 }
 
@@ -48,7 +52,7 @@ void Profesor::Registrar_usuario(struct Datos_usuario p) {
 
 void Profesor::Iniciar_sesion(struct Datos_usuario p) {
 			
-	if(checkCredenciales(p) == true){
+	if(check_credenciales(p) == true){
 		cout<<"	Sesión iniciada."<<endl;
 		menu_funciones(p);
 	}

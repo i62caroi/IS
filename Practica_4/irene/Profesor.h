@@ -21,10 +21,6 @@ public:
 
 	void Iniciar_sesion(struct Datos_usuario p);
 };
-
-	//void Registrar_usuario(struct Datos_usuario p);
-
-	//void Iniciar_sesion(struct Datos_usuario p);
 	
 
 #endif

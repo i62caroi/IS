@@ -8,7 +8,7 @@
 using namespace std;
 
 
-bool buscar_coordinador(struct Datos_usuario a){
+bool check_coordinador(struct Datos_usuario a){
 
 	Datos_usuario b;
 
@@ -35,6 +35,33 @@ bool buscar_coordinador(struct Datos_usuario a){
 }
 
 
+bool check_user(struct Datos_usuario a){
+
+	Datos_usuario b;
+
+	ifstream file;
+	
+	file.open("credenciales.bin", ios::in | ios::binary);
+	
+	if(file.is_open()){
+	
+		file.read((char *)&b, sizeof(b));
+		
+		while(!file.eof()){
+			if((strcmp(b.user, a.user)) == 0){
+				return true;
+			}
+			else{
+				return false;
+			}
+			
+			file.read((char *)&b, sizeof(b));
+		}
+	}
+
+}
+
+
 void crear_coordinador(){
 	
 	/* Credenciales coordinador */
@@ -44,7 +71,7 @@ void crear_coordinador(){
 	strcpy(a.password, "12345");
 	strcpy(a.tipo, "coordinador");
 	
-	if(buscar_coordinador(a) == false){
+	if(check_coordinador(a) == false){
 	
 		ofstream file;
 	
@@ -96,7 +123,7 @@ void menu_inicio(){
 		
 				Datos_usuario b;
 				Profesor q;
-			
+				
 				cout<<"	Nuevo usuario: ";
 				cin>>b.user;
 		
@@ -105,7 +132,7 @@ void menu_inicio(){
 				cout<<endl;
 			
 				q.Registrar_usuario(b);
-			
+				
 				break;
 			
 			
@@ -175,10 +202,36 @@ void verUsuarios(){
 }
 
 
-bool checkCredenciales(struct Datos_usuario p){
-return true;
-}
+bool check_credenciales(struct Datos_usuario a){
+
+	Datos_usuario b;
+
+	ifstream file;
 	
+	file.open("credenciales.bin", ios::in | ios::binary);
+	
+	if(file.is_open()){
+	
+		file.read((char *)&b, sizeof(b));
+		
+		while(!file.eof()){
+			if((strcmp(b.user, a.user)) == 0){
+				if((strcmp(b.password, a.password)) == 0){
+					return true;
+				}
+				else{
+					return false;
+				}
+			}
+			else{
+				return false;
+			}
+			
+			file.read((char *)&b, sizeof(b));
+		}
+	}
+
+}
 
 
 
