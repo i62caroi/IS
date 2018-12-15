@@ -3,7 +3,7 @@
 
 
 
-|ID              |Historia de Usuario            |Estimación                 |Prioridad
+|ID              |Ítems            |Estimación                 |Prioridad
 |----------------|-------------------------------|---------------------------|-----------------------|
 |13        |Definición de cabeceras           |2 horas          |0|
 |1				 |Buscar          				 |2 horas         			 |1|
@@ -19,4 +19,5 @@
 |5				 |Eliminar alumno	    		 |2 horas					 |11|
 |6				 |Listar alumnos					 |2 horas					 |12|
 |14        |Crear Menú          |2 horas            |13|
+|15        |Creación Agenda inicial       |2 horas          |14|
 
