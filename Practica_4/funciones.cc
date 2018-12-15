@@ -11,12 +11,15 @@ void menu(string user,string password,string tipo)
 {
 
 	list<Alumno> listaAlumnos;
+	list<Alumno>::iterator it;
 
 	int opcion;
 
 	//IMPRESION DEL MENÚ
-
+do{
 	cout<<"Las distintas funcionalidades del sistema son:"<<endl<<endl;
+
+	cout<<"-------------------------------------"<<endl;
 
 	cout<<"[1]  Mostrar un alumno/a"<<endl;
 
@@ -34,7 +37,11 @@ void menu(string user,string password,string tipo)
 
 	cout<<"[8]  Realizar copia de seguridad"<<endl;
 
-	cout<<"[9]  Cargar copia de seguridad"<<endl<<endl;
+	cout<<"[9]  Cargar copia de seguridad"<<endl;
+
+	cout<<"[0] Salir"<<endl;
+
+	cout<<"-------------------------------------"<<endl;
 
 
 
@@ -94,14 +101,19 @@ void menu(string user,string password,string tipo)
 			break;
 		case 5:
 
+			Listar_alumnos(listaAlumnos);
+
 			break;
 		case 6:
 
+			cargar_Fichero(listaAlumnos);
+
+			cout<<"estado lista ---> "<<listaAlumnos.empty()<<endl;
 
 			break;
 		case 7:
 
-			cout<<"Funcion 7"<<endl;
+			guardar_Fichero(listaAlumnos);
 			break;
 
 		case 8:
@@ -110,8 +122,10 @@ void menu(string user,string password,string tipo)
 		case 9:
 
 			break;
-	}
 
+	//default:cout<<"El numero introducido no es correcto"<<endl;
+	}
+}while(opcion!=0);
 }
 
 void VerificarCredenciales(struct Datos p){
@@ -142,7 +156,7 @@ void VerificarCredenciales(struct Datos p){
 
 }
 
-void anadir_alumno(list<Alumno> &lista){
+void anadir_alumno(list<Alumno>&lista){
 
 	if(lista.size()<150){
 
@@ -217,7 +231,7 @@ void anadir_alumno(list<Alumno> &lista){
 
 		lista.push_back(p);
 
-//SOLUCION DE LA PUTA LISTA
+//SOLUCION DE LA LISTA
 
 /*
 		list<Alumno>::iterator it;
@@ -234,7 +248,6 @@ void anadir_alumno(list<Alumno> &lista){
 		m=lista.back();
 
 		cout<<"-----------------------"<<endl;
-		cout<<"
 		cout<<m.getNombre()<<endl;
 */
 
@@ -244,6 +257,113 @@ void anadir_alumno(list<Alumno> &lista){
 		cout<<"La lista está completa, no se pueden añadir más alumnos"<<endl;
 
 	}
+
+}
+
+void cargar_Fichero(list<Alumno>&lista){
+
+	list<Alumno>::iterator it;
+	Datos_alumno p;
+
+	ifstream f;
+
+	f.open("alumnos.bin",ios::in | ios::binary);
+
+	//f.read((char *)&p, sizeof(p));
+
+	for(it=lista.begin();!f.eof();it++){
+
+		f.read((char *)&p, sizeof(p));
+
+		it->setNombre(p.nombre);
+		it->setApellidos(p.apellidos);
+		it->setDireccion(p.direccion);
+		it->setEmail(p.email);
+		it->setDni(p.dni);
+		it->setFecha_nacimiento(p.fecha_nacimiento);
+		it->setTelefono(p.telefono);
+		it->setCurso_mas_alto(p.curso);
+		it->setGrupo(p.grupo);
+		it->setLider(p.lider);
+
+		cout<< it->getNombre() <<endl;
+		cout<< it->getApellidos() <<endl;
+		cout<< it->getDireccion() <<endl;
+		cout<< it->getDni() <<endl;
+		cout<< it->getEmail() <<endl;
+		cout<< it->getFecha_nacimiento() <<endl;
+		cout<< it->getTelefono() <<endl;
+		cout<< it->getCurso_mas_alto() <<endl;
+		cout<< it->getGrupo() <<endl;
+		cout<< it->getLider() <<endl;
+
+	}
+
+	f.close();
+
+}
+
+void guardar_Fichero(list<Alumno> &lista){
+
+	list<Alumno>::iterator it;
+	Datos_alumno p;
+	char nombre[50];
+	string aux;
+
+	ofstream f;
+
+	f.open("alumnos.bin",ios::out |ios::binary);
+
+	for(it=lista.begin();it != lista.end();it++){
+
+		aux=it->getNombre();
+		strcpy(p.nombre,aux.c_str());
+		aux=it->getApellidos();
+		strcpy(p.apellidos,aux.c_str());
+		aux=it->getDireccion();
+		strcpy(p.direccion,aux.c_str());
+		aux=it->getDni();
+		strcpy(p.dni,aux.c_str());
+		aux=it->getEmail();
+		strcpy(p.email,aux.c_str());
+		aux=it->getFecha_nacimiento();
+		strcpy(p.fecha_nacimiento,aux.c_str());
+		p.telefono=it->getTelefono();
+		p.curso=it->getCurso_mas_alto();
+		p.grupo=it->getGrupo();
+		p.lider=it->getLider();
+
+		f.write((char *)&p, sizeof(p));
+
+	}
+
+	f.close();
+
+}
+
+void Listar_alumnos(list<Alumno>&lista){
+
+	list<Alumno>::iterator it;
+
+	//if(!lista.empty()){
+
+		for(it=lista.begin();it != lista.end();it++){
+
+			cout<<"Nombre ---> "<<it->getNombre()<<endl;
+			cout<<"Apellidos ---> "<<it->getApellidos()<<endl;
+			cout<<"Direccion ---> "<<it->getDireccion()<<endl;
+			cout<<"Email ---> "<<it->getEmail()<<endl;
+			cout<<"Dni ---> "<<it->getDni()<<endl;
+			cout<<"Fecha de nacimiento ---> "<<it->getFecha_nacimiento()<<endl;
+			cout<<"Telefono ---> "<<it->getTelefono()<<endl;
+			cout<<"Curso mas alto en el que esta matriculado ---> "<<it->getCurso_mas_alto()<<endl;
+			cout<<"Grupo al que pertenece ---> "<<it->getGrupo()<<endl;
+			cout<<"Lider ---> "<<it->getLider()<<endl;
+
+		}
+
+
+	//}else{cout<<"La lista esta vacia, debe cargar primero un fichero"<<endl;};
 
 }
 

@@ -34,7 +34,7 @@ class Alumno{
 		inline int getTelefono() const{return telefono_;};
 		inline int getCurso_mas_alto() const{return curso_mas_alto_;};
 		inline int getGrupo() const{return grupo_;};
-		int bool getLider() const{return lider_;};
+		inline bool getLider() const{return lider_;};
 
 //MODIFICADORES
 
@@ -47,6 +47,6 @@ class Alumno{
 		inline void setTelefono(int n_telefono){telefono_=n_telefono;};
 		inline void setCurso_mas_alto(int n_curso){curso_mas_alto_=n_curso;};
 		inline void setGrupo(int n_grupo){grupo_=n_grupo;};
-		void setLider();
+		inline void setLider(bool lider){lider_=lider;};
 };
 #endif

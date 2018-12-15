@@ -2,6 +2,8 @@
 #include<string>
 #include<fstream>
 #include "clasePROFESOR.h"
+#include "claseALUMNO.h"
+#include "funciones.h"
 using namespace std;
 
 int main(){
@@ -13,39 +15,31 @@ int main(){
 	cin>>eleccion;
 
 
-switch (eleccion) {
+switch(eleccion){
 
 	case 1:
+	{
+		Datos p;
 
-		Profesor p;
+		cout<<"¿Cual es su nombre de usuarios?"<<endl;
+		cin>>p.user;
 
-		string user;
-		char *aux_user;
-		string password;
-		string aux_password;
+		cout<<"¿Cual es su contraseña?"<<endl;
+		cin>>p.password;
 
-		ifstream fichero_entrada;	 //lectura
-
-		cout<<"Nombre de usuario"
-		cin>>user;
-
-		cout<<"Password"<<endl;
-		cin>>password;
-
-		fichero_entrada.open("registro_usuarios.bin",ios::in | ios::binary);
-
-		
+		VerificarCredenciales(p);
+	}	
 
 	break;
 
 
-	case 2: exit(1);
-
+	case 2:
+	{
+		exit(1);
+	}
 	break;
 
 	default:cout<<"El numero introduccido no corresponde con ninguna eleccion"<<endl;
-
-
 
 }
 
