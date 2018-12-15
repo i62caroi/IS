@@ -22,14 +22,9 @@ struct Alumno{
 };
 
 
-void escribirFich(struct Alumno a){
-	
+void escribirFich(struct Alumno a, char nombre[20]){
+
 	ofstream file;
-	char nombre[20];
-	
-	cout<<"Nombre del fichero a escribir:"<<endl;
-	cin>>nombre;
-	cout<<" "<<endl;
 	
 	file.open(nombre, ios::out | ios::app |ios::binary);
 	
@@ -39,46 +34,47 @@ void escribirFich(struct Alumno a){
 	
 }
 
-void leerFich(struct Alumno a){
+void leerFich(struct Alumno a, char nombre[20]){
 
 	ifstream file;
-	char nombre[20];
-	
-	cout<<"Nombre del fichero a leer:"<<endl;
-	cin>>nombre;
-	cout<<" "<<endl;
-	
+		
 	file.open(nombre, ios::in | ios::binary);
 	
-	file.read((char *)&a, sizeof(a));
+	if(file.is_open()){
 	
-	while(!file.eof()){
-	
-		//file.read((char *)&a, sizeof(a));
-	
-		cout<<"Nombre: "<<a.nombre<<endl;
-		cout<<"Apellidos: "<<a.apellidos<<endl;
-		cout<<"email: "<<a.email<<endl;
-		cout<<"Dirección: "<<a.direccion<<endl;
-		cout<<"DNI: "<<a.dni<<endl;
-		cout<<"Fecha nacimiento: "<<a.fecha_nacimiento<<endl;
-		cout<<"Teléfono: "<<a.telefono<<endl;
-		cout<<"Curso más alto: "<<a.curso_mas_alto<<endl;
-		cout<<"Grupo: "<<a.grupo<<endl;
-	
-		if(a.lider == 1){
-			cout<<"Líder: SÍ"<<endl;
-		}
-		else{
-			cout<<"Líder: NO"<<endl;
-		}
-		
-		cout<<" "<<endl;
-		
 		file.read((char *)&a, sizeof(a));
-	}
+	
+		while(!file.eof()){
+	
+			cout<<"	Nombre: "<<a.nombre<<endl;
+			cout<<"	Apellidos: "<<a.apellidos<<endl;
+			cout<<"	email: "<<a.email<<endl;
+			cout<<"	Dirección: "<<a.direccion<<endl;
+			cout<<"	DNI: "<<a.dni<<endl;
+			cout<<"	Fecha nacimiento: "<<a.fecha_nacimiento<<endl;
+			cout<<"	Teléfono: "<<a.telefono<<endl;
+			cout<<"	Curso más alto: "<<a.curso_mas_alto<<endl;
+			cout<<"	Grupo: "<<a.grupo<<endl;
+	
+			if(a.lider == 1){
+				cout<<"	Líder: SÍ"<<endl;
+			}
+			else{
+				cout<<"	Líder: NO"<<endl;
+			}
+		
+			cout<<endl;
+		
+			file.read((char *)&a, sizeof(a));
+		}
 
-	file.close();	
+		file.close();	
+	
+	}
+	
+	else{
+		cout<<"	Fichero inexistente"<<endl;
+	}
 	
 	
 }
@@ -87,7 +83,7 @@ void leerFich(struct Alumno a){
 
 int main(){
 
-	cout<<" "<<endl;	
+	cout<<endl;	
 	
 	Alumno a1;
 	Alumno a2;
@@ -97,14 +93,15 @@ int main(){
 	Alumno a;
 
 	int opcion = 0;
+	char nombre[20];
 	
-	cout<<"1. Escribir alumnos"<<endl;
-	cout<<"2. Leer alumnos"<<endl;
-	cout<<"3. Salir"<<endl;
-	cout<<" "<<endl;
-	cout<<"Escoja opción:"<<endl;
+	cout<<"	1. Escribir alumnos"<<endl;
+	cout<<"	2. Leer alumnos"<<endl;
+	cout<<"	3. Salir"<<endl;
+	cout<<endl;
+	cout<<"	Escoja opción: ";
 	cin>>opcion;
-	cout<<" "<<endl;
+	cout<<endl;
 	
 	do{
 	
@@ -161,17 +158,25 @@ int main(){
 				a4.lider = 1;
 
 
-				escribirFich(a1);
-				escribirFich(a2);
-				escribirFich(a3);
-				escribirFich(a4);
+				cout<<"	Nombre del fichero a escribir: ";
+				cin>>nombre;
+				cout<<endl;
+
+				escribirFich(a1, nombre);
+				escribirFich(a2, nombre);
+				escribirFich(a3, nombre);
+				escribirFich(a4, nombre);
 		
 				break;
 				
 				
 			case 2:
 				
-				leerFich(a);
+				cout<<"	Nombre del fichero a leer: ";
+				cin>>nombre;
+				cout<<endl;
+				
+				leerFich(a, nombre);
 				break;
 				
 				
@@ -182,14 +187,16 @@ int main(){
 		}
 		
 		opcion = 0;
-	
-		cout<<"1. Escribir alumnos"<<endl;
-		cout<<"2. Leer alumnos"<<endl;
-		cout<<"3. Salir"<<endl;
-		cout<<" "<<endl;
-		cout<<"Escoja opción:"<<endl;
+		
+		cout<<endl;
+		cout<<endl;
+		cout<<"	1. Escribir alumnos"<<endl;
+		cout<<"	2. Leer alumnos"<<endl;
+		cout<<"	3. Salir"<<endl;
+		cout<<endl;
+		cout<<"	Escoja opción: ";
 		cin>>opcion;
-		cout<<" "<<endl;
+		cout<<endl;
 		
 	}while(opcion != 3);
 	
