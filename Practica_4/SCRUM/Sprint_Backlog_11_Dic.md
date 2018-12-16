@@ -3,8 +3,8 @@
 
 
 
-|    Product Backlog Item   |                      Tareas                      | Tareas comenzadas | Completado |
-|-------------------------|------------------------------------------------|:-----------------:|:----------:|
+|    Product Backlog Item           |                      Tareas                      | Tareas comenzadas | Completado |
+|-----------------------------------|------------------------------------------------|:-----------------:|:----------:|
 | Creación Agenda inicial   | Crear fichero binario con alumnos: Irene Casares |         X         |      X     |
 | Creación Agenda inicial   | Leer fichero binario de alumno: Irene Casares    |         X         |      X     |
 | Buscar                    | Búsqueda por DNI:                                |                   |            |
@@ -22,8 +22,8 @@
 | Mostrar alumno/s          | Buscar grupo: José Domínguez                     |         X         |      X     |
 | Mostrar alumno/s          | Mostrar alumno: José Domínguez                   |         X         |      X     |
 | Mostrar alumno/s          | Mostrar grupo: José Domínguez                    |         X         |      X     |
-| Iniciar sesión            | Comprobar usuario: Irene Casares y Antonio Bogallo               |         X         |      X     |
-| Iniciar sesión            | Iniciar sesión: Irene Casares y Antonio Bogallo                  |         X         |      X     |
+| Iniciar sesión            | Comprobar usuario: Antonio Bogallo e Irene Casares               |         X         |      X     |
+| Iniciar sesión            | Iniciar sesión: Antonio Bogallo e Irene Casares                |         X         |      X     |
 | Crear coordinador         | Comprobar coordinador: Irene Casares            |         X         |      X     |
 | Crear coordinador         | Crear coordinador: Irene Casares            |         X         |      X     |
 | Registrar usuario         | Comprobar usuario: Irene Casares                       |         X          |      X      |
