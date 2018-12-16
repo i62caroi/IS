@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
+#include <unistd.h>
 using namespace std;
 
 /*
@@ -32,6 +33,7 @@ void Profesor::Crear_copia_seguridad(char tipo) {
 void Profesor::Registrar_usuario(struct Datos_usuario p) {
 
 	if(check_user(p) == false){
+	
 		strcpy(p.tipo, "ayudante");
 
 		ofstream file;
@@ -42,22 +44,17 @@ void Profesor::Registrar_usuario(struct Datos_usuario p) {
 	
 		file.close();
 	}
-	else{
-		cout<<"	Este usuario ya existe"<<endl;
-	}	
 	
+		
 }
 
 
 
-void Profesor::Iniciar_sesion(struct Datos_usuario p) {
-			
+void Profesor::Iniciar_sesion(struct Datos_usuario p) {	
+	
 	if(check_credenciales(p) == true){
-		cout<<"	Sesión iniciada."<<endl;
+		cout<<"	Sesión iniciada"<<endl;
 		menu_funciones(p);
-	}
-	else{
-		cout<<"	Este usuario no está registrado.\n\n"<<endl;
 	}
 	
 }

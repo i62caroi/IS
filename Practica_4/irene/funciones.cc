@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "funciones.h"
 #include "Profesor.h"
+#include "Agenda.h"
 using namespace std;
 
 
@@ -31,6 +32,7 @@ bool check_coordinador(struct Datos_usuario a){
 			file.read((char *)&b, sizeof(b));
 		}
 	}
+	
 
 }
 
@@ -38,6 +40,9 @@ bool check_coordinador(struct Datos_usuario a){
 bool check_user(struct Datos_usuario a){
 
 	Datos_usuario b;
+	
+	int existe;
+	int escrito = 0;
 
 	ifstream file;
 	
@@ -49,14 +54,29 @@ bool check_user(struct Datos_usuario a){
 		
 		while(!file.eof()){
 			if((strcmp(b.user, a.user)) == 0){
-				return true;
+				existe = 1;
 			}
 			else{
-				return false;
+				existe = 0;
 			}
 			
 			file.read((char *)&b, sizeof(b));
 		}
+		
+		file.close();
+	}
+	
+	
+	if(existe == 1){
+		if(escrito == 0){
+			cout<<"	Este nickname ya está en uso."<<endl;
+			escrito = 1;
+		}
+		return true;
+	}
+	
+	if(existe == 0){
+		return false;
 	}
 
 }
@@ -87,13 +107,13 @@ void crear_coordinador(){
 
 void menu_inicio(){
 	
-	int eleccion = 0;
+	int eleccion;
 	
 	cout<<"   ---------------------------------------"<<endl;
-	cout<<"	1. Iniciar sesión"<<endl;
-	cout<<"	2. Registrar usuario"<<endl;
-	cout<<"	3. Ver usuarios"<<endl;
-	cout<<"	4. Salir\n"<<endl;
+	cout<<"	[1] Iniciar sesión"<<endl;
+	cout<<"	[2] Registrar usuario"<<endl;
+	cout<<"	[3] Ver usuarios"<<endl;
+	cout<<"	[0] Salir\n"<<endl;
 	cout<<"	Escoja una opción: ";
 	cin>>eleccion;
 	cout<<endl;
@@ -142,11 +162,10 @@ void menu_inicio(){
 				break;
 			
 			
-			case 4:
+			case 0:
 		
 				cout<<"	FIN DEL PROGRAMA.\n"<<endl;
 				exit(1);
-				break;
 			
 			
 			default:
@@ -156,17 +175,17 @@ void menu_inicio(){
 		
 		cout<<"\n\n"<<endl;
 		cout<<"   ---------------------------------------"<<endl;
-		cout<<"	1. Iniciar sesión"<<endl;
-		cout<<"	2. Registrar usuario"<<endl;
-		cout<<"	3. Ver usuarios"<<endl;
-		cout<<"	4. Salir\n"<<endl;
+		cout<<"	[1] Iniciar sesión"<<endl;
+		cout<<"	[2] Registrar usuario"<<endl;
+		cout<<"	[3] Ver usuarios"<<endl;
+		cout<<"	[0] Salir\n"<<endl;
 		cout<<"	Escoja una opción: ";
 		cin>>eleccion;
 		cout<<endl;
 		
-	}while(eleccion != 4);
+	}while(eleccion != 0);
 	
-	cout<<"	FIN DEL PROGRAMA.\n"<<endl;
+	//cout<<"	FIN DEL PROGRAMA.\n"<<endl;
 	
 }
 
@@ -205,6 +224,8 @@ void verUsuarios(){
 bool check_credenciales(struct Datos_usuario a){
 
 	Datos_usuario b;
+	
+	int existe;
 
 	ifstream file;
 	
@@ -215,61 +236,156 @@ bool check_credenciales(struct Datos_usuario a){
 		file.read((char *)&b, sizeof(b));
 		
 		while(!file.eof()){
+			
 			if((strcmp(b.user, a.user)) == 0){
 				if((strcmp(b.password, a.password)) == 0){
-					return true;
-				}
-				else{
-					return false;
+					existe = 1;
 				}
 			}
 			else{
-				return false;
+			 	existe = 0;
 			}
 			
 			file.read((char *)&b, sizeof(b));
 		}
+		
+	}
+	
+	if(existe == 1){
+		return true;
+	}
+	
+	if(existe == 0){
+		cout<<"\n	El usuario no está registrado."<<endl;
+		return false;
 	}
 
 }
 
 
-
 void menu_funciones(struct Datos_usuario p){
-/*
-	list<Alumno> listaAlumnos;
-	list<Alumno>::iterator it;
+
+	int eleccion;
 	
-	int opcion;
+	cout<<"\n\n	MENÚ PRINCIPAL\n"<<endl;
+	cout<<"   --------------------------------------------------"<<endl;
+	cout<<"	[1] Mostrar alumno"<<endl;
+	cout<<"	[2] Añadir alumno"<<endl;
+	cout<<"	[3] Editar datos alumno"<<endl;
+	cout<<"	[4] Eliminar alumno"<<endl;
+	cout<<"	[5] Listar alumnos"<<endl;
+	cout<<"	[6] Cargar fichero"<<endl;
+	cout<<"	[7] Guardar fichero"<<endl;
+	cout<<"	[8] Realizar copia de seguridad"<<endl;
+	cout<<"	[9] Cargar copia de seguridad"<<endl;
+	cout<<"	[0] Salir\n"<<endl;
+	cout<<"	Escoja una opción: ";
+	cin>>eleccion;
+	cout<<endl;
 	
 	do{
 	
-		cout<<"	MENÚ"<<endl<<endl;
-
-		cout<<"	-------------------------------------"<<endl;
-
-		cout<<"	[1]  Mostrar un alumno/a"<<endl;
-
-		cout<<"	[2]  Añadir alumno/a"<<endl;
-
-		cout<<"	[3]  Editar datos alumno/a"<<endl;
-
-		cout<<"	[4]  Eliminar alumno/a"<<endl;
-
-		cout<<"	[5]  Listar alumnos/as"<<endl;
-
-		cout<<"	[6]  Cargar fichero"<<endl;
-
-		cout<<"	[7]  Guardar fichero"<<endl;
-
-		cout<<"	[8]  Realizar copia de seguridad"<<endl;
-
-		cout<<"	[9]  Cargar copia de seguridad"<<endl;
-
-		cout<<"	[0] Salir"<<endl;
-
-		cout<<"	-------------------------------------"<<endl;
+		switch(eleccion){
 	
-	}while(opcion != 0);
-*/
+			case 1:
+		/*
+				Agenda a;
+				a.Mostrar_alumno();
+			*/	
+				break;
+		
+		
+			case 2:
+		/*
+				Agenda b;
+				//b.Anadir_alumno();
+			*/	
+				break;
+			
+			
+			case 3:
+			
+				/*Agenda c;
+				//c.Editar_alumno();
+				*/
+				break;
+			
+			
+			case 4:
+		/*
+				Agenda d;
+				//d.Eliminar_alumno();
+			*/	
+				break;
+				
+			
+			case 5:
+			/*
+				Agenda e;
+				//e.Listar_alumnos();
+				*/
+				break;
+				
+				
+			case 6:
+			
+				Profesor p;
+				//p.Cargar_fichero();
+				
+				break;
+				
+				
+			case 7:
+			
+				Profesor q;
+			//	q.Guardar_fichero();
+				
+				break;
+				
+				
+			case 8:
+			
+				Profesor w;
+				//w.Crear_copia_seguridad();
+				
+				break;
+				
+			
+			case 9:
+			
+				Profesor f;
+				//f.Cargar_copia_seguridad();
+				
+				break;
+				
+				
+			case 0:
+			
+				cout<<"	HA SALIDO DEL MENÚ PRINCIPAL\n\n"<<endl;
+				exit(1);	
+			
+			
+			default:
+				cout<<"	El número introducido no es válido\n"<<endl;
+	
+		}	
+		
+		cout<<"\n\n"<<endl;
+		cout<<"   --------------------------------------------------"<<endl;
+		cout<<"	[1] Mostrar alumno"<<endl;
+		cout<<"	[2] Añadir alumno"<<endl;
+		cout<<"	[3] Editar datos alumno"<<endl;
+		cout<<"	[4] Eliminar alumno"<<endl;
+		cout<<"	[5] Listar alumnos"<<endl;
+		cout<<"	[6] Cargar fichero"<<endl;
+		cout<<"	[7] Guardar fichero"<<endl;
+		cout<<"	[8] Realizar copia de seguridad"<<endl;
+		cout<<"	[9] Cargar copia de seguridad"<<endl;
+		cout<<"	[0] Salir\n"<<endl;
+		cout<<"	Escoja una opción: ";
+		cin>>eleccion;
+		cout<<endl;
+		
+	}while(eleccion != 0);
+
 }
