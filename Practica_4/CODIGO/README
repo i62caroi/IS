@@ -24,4 +24,8 @@ En esta carpeta se encuentran los ficheros necesarios para compilar y ejecutar n
 	- main.cc : incluye la función principal main.
 
 
-Además de esto archivos, también se encuentran el fichero agendaBin.cc y su ejecutable, Agenda.exe. Este pequeño programa genera un fichero binario y escribe en él la información de 4 alumnos. Este fichero sería útil para, por ejemplo, cargarlo en la agenda del programa que se nos encomendó.  
+Además de esto archivos, también se encuentran el fichero 'agendaBin.cc' y su ejecutable, 'Agenda.exe'. Este pequeño programa genera un fichero binario y escribe en él la información de 4 alumnos. Este fichero sería útil para, por ejemplo, cargarlo en la agenda del programa que se nos encomendó.  
+
+
+Al ejecutar el programa se genera automáticamente un fichero binario llamado 'credenciales.bin' que contiene el nombre de usuario(super) y contraseña(12345) del coordinador. Al registrar un nuevo usuario, se introducirá en este fichero, el cual será consultado a la hora de iniciar sesión para comprobar que el usuario indicado existe.
+Por otro lado, se ha implementado una función que consulta este fichero y muestra las credenciales que hay en él para que, de esta forma, sepa cuáles introducir para iniciar sesión. Sabemos que esta función no debería estar al alcance de cualquier usuario, pero la vemos necesaria para la comprobación del funcionamiento del programa.
