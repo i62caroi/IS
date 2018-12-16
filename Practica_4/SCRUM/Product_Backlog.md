@@ -4,7 +4,7 @@
 
 
 |ID              |Ítems            |Estimación                 |Prioridad
-|----------------|-------------------------------|---------------------------|-----------------------|
+|:----------------:|-------------------------------|:---------------------------:|:-----------------------:|
 |13        |Definición de cabeceras           |2 horas          |0|
 |1				 |Buscar          				 |2 horas         			 |1|
 |4				 |Cargar fichero   		         |3 horas					 |2|
@@ -14,6 +14,7 @@
 |2				 |Añadir alumno					 |2 horas					 |6|
 |3				 |Editar datos de alumno		 |2 horas					 |7|
 |10				 |Mostrar alumno				 |2 horas 					 |8|
+|16        |Crear coordinador       |2 horas          |9|
 |9				 |Iniciar sesión				 |2 horas					 |9|
 |8				 |Registrar usuario				 |2 horas					 |10|
 |5				 |Eliminar alumno	    		 |2 horas					 |11|
