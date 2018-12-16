@@ -1,0 +1,27 @@
+
+Prácticas Ingeniería del Software.
+Grupo 24
+
+Participantes:
+
+	- Antonio Bogallo Fernández (bogallo)
+	- Irene Casares Rodríguez (i62caroi) --> Líder
+	- José Domínguez García (i62dogaj)
+
+
+
+
+En esta carpeta se encuentran los ficheros necesarios para compilar y ejecutar nuestro programa. Estos son:
+
+	- Agenda.cc : incluye las funiones propias de la clase Agenda.
+	- Agenda.h : incluye las definiciones de las funciones de la clase Agenda.
+	- Alumno.cc : incluye las funciones propias de la clase Alumno.
+	- Alumno.h : incluye las definiciones de las funciones de la clase Alumno.
+	- Profesor.cc : incluye las funciones propias de la clase Profesor.
+	- Profesor.h incluye las definiciones de las funciones de la clase Profesor.
+	- funciones.cc : incluye diferentes funciones necesarias para el correcto funcionamiento del programa.
+	- funciones.h : incluye las definiciones de las funciones mencionadas anteriormente.
+	- main.cc : incluye la función principal main.
+
+
+Además de esto archivos, también se encuentran el fichero agendaBin.cc y su ejecutable, Agenda.exe. Este pequeño programa genera un fichero binario y escribe en él la información de 4 alumnos. Este fichero sería útil para, por ejemplo, cargarlo en la agenda del programa que se nos encomendó.  
