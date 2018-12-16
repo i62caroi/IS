@@ -13,7 +13,7 @@ Participantes:
 
 En esta carpeta se encuentran los ficheros necesarios para compilar y ejecutar nuestro programa. Estos son:
 
-	- Agenda.cc : incluye las funiones propias de la clase Agenda.
+	- Agenda.cc : incluye las funciones propias de la clase Agenda.
 	- Agenda.h : incluye las definiciones de las funciones de la clase Agenda.
 	- Alumno.cc : incluye las funciones propias de la clase Alumno.
 	- Alumno.h : incluye las definiciones de las funciones de la clase Alumno.
