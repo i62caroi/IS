@@ -243,7 +243,7 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 	
 				case 1:
 	
-					//a.Mostrar_alumno(lista);
+					a.Mostrar_alumno(lista);
 			
 					break;
 		
@@ -334,249 +334,74 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 }
 
 
-/*
-void menu_funciones_C(list <Alumno> &lista){
-
-	int eleccion;
-	cout<<"Menu 1"<<endl;
-	Agenda a;
-	Profesor q;
-
-	
-		
-		do{
-	
-			cout<<"\n\n\n	MENÚ PRINCIPAL"<<endl;
-			cout<<"   --------------------------------------------------\n"<<endl;
-			cout<<"	[1] Mostrar alumno"<<endl;
-			cout<<"	[2] Añadir alumno"<<endl;
-			cout<<"	[3] Editar datos alumno"<<endl;
-			cout<<"	[4] Eliminar alumno"<<endl;
-			cout<<"	[5] Listar alumnos"<<endl;
-			cout<<"	[6] Cargar fichero"<<endl;
-			cout<<"	[7] Guardar fichero"<<endl;
-			cout<<"	[8] Realizar copia de seguridad"<<endl;
-			cout<<"	[9] Cargar copia de seguridad"<<endl;
-			cout<<"	[0] Salir\n"<<endl;
-			cout<<"	Escoja una opción: ";
-			cin>>eleccion;
-			cin.ignore();
-			cout<<endl;
-	
-			switch(eleccion){
-	
-				case 1:
-	
-					//a.Mostrar_alumno(lista);
-			
-					break;
-		
-		
-				case 2:
-		
-				
-					a.Anadir_alumno(lista);
-				
-					break;
-			
-			
-				case 3:
-			
-				
-					//a.Editar_alumno(lista);
-				
-					break;
-			
-			
-				case 4:
-		
-					//a.Eliminar_alumno(lista);
-			
-					break;
-				
-			
-				case 5:
-				
-					//a.Listar_alumnos(lista);
-				
-					break;
-				
-				
-				case 6:
-			
-					//q.Cargar_fichero();
-					cout<<"\n	Estamos trabajando en ello."<<endl;
-				
-					break;
-				
-				
-				case 7:
-			
-				//	q.Guardar_fichero();
-				
-					break;
-				
-				
-				case 8:
-			
-					//q.Crear_copia_seguridad();
-				
-					break;
-				
-			
-				case 9:
-			
-					//q.Cargar_copia_seguridad();
-				
-					break;
-							
-			
-				case 0:
-			
-					cout<<"	HA SALIDO DEL MENÚ PRINCIPAL."<<endl;
-				
-					break;
-			
-			
-				default:
-					cout<<"	El número introducido no es válido\n"<<endl;
-	
-			}	
-		
-		}while(eleccion != 0);
-
-}
-
-
-
-void menu_funciones_A(list <Alumno> &lista){
-
-
-	int eleccion;
-	cout<<"Menu 1"<<endl;
-	Agenda a;
-	Profesor q;
-	
-	
-	cout<<"Menu 2"<<endl;
-			do{
-	
-				cout<<"\n\n\n	MENÚ PRINCIPAL"<<endl;
-				cout<<"   --------------------------------------------------\n"<<endl;
-				cout<<"	[1] Mostrar alumno"<<endl;
-				cout<<"	[2] Añadir alumno"<<endl;
-				cout<<"	[3] Editar datos alumno"<<endl;
-				cout<<"	[4] Eliminar alumno"<<endl;
-				cout<<"	[5] Listar alumnos"<<endl;
-				cout<<"	[6] Cargar fichero"<<endl;
-				cout<<"	[7] Guardar fichero"<<endl;
-				cout<<"	[0] Salir\n"<<endl;
-				cout<<"	Escoja una opción: ";
-				cin>>eleccion;
-				cin.ignore();
-				cout<<endl;
-	
-				switch(eleccion){
-	
-					case 1:
-	
-						//a.Mostrar_alumno(lista);
-			
-						break;
-		
-		
-					case 2:
-		
-				
-						a.Anadir_alumno(lista);
-				
-						break;
-			
-			
-					case 3:
-			
-				
-						//a.Editar_alumno(lista);
-				
-						break;
-			
-			
-					case 4:
-		
-						//a.Eliminar_alumno(lista);
-			
-						break;
-				
-			
-					case 5:
-				
-						//a.Listar_alumnos(lista);
-				
-						break;
-				
-				
-					case 6:
-			
-						//q.Cargar_fichero();
-						cout<<"\n	Estamos trabajando en ello."<<endl;
-				
-						break;
-				
-				
-					case 7:
-			
-					//	q.Guardar_fichero();
-				
-						break;
-							
-			
-					case 0:
-			
-						cout<<"	HA SALIDO DEL MENÚ PRINCIPAL."<<endl;
-				
-						break;
-			
-			
-					default:
-						cout<<"	El número introducido no es válido\n"<<endl;
-	
-				}	
-		
-			}while(eleccion != 0);
-
-}*/
-
-
-/*
-
-void VerificarCredenciales(struct Datos_usuario p){
-
-	ifstream f;
-	Datos_usuario q;
-
-	f.open("credenciales.bin",ios::in | ios::binary);
-
-	while(f.read((char *)&q, sizeof(q)) && (!f.eof())){
-
-		if((strcmp(q.user,p.user))==0){
-
-			if((strcmp(q.password,p.password))==0){
-
-				strcpy(p.tipo,q.tipo);
-				menu(p.user,p.password,p.tipo);
-
-			}
-
-		}
-
-		//cout<<"Usuario ---> "<<q.user<<endl;
-		//cout<<"Password --->"<<q.password<<endl;
+void lista_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
+	for(int i = 1; i <= lista.size(); i++){
+		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
+		cout<<"	Apellidos: "<<alumno[i].getApellidos()<<endl;
+		cout<<"	email: "<<alumno[i].getEmail()<<endl;
+		cout<<"	Dirección: "<<alumno[i].getDireccion()<<endl;
+		cout<<"	DNI: "<<alumno[i].getDni()<<endl;
+		cout<<"	Fecha nacimiento: "<<alumno[i].getFecha_nacimiento()<<endl;
+		cout<<"	Teléfono: "<<alumno[i].getTelefono()<<endl;
+		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
+		cout<<"	Grupo: "<<alumno[i].getGrupo()<<endl;
+		cout<<"	Líder: "<<alumno[i].getLider()<<endl;
+		cout<<endl;
 	}
-
-	f.close();
-
+	system("pause");
 }
-*/
+
+
+void lista_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
+	for(int i = lista.size(); i >= 1; i--){
+		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
+		cout<<"	Apellidos: "<<alumno[i].getApellidos()<<endl;
+		cout<<"	email: "<<alumno[i].getEmail()<<endl;
+		cout<<"	Dirección: "<<alumno[i].getDireccion()<<endl;
+		cout<<"	DNI: "<<alumno[i].getDni()<<endl;
+		cout<<"	Fecha nacimiento: "<<alumno[i].getFecha_nacimiento()<<endl;
+		cout<<"	Teléfono: "<<alumno[i].getTelefono()<<endl;
+		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
+		cout<<"	Grupo: "<<alumno[i].getGrupo()<<endl;
+		cout<<"	Líder: "<<alumno[i].getLider()<<endl;
+		cout<<endl;
+	}
+	system("pause");
+}
+
+
+void lista_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
+	for(int i = 1; i <= lista.size(); i++){
+		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
+		cout<<"	Apellidos: "<<alumno[i].getApellidos()<<endl;
+		cout<<"	email: "<<alumno[i].getEmail()<<endl;
+		cout<<"	Dirección: "<<alumno[i].getDireccion()<<endl;
+		cout<<"	DNI: "<<alumno[i].getDni()<<endl;
+		cout<<"	Fecha nacimiento: "<<alumno[i].getFecha_nacimiento()<<endl;
+		cout<<"	Teléfono: "<<alumno[i].getTelefono()<<endl;
+		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
+		cout<<endl;
+	}
+	system("pause");
+}
+
+
+void lista_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
+	for(int i = lista.size(); i >= 1; i--){
+		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
+		cout<<"	Apellidos: "<<alumno[i].getApellidos()<<endl;
+		cout<<"	email: "<<alumno[i].getEmail()<<endl;
+		cout<<"	Dirección: "<<alumno[i].getDireccion()<<endl;
+		cout<<"	DNI: "<<alumno[i].getDni()<<endl;
+		cout<<"	Fecha nacimiento: "<<alumno[i].getFecha_nacimiento()<<endl;
+		cout<<"	Teléfono: "<<alumno[i].getTelefono()<<endl;
+		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
+		cout<<endl;
+	}
+	system("pause");
+}
+
+
 /*
  ------ CHECK CREDENCIALES IRENE ---- 
  

@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 using namespace std;
+const unsigned int NUM = 150;
 
 	struct Datos_usuario{
 
@@ -31,21 +32,17 @@ using namespace std;
 		bool lider;
 	
 	};
-
-	bool checkCredenciales(struct Datos_usuario p);
 	
 	void verUsuarios();
-	
-	void menu_inicio(list<Alumno> &lista);
-	
-	void menu_funciones(struct Datos_usuario p, list<Alumno> &lista);
-	
+	void menu_inicio(list <Alumno> &lista);
+	void menu_funciones(struct Datos_usuario p, list <Alumno> &lista);
 	void crear_coordinador();
-	
 	bool check_coordinador(struct Datos_usuario p);
-	
 	bool check_user(struct Datos_usuario p);
-	
 	bool check_credenciales(struct Datos_usuario p);
+	void lista_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]);
+	void lista_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]);
+	void lista_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]);
+	void lista_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]);
 
 #endif

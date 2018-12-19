@@ -92,8 +92,64 @@ void Profesor::Guardar_fichero(list<Alumno> &lista){
 }
 */
 
+/*
+void Profesor::Guardar_fichero(list <Alumno> &lista){
 
+	if(!lista.empty()){
+		
+		list<Alumno>::iterator pos;
+		char nombreF[20];
+		string nombre, apellidos, email, dir, dni, fecha; 
+		Datos_alumno a;
+	
+		ofstream file;
+	
+		cout<<"	Introduzca el nombre del fichero en el que quiera guardar los datos de los alumnos: ";
+		cin>>nombreF;
+		cin.ignore();
+		
+		file.open(nombreF, ios::out | ios::binary);
+	
+		for(pos = lista.begin(); pos != lista.end(); pos++){
+		
+			nombre = pos->getNombre();
+			strcpy(a.nombre, nombre.c_str());
+			
+			apellidos = pos->getApellidos();
+			strcpy(a.apellidos, apellidos.c_str());
+			
+			email = pos->getEmail();
+			strcpy(a.email, email.c_str());
+			
+			dir = pos->getDireccion();
+			strcpy(a.direccion, dir.c_str());
+			
+			dni = pos->getDni();
+			strcpy(a.dni, dni.c_str());
+			
+			fecha = pos->getFecha_nacimiento();
+			strcpy(a.fecha_nacimiento, fecha.c_str());
+			
+			a.telefono = pos->getTelefono();
+			
+			a.curso_mas_alto = pos->getCurso_mas_alto();
+			
+			a.grupo = pos->getGrupo();
+			
+			a.lider = pos->getLider();
+			
+			file.write((char *)&a, sizeof(a));
+		
+		}
+		
+		file.close();
+	
+	}
+	else{
+		cout<<"	La agenda está vacía."<<endl;
+	}
 
+}*/
 
 
 /*
