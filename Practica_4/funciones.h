@@ -26,12 +26,12 @@ struct Datos_alumno{
 	bool lider;
 };
 
-void anadir_alumno(list<Alumno>&lista);
+void anadir_alumno(list<Alumno> &);
 void menu(string user,string password,string tipo);
-void mostrarAlumno(list<Alumno>&lista);
+void mostrarAlumno(list<Alumno> &);
 void VerificarCredenciales(struct Datos p);
-void cargar_Fichero(list<Alumno>&lista);
-void guardar_Fichero(list<Alumno>&lista);
-void Listar_alumnos(list<Alumno>&lista);
+void cargar_Fichero(list<Datos_alumno> &);
+void guardar_Fichero(list<Alumno> &);
+void Listar_alumnos(list<Datos_alumno> &);
 
 #endif

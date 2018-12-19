@@ -10,8 +10,8 @@ using namespace std;
 void menu(string user,string password,string tipo)
 {
 
-	list<Alumno> listaAlumnos;
-	list<Alumno>::iterator it;
+	list<Alumno>listaAlumnos;
+	list<Datos_alumno> aux;
 
 	int opcion;
 
@@ -101,14 +101,14 @@ do{
 			break;
 		case 5:
 
-			Listar_alumnos(listaAlumnos);
+			Listar_alumnos(aux);
 
 			break;
 		case 6:
 
-			cargar_Fichero(listaAlumnos);
+			cargar_Fichero(aux);
 
-			cout<<"estado lista ---> "<<listaAlumnos.empty()<<endl;
+			cout<<"componentes de la lista ---> "<<aux.size()<<endl;
 
 			break;
 		case 7:
@@ -156,7 +156,7 @@ void VerificarCredenciales(struct Datos p){
 
 }
 
-void anadir_alumno(list<Alumno>&lista){
+void anadir_alumno(list<Alumno> &lista){
 
 	if(lista.size()<150){
 
@@ -260,10 +260,11 @@ void anadir_alumno(list<Alumno>&lista){
 
 }
 
-void cargar_Fichero(list<Alumno>&lista){
+void cargar_Fichero(list<Datos_alumno> &aux){
 
-	list<Alumno>::iterator it;
+	//list<Alumno>::iterator it;
 	Datos_alumno p;
+	//list<Datos_alumno> aux;
 
 	ifstream f;
 
@@ -271,10 +272,12 @@ void cargar_Fichero(list<Alumno>&lista){
 
 	//f.read((char *)&p, sizeof(p));
 
-	for(it=lista.begin();!f.eof();it++){
+	//for(it=lista.begin();!f.eof();it++){
+
+	while(!f.eof()){
 
 		f.read((char *)&p, sizeof(p));
-
+/*
 		it->setNombre(p.nombre);
 		it->setApellidos(p.apellidos);
 		it->setDireccion(p.direccion);
@@ -285,7 +288,10 @@ void cargar_Fichero(list<Alumno>&lista){
 		it->setCurso_mas_alto(p.curso);
 		it->setGrupo(p.grupo);
 		it->setLider(p.lider);
+*/
 
+		aux.push_back(p);
+/*
 		cout<< it->getNombre() <<endl;
 		cout<< it->getApellidos() <<endl;
 		cout<< it->getDireccion() <<endl;
@@ -296,6 +302,8 @@ void cargar_Fichero(list<Alumno>&lista){
 		cout<< it->getCurso_mas_alto() <<endl;
 		cout<< it->getGrupo() <<endl;
 		cout<< it->getLider() <<endl;
+*/
+		cout<<"¿Lista vacia? ---> "<<aux.empty()<<endl;
 
 	}
 
@@ -341,24 +349,24 @@ void guardar_Fichero(list<Alumno> &lista){
 
 }
 
-void Listar_alumnos(list<Alumno>&lista){
+void Listar_alumnos(list<Datos_alumno> &lista){
 
-	list<Alumno>::iterator it;
+	list<Datos_alumno>::iterator it;
 
 	//if(!lista.empty()){
 
 		for(it=lista.begin();it != lista.end();it++){
 
-			cout<<"Nombre ---> "<<it->getNombre()<<endl;
-			cout<<"Apellidos ---> "<<it->getApellidos()<<endl;
-			cout<<"Direccion ---> "<<it->getDireccion()<<endl;
-			cout<<"Email ---> "<<it->getEmail()<<endl;
-			cout<<"Dni ---> "<<it->getDni()<<endl;
-			cout<<"Fecha de nacimiento ---> "<<it->getFecha_nacimiento()<<endl;
-			cout<<"Telefono ---> "<<it->getTelefono()<<endl;
-			cout<<"Curso mas alto en el que esta matriculado ---> "<<it->getCurso_mas_alto()<<endl;
-			cout<<"Grupo al que pertenece ---> "<<it->getGrupo()<<endl;
-			cout<<"Lider ---> "<<it->getLider()<<endl;
+			cout<<"Nombre ---> "<<it->nombre<<endl;
+			cout<<"Apellidos ---> "<<it->apellidos<<endl;
+			cout<<"Direccion ---> "<<it->direccion<<endl;
+			cout<<"Email ---> "<<it->email<<endl;
+			cout<<"Dni ---> "<<it->dni<<endl;
+			cout<<"Fecha de nacimiento ---> "<<it->fecha_nacimiento<<endl;
+			cout<<"Telefono ---> "<<it->telefono<<endl;
+			cout<<"Curso mas alto en el que esta matriculado ---> "<<it->curso<<endl;
+			cout<<"Grupo al que pertenece ---> "<<it->grupo<<endl;
+			cout<<"Lider ---> "<<it->lider<<endl;
 
 		}
 
@@ -367,7 +375,7 @@ void Listar_alumnos(list<Alumno>&lista){
 
 }
 
-void mostrarAlumno(list<Alumno>&lista){
+void mostrarAlumno(list<Alumno> &lista){
 	char apellidochar[255];
 
 	string apellido;
