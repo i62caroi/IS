@@ -68,7 +68,7 @@ void menu(profesor p){
 
 		cout<<"[4]  Eliminar alumno/a"<<endl;
 
-		cout<<"[5]  Listar alumnos/as"<<endl;	//HECHA
+		cout<<"[5]  Listar alumnos/as"<<endl;	//FALTA LA ESTRUCTURA Y TODAS LAS ORDENACIONES
 
 		cout<<"[6]  Cargar fichero"<<endl;	//HECHA
 
