@@ -7,10 +7,6 @@ using namespace std;
 
 class Profesor {
 
-private:
-	
-	Datos_usuario p;
-
 public:
 	void Cargar_fichero(list<Alumno> &lista);
 

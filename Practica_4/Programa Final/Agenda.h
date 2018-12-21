@@ -10,10 +10,6 @@
 using namespace std;
 
 class Agenda {
-
-private:
-
-	list <Alumno> lista;
 	
 public:
 	void Anadir_alumno(list <Alumno> &lista);
@@ -21,8 +17,8 @@ public:
 	void Eliminar_alumno(list <Alumno> &lista);
 	void Mostrar_alumno(list <Alumno> &lista);
 	void Listar_alumnos(list <Alumno> &lista);
-	bool Buscar_apellidos(list <Alumno> lista, string apellidos);
-	bool Buscar_dni(list <Alumno> lista, string dni);
+	bool Buscar_apellidos(list <Alumno> lista, const char *apellidos);
+	bool Buscar_dni(list <Alumno> lista, const char *dni);
 	bool Buscar_grupo(list <Alumno> lista, int grupo);
 	bool Buscar_lider(list <Alumno> lista, int grupo);
 };

@@ -108,8 +108,6 @@ void menu_inicio(list<Alumno> &lista){
 	
 	int eleccion;
 	
-	//list <Alumno> lista;
-	
 	do{
 	
 		cout<<"\n\n	INICIO"<<endl;
@@ -280,15 +278,14 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				
 				case 6:
 			
-					//q.Cargar_fichero();
-					cout<<"\n	Estamos trabajando en ello."<<endl;
+					q.Cargar_fichero(lista);
 				
 					break;
 				
 				
 				case 7:
 			
-				//	q.Guardar_fichero();
+					q.Guardar_fichero(lista);
 				
 					break;
 				
@@ -334,6 +331,9 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 }
 
 
+
+
+/* Lista ascendente completa */
 void lista_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
 	for(int i = 1; i <= lista.size(); i++){
 		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
@@ -348,10 +348,9 @@ void lista_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Líder: "<<alumno[i].getLider()<<endl;
 		cout<<endl;
 	}
-	system("pause");
 }
 
-
+/* Lista descendente completa */
 void lista_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
 	for(int i = lista.size(); i >= 1; i--){
 		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
@@ -366,10 +365,9 @@ void lista_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Líder: "<<alumno[i].getLider()<<endl;
 		cout<<endl;
 	}
-	system("pause");
 }
 
-
+/* Lista ascendente reducida */
 void lista_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
 	for(int i = 1; i <= lista.size(); i++){
 		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
@@ -382,10 +380,9 @@ void lista_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
 		cout<<endl;
 	}
-	system("pause");
 }
 
-
+/* Lista descendente reducida */
 void lista_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
 	for(int i = lista.size(); i >= 1; i--){
 		cout<<"	Nombre: "<<alumno[i].getNombre()<<endl;
@@ -398,7 +395,6 @@ void lista_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
 		cout<<endl;
 	}
-	system("pause");
 }
 
 

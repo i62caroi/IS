@@ -13,42 +13,61 @@ void Agenda::Anadir_alumno(list <Alumno> &lista){
 	if(lista.size() < 150){
 	
 		Alumno a;
-		string nombre, apellidos, email, dir, dni, fecha;
+		string nombre, apellidos, email, dir, dni, fecha, lider;
 		string cad;
 		int tlf, curso, grupo;
-		bool lider;
-		char extra;
+		char extra, Lider;
+		char *l = &Lider;
+		char *n_ = new char[nombre.size() + 1];
+		char *a_ = new char[apellidos.size() + 1];
+		char *e_ = new char[email.size() + 1];
+		char *d_ = new char[dir.size() + 1];
+		char *dni_ = new char[dni.size() + 1];
+		char *f_ = new char[fecha.size() + 1];
+		char *l_ = new char[lider.size() + 1];
 		list<Alumno>::iterator pos;
 	
 		cout<<"	Introduzca el DNI para comprobar si existe el alumno: ";
 		cin>>dni;
+		copy(dni.begin(), dni.end(), dni_);
+		dni_[dni.size()] = '\0';
 		cin.ignore();
 		cout<<endl;
 		
-		if(Buscar_dni(lista, dni) == false){
+		if(Buscar_dni(lista, dni.c_str()) == false){
 		
-			a.setDni(dni);
+			a.setDni(dni_);
 	
 			cout<<"	Nombre: ";
 			getline(cin, nombre);
-			a.setNombre(nombre);
+			copy(nombre.begin(), nombre.end(), n_);
+			n_[nombre.size()] = '\0';
+			a.setNombre(n_);
 	
 			cout<<"	Apellidos: ";
 			getline(cin, apellidos);
-			a.setApellidos(apellidos);
+			copy(apellidos.begin(), apellidos.end(), a_);
+			a_[apellidos.size()] = '\0';
+			a.setApellidos(a_);
 	
 			cout<<"	email: ";
 			cin>>email;
-			a.setEmail(email);
+			copy(email.begin(), email.end(), e_);
+			e_[email.size()] = '\0';
+			a.setEmail(e_);
 			cin.ignore();
 	
 			cout<<"	Dirección: ";
 			getline(cin, dir);
-			a.setDireccion(dir);
+			copy(dir.begin(), dir.end(), d_);
+			d_[dir.size()] = '\0';
+			a.setDireccion(d_);
 	
 			cout<<"	Fecha nacimiento (DD-MM-AA): ";
 			getline(cin, fecha);
-			a.setFecha_nacimiento(fecha);
+			copy(fecha.begin(), fecha.end(), f_);
+			f_[fecha.size()] = '\0';
+			a.setFecha_nacimiento(f_);
 	
 			cout<<"	Teléfono: ";
 			cin>>cad;
@@ -76,33 +95,38 @@ void Agenda::Anadir_alumno(list <Alumno> &lista){
 				cin.ignore();
 				
 				if(lista.empty()){
-					cout<<"	¿Es líder? Introduzca '1' si lo es o '0' si no lo es: ";
+					cout<<"	¿Es líder? [si/no]: ";
 					cin>>lider;
-					a.setLider(lider);
+					copy(lider.begin(), lider.end(), l_);
+					l_[lider.size()] = '\0';
+					a.setLider(l_);
 					cin.ignore();
 				}
 				else{
 					for(pos = lista.begin(); pos != lista.end(); pos++){
 						if(Buscar_lider(lista, grupo) == false){
-							cout<<"	¿Es líder? Introduzca '1' si lo es o '0' si no lo es: ";
+							cout<<"	¿Es líder? [si/no]: ";
 							cin>>lider;
-							a.setLider(lider);
+							copy(lider.begin(), lider.end(), l_);
+							l_[lider.size()] = '\0';
+							a.setLider(l_);
 							cin.ignore();
 						}
 						else{
 							cout<<"	Este grupo ya tiene líder, por lo que este alumno no puede serlo."<<endl;
+							strcpy(l, "no");
+							a.setLider(l);
+							
 						}
 					}
 				}
 				
 			}
 			if(extra == 'n'){
-					grupo = 0;
-					lider = 0;
+					grupo = 0; // No se asigna a ningún grupo
+					strcpy(l, "no"); 
 					a.setGrupo(grupo);
-			}
-			else{
-					cout<<"	Opción inválida."<<endl;
+					a.setLider(l);
 			}
 			
 			
@@ -121,341 +145,6 @@ void Agenda::Anadir_alumno(list <Alumno> &lista){
 		cout<<"	La agenda está completa. No se pueden añadir más alumnos."<<endl;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-void Agenda::Editar_alumno(list<Alumno>&lista){
-
-	char apellidochar[255];
-
-	string apellido;
-	string dni;
-
-
-	cout<<"Introduzca los apellidos del alumno a mostrar(editar)"<<endl;
-	cin.ignore();
-	cin.getline(apellidochar, 255,'\n');
-
-	apellido=apellidochar;
-
-	list<Alumno>::iterator it;
-
-	for (it=lista.begin(); it!=lista.end(); it++)
-	{
-		if(apellido==it->getApellidos()){	
-			//Aqui editamos los campos del alumno
-
-		}
-
-	}
-
-
-	//Si se produce la coincidendia de apellidos
-
-	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
-	cin>>dni;
-
-	for (it=lista.begin(); it!=lista.end(); it++)
-	{
-		if(dni==it->getDni()){
-			//Aqui editamos los campos del alumno
-		}
-
-	}
-
-	//Paso de char a string
-	cout<<"DNI introducido STRING--> "<<dni<<endl;
-
-}
-*/
-
-
-void Agenda::Editar_alumno(list <Alumno> &Lista){
-
-	string dni, cad;
-	char extra;
-	int opcion, dat, grupo;
-	int cambioG = 0; /* Para comprobar si se ha cambiado el grupo. Esta variable se utilizará a la hora de cambiar el campo de líder */
-	bool lider;
-	list<Alumno>::iterator pos;
-	list<Alumno>::iterator pos2;
-	
-	cout<<"	Introduzca los apellidos para comprobar si existe el alumno: ";
-	cin>>dni;
-	cin.ignore();
-	cout<<"\n"<<endl;
-	
-	if(!lista.empty()){
-		if(Buscar_dni(lista, dni) == true){
-		
-			for(pos = lista.begin(); pos != lista.end(); pos++){
-				if(pos->getDni() == dni){
-				
-					do{
-				
-						cout<<"	Datos del alumno:\n"<<endl;
-						cout<<"	Nombre: "<<pos->getNombre()<<endl;
-						cout<<"	Apellidos: "<<pos->getApellidos()<<endl;
-						cout<<"	email: "<<pos->getEmail()<<endl;
-						cout<<"	Dirección: "<<pos->getDireccion()<<endl;
-						cout<<"	DNI: "<<pos->getDni()<<endl;
-						cout<<"	Fecha nacimiento: "<<pos->getFecha_nacimiento()<<endl;
-						cout<<"	Teléfono: "<<pos->getTelefono()<<endl;
-						cout<<"	Curso más alto: "<<pos->getCurso_mas_alto()<<endl;
-						cout<<"	Grupo: "<<pos->getGrupo()<<endl;
-						cout<<"	Líder: "<<pos->getLider()<<endl;
-						cout<<"\n"<<endl;
-						
-						if(cambioG == 0){
-							grupo = pos->getGrupo();
-						}
-					
-						cout<<"	[1] Nombre"<<endl;
-						cout<<"	[2] Apellidos"<<endl;
-						cout<<"	[3] email"<<endl;
-						cout<<"	[4] Dirección"<<endl;
-						cout<<"	[5] DNI"<<endl;
-						cout<<"	[6] Fecha de nacimiento"<<endl;
-						cout<<"	[7] Teléfono"<<endl;
-						cout<<"	[8] Curso más alto"<<endl;
-						cout<<"	[9] Grupo"<<endl;
-						cout<<"	[10] ¿Es líder?"<<endl;
-						cout<<"	[0] Ninguno\n"<<endl;
-						cout<<"	Introduzca el campo que quiere modificar: ";
-						cin>>opcion;
-						cin.ignore();
-						cout<<"\n"<<endl;
-					
-						switch(opcion){
-					
-							case 1:
-								cout<<"	Nuevo nombre: ";
-								getline(cin, cad);
-								pos->setNombre(cad);
-								cout<<"\n"<<endl;
-								
-								break;
-						
-						
-							case 2:
-								cout<<"	Nuevos apellidos: ";
-								getline(cin, cad);
-								pos->setApellidos(cad);
-								cout<<"\n"<<endl;
-								
-								break;
-						
-						
-							case 3:
-								cout<<"	Nuevo email: ";
-								cin>>cad;
-								pos->setEmail(cad);
-								cin.ignore();
-								cout<<"\n"<<endl;
-								
-								break;
-							
-							
-							case 4:
-								cout<<"	Nueva dirección: ";
-								getline(cin, cad);
-								pos->setDireccion(cad);
-								cout<<"\n"<<endl;
-								
-								break;
-							
-							
-							case 5:
-								cout<<"	Nuevo DNI: ";
-								cin>>cad;
-								pos->setDni(cad);
-								cin.ignore();
-								cout<<"\n"<<endl;
-								
-								break;
-							
-							
-							case 6:
-								cout<<"	Nueva fecha de nacimiento (DD-MM-AA): ";
-								cin>>cad;
-								pos->setFecha_nacimiento(cad);
-								cin.ignore();
-								cout<<"\n"<<endl;
-								
-								break;
-							
-							
-							case 7:
-								cout<<"	Nuevo teléfono: ";
-								cin>>cad;
-								dat = atoi(cad.c_str());
-								pos->setTelefono(dat);
-								cin.ignore();
-								cout<<"\n"<<endl;
-								
-								break;
-							
-							
-							case 8:
-								cout<<"	Nuevo curso más alto: ";
-								cin>>cad;
-								dat = atoi(cad.c_str());
-								pos->setCurso_mas_alto(dat);
-								cin.ignore();
-								cout<<"\n"<<endl;
-								
-								break;
-							
-							
-							case 9:
-								cout<<"	Nuevo grupo: ";
-								cin>>cad;
-								dat = atoi(cad.c_str());
-								pos->setGrupo(dat);
-								cin.ignore();
-								cambioG = 1;
-								grupo = pos->getGrupo();
-								if(Buscar_lider(lista, grupo) == true){
-									pos->setLider(lider);
-									cout<<"	El nuevo grupo ya tenía un líder, por lo que este alumno no puede serlo."<<endl;
-								}
-								cout<<"\n"<<endl;
-								
-								break;
-							
-							
-							case 0:
-								
-								cout<<"	¿Es líder? Introduzca '1' si lo es o '0' si no lo es: ";
-								cin>>lider;
-								cin.ignore();
-								if(lider == 0){ // No va a ser líder
-									pos->setLider(lider);
-									cout<<"\n"<<endl;
-								}
-								else{
-									if(lider == 1){ // Va a ser líder
-										if(Buscar_lider(lista, grupo) == false){ // Comprobamos si el grupo ya tiene líder
-											pos->setLider(lider);
-											cout<<"\n"<<endl;
-										}
-										else{
-											cout<<"	Este grupo ya tiene líder, por lo que este alumno no puede serlo."<<endl;
-										}
-									}
-								}	
-						
-								break;
-								
-								
-							default:
-								cout<<"	Opción inválida."<<endl;
-							
-					
-						}
-					
-					}while(opcion != 0);
-				
-				}
-			}
-				
-		}
-		else{
-			cout<<"	El alumno no existe."<<endl;
-		}
-	}
-	else{
-		cout<<"	La agenda está vacía."<<endl;
-	}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-/*
-void Agenda::Eliminar_alumno(list<Alumno>&lista){
-
-	char apellidochar[255];
-
-	string apellido;
-	string dni;
-
-
-	cout<<"Introduzca los apellidos del alumno a eliminar(editar)"<<endl;
-	cin.ignore();
-	cin.getline(apellidochar, 255,'\n'); 
-
-	apellido=apellidochar;
-
-	list<Alumno>::iterator it;
-
-	for (it=lista.begin(); it!=lista.end(); it++)
-	{
-		if(apellido==it->getApellidos()){
-
-			//Aqui eliminamos al alumno
-		}
-	}
-
-
-
-
-	//Si se produce la coincidendia de apellidos entonces pedidos al usuario que introduzca el dni por teclado
-
-	cout<<"Introduzca el dni del alumno a mostrar"<<endl;
-	cin>>dni;
-
-	//Paso de char a string
-	cout<<"DNI introducido STRING--> "<<dni<<endl;
-
-
-	for (it=lista.begin(); it!=lista.end(); it++)
-	{
-		if(dni==it->getDni()){
-			//Aqui eliminamos al alumno
-
-		}
-	}
-}
-
-*/
-/*
-
-void Agenda::Eliminar_alumno(list <Alumno> &lista){
-
-	char apellidos;
-	
-	cout<<"
-
-}*/
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -498,7 +187,7 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 						
 			for(pos = lista.begin(); pos != lista.end(); pos++){
 				
-				if(pos->getApellidos() == apellidos){
+				if((strcmp(pos->getApellidos(), apellidos.c_str())) == 0){
 				
 					cout<<"	Nombre: "<<pos->getNombre()<<endl;
 					cout<<"	Apellidos: "<<pos->getApellidos()<<endl;
@@ -519,8 +208,6 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 			if(escritoAp == 0){
 				cout<<"	No hay alumnos con esos apellidos."<<endl;
 			}
-			
-			system("pause");
 		
 		}
 		else{
@@ -533,7 +220,7 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 						
 				for(pos = lista.begin(); pos != lista.end(); pos++){
 					
-					if(pos->getDni() == dni){
+					if((strcmp(pos->getDni(), dni.c_str())) == 0){
 				
 						cout<<"	Nombre: "<<pos->getNombre()<<endl;
 						cout<<"	Apellidos: "<<pos->getApellidos()<<endl;
@@ -554,8 +241,6 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 					cout<<"	No hay ningún alumno con este DNI."<<endl;
 				}
 			
-				system("pause");
-				
 			}
 		}
 	
@@ -577,7 +262,7 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 				
 					if(pos->getGrupo() == grupo){
 		
-						if(pos->getLider() == 0){			
+						if((strcmp(pos->getLider(), "no")) == 0){			
 							cout<<"	   "<<pos->getNombre()<<" "<<pos->getApellidos()<<endl;	
 						}
 						else{
@@ -592,25 +277,10 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 				cout<<"	No hay alumnos asignados a este grupo."<<endl;
 			}
 		
-			system("pause");
-		
 		}
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -623,7 +293,8 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 	int opcion, campo, orden;
 	Alumno alumno[NUM];
 	Alumno aux;
-	string dni1, dni_1, dni2, dni_2, apellidos1, apellido1_1, apellido1_2, apellidos2, apellido2_1, apellido2_2;
+	//char dni1[10], dni_1[10], dni2[10], dni_2[10], apellidos1[60], apellido1_1[60], apellido1_2[60], apellidos2[60], apellido2_1[60], apellido2_2[60];
+	string nombre1, nombre2, dni1, dni_1, dni2, dni_2, apellidos1, apellido1_1, apellido1_2, apellidos2, apellido2_1, apellido2_2;
 	int pos1, pos2;
 	
 	if(!lista.empty()){
@@ -639,6 +310,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 			alumno[i].setFecha_nacimiento(pos->getFecha_nacimiento());
 			alumno[i].setTelefono(pos->getTelefono());
 			alumno[i].setCurso_mas_alto(pos->getCurso_mas_alto());
+			alumno[i].setGrupo(pos->getGrupo());
 			alumno[i].setLider(pos->getLider());
 			pos++;
 		}
@@ -683,7 +355,11 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 				// Se ordena el vector por nombre
 				for(int i = 1; i <= (lista.size() - 1); i++){
 					for(int j = 1; j <= (lista.size() - 1); j++){
-						if(alumno[j].getNombre() > alumno[j+1].getNombre()){
+					
+						nombre1 = alumno[j].getNombre();
+						nombre2 = alumno[j+1].getNombre();
+						
+						if(nombre1 > nombre2){
 							// aux = alumno[j]
 							aux.setNombre(alumno[j].getNombre());
 							aux.setApellidos(alumno[j].getApellidos());
@@ -693,6 +369,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							aux.setFecha_nacimiento(alumno[j].getFecha_nacimiento());
 							aux.setTelefono(alumno[j].getTelefono());
 							aux.setCurso_mas_alto(alumno[j].getCurso_mas_alto());
+							aux.setGrupo(alumno[j].getGrupo());
 							aux.setLider(alumno[j].getLider());
 							// alumno[j] = alumno[j+1]
 							alumno[j].setNombre(alumno[j+1].getNombre());
@@ -703,6 +380,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j].setFecha_nacimiento(alumno[j+1].getFecha_nacimiento());
 							alumno[j].setTelefono(alumno[j+1].getTelefono());
 							alumno[j].setCurso_mas_alto(alumno[j+1].getCurso_mas_alto());
+							alumno[j].setGrupo(alumno[j+1].getGrupo());
 							alumno[j].setLider(alumno[j+1].getLider());
 							// alumno[j+1] = aux
 							alumno[j+1].setNombre(aux.getNombre());
@@ -713,6 +391,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j+1].setFecha_nacimiento(aux.getFecha_nacimiento());
 							alumno[j+1].setTelefono(aux.getTelefono());
 							alumno[j+1].setCurso_mas_alto(aux.getCurso_mas_alto());
+							alumno[j+1].setGrupo(aux.getGrupo());
 							alumno[j+1].setLider(aux.getLider());
 						}
 					}
@@ -778,6 +457,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							aux.setFecha_nacimiento(alumno[j].getFecha_nacimiento());
 							aux.setTelefono(alumno[j].getTelefono());
 							aux.setCurso_mas_alto(alumno[j].getCurso_mas_alto());
+							aux.setGrupo(alumno[j].getGrupo());
 							aux.setLider(alumno[j].getLider());
 							// alumno[j] = alumno[j+1]
 							alumno[j].setNombre(alumno[j+1].getNombre());
@@ -788,6 +468,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j].setFecha_nacimiento(alumno[j+1].getFecha_nacimiento());
 							alumno[j].setTelefono(alumno[j+1].getTelefono());
 							alumno[j].setCurso_mas_alto(alumno[j+1].getCurso_mas_alto());
+							alumno[j].setGrupo(alumno[j+1].getGrupo());
 							alumno[j].setLider(alumno[j+1].getLider());
 							// alumno[j+1] = aux
 							alumno[j+1].setNombre(aux.getNombre());
@@ -798,6 +479,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j+1].setFecha_nacimiento(aux.getFecha_nacimiento());
 							alumno[j+1].setTelefono(aux.getTelefono());
 							alumno[j+1].setCurso_mas_alto(aux.getCurso_mas_alto());
+							alumno[j+1].setGrupo(aux.getGrupo());
 							alumno[j+1].setLider(aux.getLider());
 						}
 						else{
@@ -812,6 +494,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 									aux.setFecha_nacimiento(alumno[j].getFecha_nacimiento());
 									aux.setTelefono(alumno[j].getTelefono());
 									aux.setCurso_mas_alto(alumno[j].getCurso_mas_alto());
+									aux.setGrupo(alumno[j].getGrupo());
 									aux.setLider(alumno[j].getLider());
 									// alumno[j] = alumno[j+1]
 									alumno[j].setNombre(alumno[j+1].getNombre());
@@ -822,6 +505,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 									alumno[j].setFecha_nacimiento(alumno[j+1].getFecha_nacimiento());
 									alumno[j].setTelefono(alumno[j+1].getTelefono());
 									alumno[j].setCurso_mas_alto(alumno[j+1].getCurso_mas_alto());
+									alumno[j].setGrupo(alumno[j+1].getGrupo());
 									alumno[j].setLider(alumno[j+1].getLider());
 									// alumno[j+1] = aux
 									alumno[j+1].setNombre(aux.getNombre());
@@ -832,6 +516,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 									alumno[j+1].setFecha_nacimiento(aux.getFecha_nacimiento());
 									alumno[j+1].setTelefono(aux.getTelefono());
 									alumno[j+1].setCurso_mas_alto(aux.getCurso_mas_alto());
+									alumno[j+1].setGrupo(aux.getGrupo());
 									alumno[j+1].setLider(aux.getLider());
 								}
 							}
@@ -895,6 +580,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							aux.setFecha_nacimiento(alumno[j].getFecha_nacimiento());
 							aux.setTelefono(alumno[j].getTelefono());
 							aux.setCurso_mas_alto(alumno[j].getCurso_mas_alto());
+							aux.setGrupo(alumno[j].getGrupo());
 							aux.setLider(alumno[j].getLider());
 							// alumno[j] = alumno[j+1]
 							alumno[j].setNombre(alumno[j+1].getNombre());
@@ -905,6 +591,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j].setFecha_nacimiento(alumno[j+1].getFecha_nacimiento());
 							alumno[j].setTelefono(alumno[j+1].getTelefono());
 							alumno[j].setCurso_mas_alto(alumno[j+1].getCurso_mas_alto());
+							alumno[j].setGrupo(alumno[j+1].getGrupo());
 							alumno[j].setLider(alumno[j+1].getLider());
 							// alumno[j+1] = aux
 							alumno[j+1].setNombre(aux.getNombre());
@@ -915,6 +602,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j+1].setFecha_nacimiento(aux.getFecha_nacimiento());
 							alumno[j+1].setTelefono(aux.getTelefono());
 							alumno[j+1].setCurso_mas_alto(aux.getCurso_mas_alto());
+							alumno[j+1].setGrupo(aux.getGrupo());
 							alumno[j+1].setLider(aux.getLider());
 						}
 					}
@@ -971,6 +659,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							aux.setFecha_nacimiento(alumno[j].getFecha_nacimiento());
 							aux.setTelefono(alumno[j].getTelefono());
 							aux.setCurso_mas_alto(alumno[j].getCurso_mas_alto());
+							aux.setGrupo(alumno[j].getGrupo());
 							aux.setLider(alumno[j].getLider());
 							// alumno[j] = alumno[j+1]
 							alumno[j].setNombre(alumno[j+1].getNombre());
@@ -981,6 +670,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j].setFecha_nacimiento(alumno[j+1].getFecha_nacimiento());
 							alumno[j].setTelefono(alumno[j+1].getTelefono());
 							alumno[j].setCurso_mas_alto(alumno[j+1].getCurso_mas_alto());
+							alumno[j].setGrupo(alumno[j+1].getGrupo());
 							alumno[j].setLider(alumno[j+1].getLider());
 							// alumno[j+1] = aux
 							alumno[j+1].setNombre(aux.getNombre());
@@ -991,6 +681,7 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 							alumno[j+1].setFecha_nacimiento(aux.getFecha_nacimiento());
 							alumno[j+1].setTelefono(aux.getTelefono());
 							alumno[j+1].setCurso_mas_alto(aux.getCurso_mas_alto());
+							alumno[j+1].setGrupo(aux.getGrupo());
 							alumno[j+1].setLider(aux.getLider());
 						}
 					}
@@ -1038,83 +729,13 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 
 
 
-
-// -------- LISTAR JOSE ---------
-/*
-void listarAlumnos(list<Alumno>&lista){
-
-	//LISTAR ALUMNOS POR TERMINAL
-	//Estructura de tabla
-	printf("LISTA DE ALUMNOS\n");
-*/
-
-	//LISTAR ALUMNOS MEDIANTE ARCHIVO ****HTML****
-/*
-	int n_alumnos=lista.size();
-	
-	string nombre="Jose";
-	string apellidos="Dominguez Garcia";
-
-	ofstream ficheroSalida;
-
-	ficheroSalida.open("temporal.html");
-
-	//Ejemplo de archivo html todo introducido manualmente (Es decir, así no se hace, es unicamente una comprobación de formato)
-	//ficheroSalida << "<html><head><title>Lista de Alumnos</title></head><body><h1 align=center>LISTA DE ALUMNOS</h1><table border=5  align=center><tr><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Dirección</th><th>DNI</th><th>Fecha Nacimiento</th><th>Teléfono</th><th>Curso más alto</th><th>Grupo</th><th>Líder</th></tr><tr><td>Robert</td><td>Downey Jr</td><td>i62dogaj@uco.es</td><td>Callese Viejo Lesbiano</td><td>738924341V</td><td>23/2/1912</td><td>824238324</td><td>3</td><td>1</td><td>No</td></tr></table></body></html>";
-
-
-	//Introduccion de datos en html mediante el recorrido de la lista (falta comprobar su funcionamiento)
-	ficheroSalida << "<html><head><title>Lista de Alumnos</title></head><body><h1 align=center>LISTA DE ALUMNOS</h1><table border=5  align=center><tr><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Direccion</th><th>DNI</th><th>Fecha Nacimiento</th><th>Telefono</th><th>Curso mas alto</th><th>Grupo</th><th>Lider</th></tr>";
-
-
-	//Supuesto correcta funcion, falta probarla
-	list<Alumno>::iterator it;
-
-	for (it=lista.begin(); it!=lista.end(); it++)
-	{
-		ficheroSalida << "<tr><td>"<<it->getNombre()<<"</td><td>"<<it->getApellidos()<<"</td><td>"<<it->getEmail()<<"</td><td>"<<it->getDireccion()<<"</td><td>"<<it->getDni()<<"</td><td>"<<it->getFecha_nacimiento()<<"</td><td>"<<it->getTelefono()<<"</td><td>"<<it->getCurso_mas_alto()<<"</td><td>"<<it->getGrupo()<<"</td><td>"<<it->getLider()<<"</td></tr>";
-	}
-
-
-	//Prueba que funciona
-	for (int i = 0; i < 5; ++i)
-	{
-				ficheroSalida << "<tr><td>"<<nombre<<"</td><td>"<<apellidos<<"</td><td>"<<it->getEmail()<<"</td><td>"<<it->getDireccion()<<"</td><td>"<<it->getDni()<<"</td><td>"<<it->getFecha_nacimiento()<<"</td><td>"<<it->getTelefono()<<"</td><td>"<<it->getCurso_mas_alto()<<"</td><td>"<<it->getGrupo()<<"</td><td>"<<it->getLider()<<"</td></tr>";
-
-	}
-
-
-	ficheroSalida.close();
-
-	sleep(1);
-	system("open temporal.html");
-
-	sleep(1);
-
-	system("rm temporal.html");
-	*/
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bool Agenda::Buscar_apellidos(list <Alumno> lista, string apellidos) {
+bool Agenda::Buscar_apellidos(list <Alumno> lista, const char *apellidos) {
 
 	list<Alumno>::iterator pos;
 	
 	for(pos = lista.begin(); pos != lista.end(); pos++){
 		
-		if(pos->getApellidos() == apellidos){
+		if((strcmp(pos->getApellidos(), apellidos)) == 0){
 			return true;
 		}
 	}
@@ -1125,13 +746,13 @@ bool Agenda::Buscar_apellidos(list <Alumno> lista, string apellidos) {
 
 
 
-bool Agenda::Buscar_dni(list <Alumno> lista, string dni) {
+bool Agenda::Buscar_dni(list <Alumno> lista, const char *dni) {
 	
 	list<Alumno>::iterator pos;
 	
 	for(pos = lista.begin(); pos != lista.end(); pos++){
 		
-		if(pos->getDni() == dni){
+		if((strcmp(pos->getDni(), dni)) == 0){
 			return true;
 		}
 		else{
@@ -1166,7 +787,7 @@ bool Agenda::Buscar_lider(list <Alumno> lista, int grupo){
 	
 		if(pos->getGrupo() == grupo){
 		
-			if(pos->getLider() == 1){
+			if((strcmp(pos->getLider(), "si")) == 0){
 				return true;
 			}
 		}
