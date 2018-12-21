@@ -10,23 +10,40 @@ using namespace std;
 /*
 void Profesor::Cargar_fichero(list<Alumno>&lista){
 
-	ifstream f;
 	list<Alumno>::iterator it;
-	Alumno p;
-	char nombre_fichero[30];
+	Datos_alumno p;
 
 	ifstream f;
 
-	cout<<"Introduzca el nombre del fichero binario que desea cargar"<<endl;
-	cin>>nombre_fichero;
+	f.open("alumnos.bin",ios::in | ios::binary);
 
-	f.open(nombre_fichero,ios::in | ios::binary);
+	//f.read((char *)&p, sizeof(p));
 
-	while(!f.eof()){
+	for(it=lista.begin();!f.eof();it++){
 
 		f.read((char *)&p, sizeof(p));
 
-		lista.push_back(p);
+		it->setNombre(p.nombre);
+		it->setApellidos(p.apellidos);
+		it->setDireccion(p.direccion);
+		it->setEmail(p.email);
+		it->setDni(p.dni);
+		it->setFecha_nacimiento(p.fecha_nacimiento);
+		it->setTelefono(p.telefono);
+		it->setCurso_mas_alto(p.curso);
+		it->setGrupo(p.grupo);
+		it->setLider(p.lider);
+
+		cout<< it->getNombre() <<endl;
+		cout<< it->getApellidos() <<endl;
+		cout<< it->getDireccion() <<endl;
+		cout<< it->getDni() <<endl;
+		cout<< it->getEmail() <<endl;
+		cout<< it->getFecha_nacimiento() <<endl;
+		cout<< it->getTelefono() <<endl;
+		cout<< it->getCurso_mas_alto() <<endl;
+		cout<< it->getGrupo() <<endl;
+		cout<< it->getLider() <<endl;
 
 	}
 
@@ -34,54 +51,37 @@ void Profesor::Cargar_fichero(list<Alumno>&lista){
 
 }
 
-void Profesor::Guardar_fichero(list <Alumno> &lista){
+
+
+void Profesor::Guardar_fichero(list<Alumno> &lista){
 
 	list<Alumno>::iterator it;
-	char aux[60];
-	int aux2;
-	Alumno p;
+	Datos_alumno p;
+	char nombre[50];
+	string aux;
 
 	ofstream f;
 
-	cout<<"Introduzca el nombre del fichero de guardado"<<endl;
-	cin>>aux;
+	f.open("alumnos.bin",ios::out |ios::binary);
 
-	f.open(aux,ios::out | ios::binary);
+	for(it=lista.begin();it != lista.end();it++){
 
-	for(it = lista.begin();it != lista.end();it++){
-
-		strcpy(aux,it->getNombre());
-		p.setNombre(aux);
-
-		strcpy(aux,it->getApellidos());
-		p.setApellidos(aux);
-
-		strcpy(aux,it->getDireccion());
-		p.setDireccion(aux);
-
-		strcpy(aux,it->getEmail());
-		p.setEmail(aux);
-
-		strcpy(aux,it->getDni());
-		p.setDni(aux);
-
-		strcpy(aux,it->getFecha_nacimiento());
-		p.setFecha_nacimiento(aux);
-
-		strcpy(aux,it->getNombre());
-		p.setNombre(aux);
-
-		aux2=it->getCurso();
-		p.setCurso(aux2);
-
-		aux2=it->getGrupo();
-		p.setGrupo(aux2);
-
-		aux2=it->getTelefono();
-		p.setTelefono(aux2);
-
-		strcpy(aux,it->getLider());
-		p.setLider(aux);
+		aux=it->getNombre();
+		strcpy(p.nombre,aux.c_str());
+		aux=it->getApellidos();
+		strcpy(p.apellidos,aux.c_str());
+		aux=it->getDireccion();
+		strcpy(p.direccion,aux.c_str());
+		aux=it->getDni();
+		strcpy(p.dni,aux.c_str());
+		aux=it->getEmail();
+		strcpy(p.email,aux.c_str());
+		aux=it->getFecha_nacimiento();
+		strcpy(p.fecha_nacimiento,aux.c_str());
+		p.telefono=it->getTelefono();
+		p.curso=it->getCurso_mas_alto();
+		p.grupo=it->getGrupo();
+		p.lider=it->getLider();
 
 		f.write((char *)&p, sizeof(p));
 
@@ -90,6 +90,69 @@ void Profesor::Guardar_fichero(list <Alumno> &lista){
 	f.close();
 
 }
+*/
+
+/*
+void Profesor::Guardar_fichero(list <Alumno> &lista){
+
+	if(!lista.empty()){
+		
+		list<Alumno>::iterator pos;
+		char nombreF[20];
+		string nombre, apellidos, email, dir, dni, fecha; 
+		Datos_alumno a;
+	
+		ofstream file;
+	
+		cout<<"	Introduzca el nombre del fichero en el que quiera guardar los datos de los alumnos: ";
+		cin>>nombreF;
+		cin.ignore();
+		
+		file.open(nombreF, ios::out | ios::binary);
+	
+		for(pos = lista.begin(); pos != lista.end(); pos++){
+		
+			nombre = pos->getNombre();
+			strcpy(a.nombre, nombre.c_str());
+			
+			apellidos = pos->getApellidos();
+			strcpy(a.apellidos, apellidos.c_str());
+			
+			email = pos->getEmail();
+			strcpy(a.email, email.c_str());
+			
+			dir = pos->getDireccion();
+			strcpy(a.direccion, dir.c_str());
+			
+			dni = pos->getDni();
+			strcpy(a.dni, dni.c_str());
+			
+			fecha = pos->getFecha_nacimiento();
+			strcpy(a.fecha_nacimiento, fecha.c_str());
+			
+			a.telefono = pos->getTelefono();
+			
+			a.curso_mas_alto = pos->getCurso_mas_alto();
+			
+			a.grupo = pos->getGrupo();
+			
+			a.lider = pos->getLider();
+			
+			file.write((char *)&a, sizeof(a));
+		
+		}
+		
+		file.close();
+	
+	}
+	else{
+		cout<<"	La agenda está vacía."<<endl;
+	}
+
+}*/
+
+
+/*
 
 void Profesor::Cargar_copia_seguridad(char tipo) {
 	// TODO - implement Profesor::Cargar_copia_seguridad
