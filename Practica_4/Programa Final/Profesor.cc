@@ -8,7 +8,9 @@
 using namespace std;
 
 
-void Profesor::Cargar_fichero(list<Alumno>&lista){
+void Profesor::Cargar_fichero(list <Alumno> &lista){
+
+	lista.clear(); // Limpiamos la lista
 
 	ifstream f;
 	Alumno p;
@@ -18,12 +20,14 @@ void Profesor::Cargar_fichero(list<Alumno>&lista){
 	cin>>nombre;
 
 	f.open(nombre,ios::in | ios::binary);
+	
+	f.read((char *)&p, sizeof(p));
 
 	while(!f.eof()){
+	
+		lista.push_back(p);
 
 		f.read((char *)&p, sizeof(p));
-
-		lista.push_back(p);
 
 	}
 
