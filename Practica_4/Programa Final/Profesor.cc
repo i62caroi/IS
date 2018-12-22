@@ -21,19 +21,26 @@ void Profesor::Cargar_fichero(list <Alumno> &lista){
 
 	f.open(nombre,ios::in | ios::binary);
 	
-	f.read((char *)&p, sizeof(p));
-
-	while(!f.eof()){
+	if(f.is_open()){
 	
-		lista.push_back(p);
-
 		f.read((char *)&p, sizeof(p));
 
-	}
-
-	f.close();
+		while(!f.eof()){
 	
-	cout<<"\n	Fichero cargado."<<endl;
+			lista.push_back(p);
+
+			f.read((char *)&p, sizeof(p));
+
+		}
+
+		f.close();
+	
+		cout<<"\n	Fichero cargado."<<endl;
+		
+	}
+	else{
+		cout<<"\n	El fichero no existe."<<endl;
+	}
 
 }
 

@@ -110,7 +110,7 @@ void menu_inicio(list<Alumno> &lista){
 	
 	do{
 	
-		cout<<"\n\n	INICIO"<<endl;
+		cout<<"\n\n\n\n	INICIO"<<endl;
 		cout<<"   ---------------------------------------\n"<<endl;
 		cout<<"	[1] Iniciar sesión"<<endl;
 		cout<<"	[2] Registrar usuario"<<endl;
@@ -165,7 +165,7 @@ void menu_inicio(list<Alumno> &lista){
 			
 			case 0:
 				
-				cout<<"	FIN DEL PROGRAMA.\n"<<endl;
+				cout<<"\n\n	FIN DEL PROGRAMA.\n"<<endl;
 				break;
 			
 						
@@ -257,14 +257,14 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 3:
 			
 				
-					//a.Editar_alumno(lista);
+					a.Editar_alumno(lista);
 				
 					break;
 			
 			
 				case 4:
 		
-					//a.Eliminar_alumno(lista);
+					a.Eliminar_alumno(lista);
 			
 					break;
 				

@@ -13,8 +13,6 @@ int main(){
 
 	cout<<endl;
 	
-	cout<<"\n	BIENVENIDO\n"<<endl;
-	
 	list<Alumno> lista;
 	
 	crear_coordinador();

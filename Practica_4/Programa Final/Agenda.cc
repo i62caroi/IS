@@ -27,7 +27,7 @@ void Agenda::Anadir_alumno(list <Alumno> &lista){
 		char *l_ = new char[lider.size() + 1];
 		list<Alumno>::iterator pos;
 	
-		cout<<"	Introduzca el DNI para comprobar si existe el alumno: ";
+		cout<<"	Introduzca el DNI del alumno: ";
 		cin>>dni;
 		copy(dni.begin(), dni.end(), dni_);
 		dni_[dni.size()] = '\0';
@@ -144,6 +144,479 @@ void Agenda::Anadir_alumno(list <Alumno> &lista){
 	else{
 		cout<<"	La agenda está completa. No se pueden añadir más alumnos."<<endl;
 	}
+}
+
+
+
+void Agenda::Editar_alumno(list <Alumno> &lista){
+
+	string nombre, apellidos, email, dir, dni, fecha, lider;
+	string cad;
+	int opcion, tlf, curso, grupo;
+	char *n_ = new char[nombre.size() + 1];
+	char *a_ = new char[apellidos.size() + 1];
+	char *e_ = new char[email.size() + 1];
+	char *d_ = new char[dir.size() + 1];
+	char *dni_ = new char[dni.size() + 1];
+	char *f_ = new char[fecha.size() + 1];
+	char *l_ = new char[lider.size() + 1];
+	list<Alumno>::iterator pos;
+	list<Alumno>::iterator pos2;
+	list<Alumno>::iterator pos3;
+	
+	if(!lista.empty()){
+	
+		cout<<"	Introduzca los apellidos del alumno: ";
+		getline(cin, apellidos);
+		cout<<"\n"<<endl;
+		
+		if(Buscar_apellidos(lista, apellidos.c_str()) == 1){ //El alumno existe
+			
+			for(pos = lista.begin(); pos != lista.end(); pos++){
+				
+				if((strcmp(pos->getApellidos(), apellidos.c_str())) == 0){
+				
+				
+					do{
+				
+						cout<<"\n\n	DATOS DEL ALUMNO:\n"<<endl;
+						cout<<"	Nombre: "<<pos->getNombre()<<endl;
+						cout<<"	Apellidos: "<<pos->getApellidos()<<endl;
+						cout<<"	email: "<<pos->getEmail()<<endl;
+						cout<<"	Dirección: "<<pos->getDireccion()<<endl;
+						cout<<"	DNI: "<<pos->getDni()<<endl;
+						cout<<"	Fecha nacimiento: "<<pos->getFecha_nacimiento()<<endl;
+						cout<<"	Teléfono: "<<pos->getTelefono()<<endl;
+						cout<<"	Curso más alto: "<<pos->getCurso_mas_alto()<<endl;
+						cout<<"	Grupo: "<<pos->getGrupo()<<endl;
+						cout<<"	Líder: "<<pos->getLider()<<endl;
+						cout<<"\n"<<endl;
+						
+					
+						cout<<"	[1]  Nombre"<<endl;
+						cout<<"	[2]  Apellidos"<<endl;
+						cout<<"	[3]  email"<<endl;
+						cout<<"	[4]  Dirección"<<endl;
+						cout<<"	[5]  DNI"<<endl;
+						cout<<"	[6]  Fecha de nacimiento"<<endl;
+						cout<<"	[7]  Teléfono"<<endl;
+						cout<<"	[8]  Curso más alto"<<endl;
+						cout<<"	[9]  Grupo"<<endl;
+						cout<<"	[10] ¿Es líder?"<<endl;
+						cout<<"	[0]  Ninguno\n"<<endl;
+						cout<<"	Escoja el campo que quiere modificar: ";
+						cin>>opcion;
+						cin.ignore();
+						cout<<"\n"<<endl;
+					
+						switch(opcion){
+					
+							case 1:
+								cout<<"	Nuevo nombre: ";
+								getline(cin, nombre);
+								copy(nombre.begin(), nombre.end(), n_);
+								n_[nombre.size()] = '\0';
+								pos->setNombre(n_);
+								cout<<"\n"<<endl;
+								
+								break;
+						
+						
+							case 2:
+								cout<<"	Nuevos apellidos: ";
+								getline(cin, apellidos);
+								copy(apellidos.begin(), apellidos.end(), a_);
+								a_[apellidos.size()] = '\0';
+								pos->setApellidos(a_);
+								cout<<"\n"<<endl;
+								
+								break;
+						
+						
+							case 3:
+								cout<<"	Nuevo email: ";
+								cin>>email;
+								copy(email.begin(), email.end(), e_);
+								e_[email.size()] = '\0';
+								pos->setEmail(e_);
+								cin.ignore();
+								cout<<"\n"<<endl;
+								
+								break;
+							
+							
+							case 4:
+								cout<<"	Nueva dirección: ";
+								getline(cin, dir);
+								copy(dir.begin(), dir.end(), d_);
+								d_[dir.size()] = '\0';
+								pos->setDireccion(d_);
+								cout<<"\n"<<endl;
+								
+								break;
+							
+							
+							case 5:
+								cout<<"	Nuevo DNI: ";
+								cin>>dni;
+								copy(dni.begin(), dni.end(), dni_);
+								dni_[dni.size()] = '\0';
+								pos->setDni(dni_);
+								cin.ignore();
+								cout<<"\n"<<endl;
+								
+								break;
+							
+							
+							case 6:
+								cout<<"	Nueva fecha de nacimiento (DD-MM-AA): ";
+								getline(cin, fecha);
+								copy(fecha.begin(), fecha.end(), f_);
+								f_[fecha.size()] = '\0';
+								pos->setFecha_nacimiento(f_);
+								cin.ignore();
+								cout<<"\n"<<endl;
+								
+								break;
+							
+							
+							case 7:
+								cout<<"	Nuevo teléfono: ";
+								cin>>cad;
+								tlf = atoi(cad.c_str());
+								pos->setTelefono(tlf);
+								cin.ignore();
+								cout<<"\n"<<endl;
+								
+								break;
+							
+							
+							case 8:
+								cout<<"	Nuevo curso más alto: ";
+								cin>>cad;
+								curso = atoi(cad.c_str());
+								pos->setCurso_mas_alto(curso);
+								cin.ignore();
+								cout<<"\n"<<endl;
+								
+								break;
+							
+							
+							case 9:
+								cout<<"	Nuevo grupo: ";
+								cin>>cad;
+								grupo = atoi(cad.c_str());
+								pos->setGrupo(grupo);
+								cin.ignore();
+								cout<<"\n"<<endl;
+								
+								break;
+							
+							
+							case 10:
+								
+								cout<<"	¿Es líder? [si/no]: ";
+								cin>>lider;
+								copy(lider.begin(), lider.end(), l_);
+								l_[lider.size()] = '\0';
+								cin.ignore();
+								if(lider == "no"){ // No va a ser líder
+									pos->setLider(l_);
+									cout<<"\n"<<endl;
+								}
+								else{
+									if(lider == "si"){ // Va a ser líder
+										if(Buscar_lider(lista, grupo) == false){ // Comprobamos si el grupo ya tiene líder
+											pos->setLider(l_);
+											cout<<"\n"<<endl;
+										}
+										else{
+											cout<<"	El grupo al que pertenece este alumno ya tiene líder, por lo que no puede serlo."<<endl;
+										}
+									}
+								}	
+						
+								break;
+												
+					
+						}
+					
+					}while(opcion != 0);
+				
+				}
+			}
+				
+		}
+		else{
+			if((Buscar_apellidos(lista, apellidos.c_str())) > 1){ // Hay varios alumnos con essos apellidos
+			
+				cout<<"\n	ALUMNOS CON ESOS APELLIDOS:\n"<<endl;
+				
+				for(pos2 = lista.begin(); pos2 != lista.end(); pos2++){
+					if((strcmp(pos2->getApellidos(), apellidos.c_str())) == 0){
+						cout<<"	Nombre: "<<pos2->getNombre()<<endl;
+						cout<<"	Apellidos: "<<pos2->getApellidos()<<endl;
+						cout<<"	DNI: "<<pos2->getDni()<<endl;
+						cout<<endl;
+					}
+				}
+				
+				cout<<"\n	Introduzca el DNI del alumno: ";
+				cin>>dni;
+				cin.ignore();
+				cout<<"\n"<<endl;	
+				
+				if(Buscar_dni(lista, dni.c_str()) == true){
+				
+					for(pos3 = lista.begin(); pos3 != lista.end(); pos3++){
+					
+						if((strcmp(pos3->getDni(), dni.c_str())) == 0){
+						
+							do{
+				
+								cout<<"\n\n	DATOS DEL ALUMNO:\n"<<endl;
+								cout<<"	Nombre: "<<pos3->getNombre()<<endl;
+								cout<<"	Apellidos: "<<pos3->getApellidos()<<endl;
+								cout<<"	email: "<<pos3->getEmail()<<endl;
+								cout<<"	Dirección: "<<pos3->getDireccion()<<endl;
+								cout<<"	DNI: "<<pos3->getDni()<<endl;
+								cout<<"	Fecha nacimiento: "<<pos3->getFecha_nacimiento()<<endl;
+								cout<<"	Teléfono: "<<pos3->getTelefono()<<endl;
+								cout<<"	Curso más alto: "<<pos3->getCurso_mas_alto()<<endl;
+								cout<<"	Grupo: "<<pos3->getGrupo()<<endl;
+								cout<<"	Líder: "<<pos3->getLider()<<endl;
+								cout<<"\n"<<endl;
+						
+					
+								cout<<"	[1]  Nombre"<<endl;
+								cout<<"	[2]  Apellidos"<<endl;
+								cout<<"	[3]  email"<<endl;
+								cout<<"	[4]  Dirección"<<endl;
+								cout<<"	[5]  DNI"<<endl;
+								cout<<"	[6]  Fecha de nacimiento"<<endl;
+								cout<<"	[7]  Teléfono"<<endl;
+								cout<<"	[8]  Curso más alto"<<endl;
+								cout<<"	[9]  Grupo"<<endl;
+								cout<<"	[10] ¿Es líder?"<<endl;
+								cout<<"	[0]  Ninguno\n"<<endl;
+								cout<<"	Escoja el campo que quiere modificar: ";
+								cin>>opcion;
+								cin.ignore();
+								cout<<"\n"<<endl;
+					
+								switch(opcion){
+					
+									case 1:
+										cout<<"	Nuevo nombre: ";
+										getline(cin, nombre);
+										copy(nombre.begin(), nombre.end(), n_);
+										n_[nombre.size()] = '\0';
+										pos3->setNombre(n_);
+										cout<<"\n"<<endl;
+								
+										break;
+						
+						
+									case 2:
+										cout<<"	Nuevos apellidos: ";
+										getline(cin, apellidos);
+										copy(apellidos.begin(), apellidos.end(), a_);
+										a_[apellidos.size()] = '\0';
+										pos3->setApellidos(a_);
+										cout<<"\n"<<endl;
+								
+										break;
+						
+						
+									case 3:
+										cout<<"	Nuevo email: ";
+										cin>>email;
+										copy(email.begin(), email.end(), e_);
+										e_[email.size()] = '\0';
+										pos->setEmail(e_);
+										cin.ignore();
+										cout<<"\n"<<endl;
+								
+										break;
+							
+							
+									case 4:
+										cout<<"	Nueva dirección: ";
+										getline(cin, dir);
+										copy(dir.begin(), dir.end(), d_);
+										d_[dir.size()] = '\0';
+										pos3->setDireccion(d_);
+										cout<<"\n"<<endl;
+								
+										break;
+							
+							
+									case 5:
+										cout<<"	Nuevo DNI: ";
+										cin>>dni;
+										copy(dni.begin(), dni.end(), dni_);
+										dni_[dni.size()] = '\0';
+										pos3->setDni(dni_);
+										cin.ignore();
+										cout<<"\n"<<endl;
+								
+										break;
+							
+							
+									case 6:
+										cout<<"	Nueva fecha de nacimiento (DD-MM-AA): ";
+										getline(cin, fecha);
+										copy(fecha.begin(), fecha.end(), f_);
+										f_[fecha.size()] = '\0';
+										pos3->setFecha_nacimiento(f_);
+										cin.ignore();
+										cout<<"\n"<<endl;
+								
+										break;
+							
+							
+									case 7:
+										cout<<"	Nuevo teléfono: ";
+										cin>>cad;
+										tlf = atoi(cad.c_str());
+										pos3->setTelefono(tlf);
+										cin.ignore();
+										cout<<"\n"<<endl;
+								
+										break;
+							
+							
+									case 8:
+										cout<<"	Nuevo curso más alto: ";
+										cin>>cad;
+										curso = atoi(cad.c_str());
+										pos3->setCurso_mas_alto(curso);
+										cin.ignore();
+										cout<<"\n"<<endl;
+								
+										break;
+							
+							
+									case 9:
+										cout<<"	Nuevo grupo: ";
+										cin>>cad;
+										grupo = atoi(cad.c_str());
+										pos3->setGrupo(grupo);
+										cin.ignore();
+										cout<<"\n"<<endl;
+								
+										break;
+							
+							
+									case 10:
+								
+										cout<<"	¿Es líder? [si/no]: ";
+										cin>>lider;
+										copy(lider.begin(), lider.end(), l_);
+										l_[lider.size()] = '\0';
+										cin.ignore();
+										if(lider == "no"){ // No va a ser líder
+											pos3->setLider(l_);
+											cout<<"\n"<<endl;
+										}
+										else{
+											if(lider == "si"){ // Va a ser líder
+												if(Buscar_lider(lista, grupo) == false){ // Comprobamos si el grupo ya tiene líder
+													pos3->setLider(l_);
+													cout<<"\n"<<endl;
+												}
+												else{
+													cout<<"	El grupo al que pertenece este alumno ya tiene líder, por lo que no puede serlo."<<endl;
+												}
+											}
+										}	
+						
+										break;
+												
+					
+								}
+					
+							}while(opcion != 0);
+						
+						}
+					
+					}
+				
+				}
+				else{
+					cout<<"	El DNI es incorrecto."<<endl;
+				}
+			
+			}
+			else{
+				if((Buscar_apellidos(lista, apellidos.c_str())) == 0){
+					cout<<"	El alumno no existe."<<endl;
+				}
+			}
+		}
+	}
+	else{
+		cout<<"	La agenda está vacía."<<endl;
+	}
+
+}
+
+
+
+
+void Agenda::Eliminar_alumno(list <Alumno> &lista){
+
+	string apellidos, dni;
+	list<Alumno>::iterator pos;
+	list<Alumno>::iterator pos2;
+	list<Alumno>::iterator pos3;
+	
+	cout<<"	Introduzca los apellidos del alumno: ";
+	getline(cin, apellidos);
+	cout<<"\n"<<endl;
+	
+	if(Buscar_apellidos(lista, apellidos.c_str()) == 1){ //El alumno existe
+		for(pos = lista.begin(); pos !=lista.end(); pos++){
+			if((strcmp(pos->getApellidos(), apellidos.c_str())) == 0){
+				lista.erase(pos++);
+				cout<<"	Alumno eliminado."<<endl;
+			}
+		}
+	}
+	else{
+		if(Buscar_apellidos(lista, apellidos.c_str()) > 1){ // Hay varios alumnos con esos apellidos
+		
+			cout<<"\n	ALUMNOS CON ESOS APELLIDOS:\n"<<endl;
+				
+			for(pos2 = lista.begin(); pos2 != lista.end(); pos2++){
+				if((strcmp(pos2->getApellidos(), apellidos.c_str())) == 0){
+					cout<<"	Nombre: "<<pos2->getNombre()<<endl;
+					cout<<"	Apellidos: "<<pos2->getApellidos()<<endl;
+					cout<<"	DNI: "<<pos2->getDni()<<endl;
+					cout<<endl;
+				}
+			}
+				
+			cout<<"\n	Introduzca el DNI del alumno: ";
+			cin>>dni;
+			cin.ignore();
+			cout<<"\n"<<endl;	
+			
+			for(pos3 = lista.begin(); pos3 != lista.end(); pos3++){
+				if((strcmp(pos3->getDni(), dni.c_str())) == 0){
+					lista.erase(pos3++);
+					cout<<"	Alumno eliminado."<<endl;
+				}
+			}
+		
+		}
+		else{
+			if(Buscar_apellidos(lista, apellidos.c_str()) == 0){
+				cout<<"	El alumno no existe."<<endl;
+			}
+		}
+	}
+
 }
 
 
@@ -293,7 +766,6 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 	int opcion, campo, orden;
 	Alumno alumno[NUM];
 	Alumno aux;
-	//char dni1[10], dni_1[10], dni2[10], dni_2[10], apellidos1[60], apellido1_1[60], apellido1_2[60], apellidos2[60], apellido2_1[60], apellido2_2[60];
 	string nombre1, nombre2, dni1, dni_1, dni2, dni_2, apellidos1, apellido1_1, apellido1_2, apellidos2, apellido2_1, apellido2_2;
 	int pos1, pos2;
 	
@@ -729,18 +1201,19 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 
 
 
-bool Agenda::Buscar_apellidos(list <Alumno> lista, const char *apellidos) {
+int Agenda::Buscar_apellidos(list <Alumno> lista, const char *apellidos) {
 
 	list<Alumno>::iterator pos;
+	int cont = 0;
 	
 	for(pos = lista.begin(); pos != lista.end(); pos++){
 		
 		if((strcmp(pos->getApellidos(), apellidos)) == 0){
-			return true;
+			cont++;;
 		}
 	}
 	
-	return false;
+	return cont;
 	
 }
 
