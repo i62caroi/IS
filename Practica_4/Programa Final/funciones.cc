@@ -114,7 +114,6 @@ void menu_inicio(list<Alumno> &lista){
 		cout<<"   ---------------------------------------\n"<<endl;
 		cout<<"	[1] Iniciar sesión"<<endl;
 		cout<<"	[2] Registrar usuario"<<endl;
-		cout<<"	[3] Ver usuarios"<<endl;
 		cout<<"	[0] Salir\n"<<endl;
 		cout<<"	Escoja una opción: ";
 		cin>>eleccion;
@@ -155,13 +154,7 @@ void menu_inicio(list<Alumno> &lista){
 				q.Registrar_usuario(b);
 				
 				break;
-			
-			
-			case 3:
-			
-				verUsuarios();
-				break;
-				
+							
 			
 			case 0:
 				
@@ -176,37 +169,6 @@ void menu_inicio(list<Alumno> &lista){
 		
 	}while(eleccion != 0);
 	
-}
-
-
-void verUsuarios(){
-
-	Datos_usuario a;
-
-	ifstream file;
-	
-	file.open("credenciales.bin", ios::in | ios::binary);
-	
-	if(file.is_open()){
-	
-		file.read((char *)&a, sizeof(a));
-		
-		while(!file.eof()){
-		
-			cout<<"	Usuario: "<<a.user<<endl;
-			cout<<"	Contraseña: "<<a.password<<endl;
-			cout<<"	Tipo: "<<a.tipo<<endl;
-			
-			cout<<endl;
-			
-			file.read((char *)&a, sizeof(a));
-		
-		}
-		
-		file.close();
-	
-	}
-
 }
 
 
@@ -242,6 +204,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 1:
 	
 					a.Mostrar_alumno(lista);
+					cout<<"	[Pulse intro]";
+					getchar();
 			
 					break;
 		
@@ -293,7 +257,7 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 8:
 			
 					if((strcmp(p.tipo, "coordinador")) == 0){
-						//q.Crear_copia_seguridad();
+						q.Crear_copia_seguridad(lista);
 					}
 					else{
 						cout<<"	No tiene permiso para realizar esta acción."<<endl;
@@ -348,7 +312,11 @@ void lista_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Líder: "<<alumno[i].getLider()<<endl;
 		cout<<endl;
 	}
+	
+	lista_markdown_asc_comp(lista, alumno);
+	
 }
+
 
 /* Lista descendente completa */
 void lista_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
@@ -365,7 +333,10 @@ void lista_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Líder: "<<alumno[i].getLider()<<endl;
 		cout<<endl;
 	}
+	
+	lista_markdown_desc_comp(lista, alumno);
 }
+
 
 /* Lista ascendente reducida */
 void lista_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
@@ -380,6 +351,8 @@ void lista_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
 		cout<<endl;
 	}
+	
+	lista_markdown_asc_redu(lista, alumno);
 }
 
 /* Lista descendente reducida */
@@ -395,41 +368,119 @@ void lista_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
 		cout<<"	Curso más alto: "<<alumno[i].getCurso_mas_alto()<<endl;
 		cout<<endl;
 	}
+	lista_markdown_desc_redu(lista, alumno);
 }
 
 
-/*
- ------ CHECK CREDENCIALES IRENE ---- 
- 
- 
-bool check_credenciales(struct Datos_usuario a){
 
-	Datos_usuario b;
 
-	ifstream file;
+
+void lista_markdown_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
+
+	ofstream file;
+	char nombre[30];
 	
-	file.open("credenciales.bin", ios::in | ios::binary);
+	cout<<"\n	La lista se guardará en un fichero markdown."<<endl;
+	cout<<"	¿Qué nombre quiere para el fichero? [fichero.md]: ";
+	cin>>nombre;
+	cin.ignore();
+	cout<<"\n"<<endl;
 	
-	if(file.is_open()){
+	file.open(nombre);
 	
-		file.read((char *)&b, sizeof(b));
-		
-		while(!file.eof()){
-			
-			if((strcmp(b.user, a.user)) == 0){
-				if((strcmp(b.password, a.password)) == 0){
-					return true
-				}
-			}
-			else{
-			 	cout<<"\n	El usuario no está registrado."<<endl;
-				return false;
-			}
-			
-			file.read((char *)&b, sizeof(b));
-		}
+	file<<"\n"<<endl;
+	file<<"## Lista de alumnos\n"<<endl;
+	file<<"|Nombre	|Apellidos	|email	|Dirección	|DNI	|Fecha nacimiento	|Teléfono	|Curso más alto	|Grupo	|¿Es líder?	| "<<endl;
+	file<<"|------------------|------------------|------------------|------------------|:---------------:|:---------------------:|:----------------:|:---------------:|:--------------:|:----------------:|  "<<endl;
+	
+	for(int i = 1; i <= lista.size(); i++){
+		file<<"|"<<alumno[i].getNombre()<<"	|"<<alumno[i].getApellidos()<<"	|"<<alumno[i].getEmail()<<"	|"<<alumno[i].getDireccion()<<"	|"<<alumno[i].getDni()<<"	|"<<alumno[i].getFecha_nacimiento()<<"	|"<<alumno[i].getTelefono()<<"	|"<<alumno[i].getCurso_mas_alto()<<"	|"<<alumno[i].getGrupo()<<"	|"<<alumno[i].getLider()<<"  "<<endl;
 		
 	}
 
-}*/
+}
+
+
+
+void lista_markdown_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]){
+
+	ofstream file;
+	char nombre[30];
+	
+	cout<<"\n	La lista se guardará en un fichero markdown."<<endl;
+	cout<<"	¿Qué nombre quiere para el fichero? [fichero.md]: ";
+	cin>>nombre;
+	cin.ignore();
+	cout<<"\n"<<endl;
+	
+	file.open(nombre);
+	
+	file<<"\n"<<endl;
+	file<<"## Lista de alumnos\n"<<endl;
+	file<<"|Nombre	|Apellidos	|email	|Dirección	|DNI	|Fecha nacimiento	|Teléfono	|Curso más alto	|Grupo	|¿Es líder?	| "<<endl;
+	file<<"|------------------|------------------|------------------|------------------|:---------------:|:---------------------:|:----------------:|:---------------:|:--------------:|:----------------:|  "<<endl;
+	
+	for(int i = lista.size(); i >= 1; i--){
+		file<<"|"<<alumno[i].getNombre()<<"	|"<<alumno[i].getApellidos()<<"	|"<<alumno[i].getEmail()<<"	|"<<alumno[i].getDireccion()<<"	|"<<alumno[i].getDni()<<"	|"<<alumno[i].getFecha_nacimiento()<<"	|"<<alumno[i].getTelefono()<<"	|"<<alumno[i].getCurso_mas_alto()<<"	|"<<alumno[i].getGrupo()<<"	|"<<alumno[i].getLider()<<"  "<<endl;
+		
+	}
+
+}
+
+
+
+void lista_markdown_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
+
+	ofstream file;
+	char nombre[30];
+	
+	cout<<"\n	La lista se guardará en un fichero markdown."<<endl;
+	cout<<"	¿Qué nombre quiere para el fichero? [fichero.md]: ";
+	cin>>nombre;
+	cin.ignore();
+	cout<<"\n"<<endl;
+	
+	file.open(nombre);
+	
+	file<<"\n"<<endl;
+	file<<"## Lista de alumnos\n"<<endl;
+	file<<"|Nombre	|Apellidos	|email	|Dirección	|DNI	|Fecha nacimiento	|Teléfono	|Curso más alto	| "<<endl;
+	file<<"|------------------|------------------|------------------|------------------|:---------------:|:---------------------:|:----------------:|:---------------:|  "<<endl;
+	
+	for(int i = 1; i <= lista.size(); i++){
+		file<<"|"<<alumno[i].getNombre()<<"	|"<<alumno[i].getApellidos()<<"	|"<<alumno[i].getEmail()<<"	|"<<alumno[i].getDireccion()<<"	|"<<alumno[i].getDni()<<"	|"<<alumno[i].getFecha_nacimiento()<<"	|"<<alumno[i].getTelefono()<<"	|"<<alumno[i].getCurso_mas_alto()<<"	|"<<"  "<<endl;
+		
+	}
+
+}
+
+
+
+void lista_markdown_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]){
+
+	ofstream file;
+	char nombre[30];
+	
+	cout<<"\n	La lista se guardará en un fichero markdown."<<endl;
+	cout<<"	¿Qué nombre quiere para el fichero? [fichero.md]: ";
+	cin>>nombre;
+	cin.ignore();
+	cout<<"\n"<<endl;
+	
+	file.open(nombre);
+	
+	file<<"\n"<<endl;
+	file<<"## Lista de alumnos\n"<<endl;
+	file<<"|Nombre	|Apellidos	|email	|Dirección	|DNI	|Fecha nacimiento	|Teléfono	|Curso más alto	| "<<endl;
+	file<<"|------------------|------------------|------------------|------------------|:---------------:|:---------------------:|:----------------:|:---------------:|  "<<endl;
+	
+	for(int i = lista.size(); i >= 1; i--){
+		file<<"|"<<alumno[i].getNombre()<<"	|"<<alumno[i].getApellidos()<<"	|"<<alumno[i].getEmail()<<"	|"<<alumno[i].getDireccion()<<"	|"<<alumno[i].getDni()<<"	|"<<alumno[i].getFecha_nacimiento()<<"	|"<<alumno[i].getTelefono()<<"	|"<<alumno[i].getCurso_mas_alto()<<"	|"<<"  "<<endl;
+		
+	}
+
+}
+
+
+
 

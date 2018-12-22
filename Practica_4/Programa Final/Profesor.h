@@ -3,6 +3,7 @@
 #include "funciones.h"
 #include "Alumno.h"
 #include <list>
+#include <stdio.h>
 using namespace std;
 
 class Profesor {

@@ -40,9 +40,15 @@ const unsigned int NUM = 150;
 	bool check_coordinador(struct Datos_usuario p);
 	bool check_user(struct Datos_usuario p);
 	bool check_credenciales(struct Datos_usuario p);
+	
 	void lista_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]);
 	void lista_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]);
 	void lista_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]);
 	void lista_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]);
+	
+	void lista_markdown_asc_comp(list <Alumno> &lista, Alumno alumno[NUM]);
+	void lista_markdown_desc_comp(list <Alumno> &lista, Alumno alumno[NUM]);
+	void lista_markdown_asc_redu(list <Alumno> &lista, Alumno alumno[NUM]);
+	void lista_markdown_desc_redu(list <Alumno> &lista, Alumno alumno[NUM]);
 
 #endif
