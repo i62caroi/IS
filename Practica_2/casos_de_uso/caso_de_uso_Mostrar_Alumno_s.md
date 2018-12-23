@@ -32,4 +32,4 @@
 **2.b.** En caso de no existir alumnos en la agenda, se mostrará por pantalla un mensaje de error diciendo que la agenda está vacía.  
 **3.a.** En caso de escoger buscar por apellidos y de existir varios alumnos con los mismos apellidos, se mostrará la información de todos esos alumnos.   
 **3.b.** En caso de querer buscar por DNI, se introducirá el mismo y se mostrará la información del alumno que corresponda.   
-**4.a.** En caso de no existir dicho alumno o grupo en la agenda, se mostrará por pantalla un mensaje de error diciendo que el alumno o grupo en cuestión no existe en la agenda y se redirigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.  
+**4.a.** En caso de no existir dicho alumno o grupo en la agenda, se mostrará por pantalla un mensaje de error diciendo que el alumno o grupo en cuestión no existe en la agenda y se redirigirá automáticamente al menú principal del programa donde se muestran las funcionalidades del sistema.  

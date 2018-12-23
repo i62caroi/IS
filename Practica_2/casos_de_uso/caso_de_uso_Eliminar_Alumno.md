@@ -28,4 +28,4 @@
 **Flujo alternativo:**
 
 **2.a.** En caso de existir varios alumnos con los mismos apellidos, se le pedirá al usuario el DNI del alumno que se desea eliminar.  
-**2.b.** En caso de no existir el alumno en la agenda, se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestión no existe en la agenda y se redirigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.
+**2.b.** En caso de no existir el alumno en la agenda, se mostrará por pantalla un mensaje de error diciendo que el alumno en cuestión no existe en la agenda y se redirigirá automáticamente al menú principal del programa donde se muestran las funcionalidades del sistema.

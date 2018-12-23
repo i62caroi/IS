@@ -27,4 +27,4 @@
   
 **Flujo alternativo:**  
   
-**2.a.** En caso de no existir esas credenciales o de que no sea correcta alguna de ellas, el sistema muestra un mensaje diciendo que esas credenciales no existen o no son correctas, según el caso, y volvería a pedirlas.  
+**2.a.** En caso de no existir esas credenciales o de que no sea correcta alguna de ellas, el sistema muestra un mensaje diciendo que esas credenciales no existen o no son correctas y volvería a cargar el menú inicial.  

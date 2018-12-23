@@ -27,6 +27,6 @@
 
 **Flujo alternativo:**
 
-**2.a.** En caso de que la funcíón no encuentre en el sistema una copia de seguridad con el nombre introducido por el usuario, el sistema mostrará un mensaje de error y se cargará de nuevo la función "Cargar copia de seguridad".  
-**3.a.** En caso de haber ocurrido algún tipo de fallo en la funcionalidad del sistema, se mostrará un mensaje de error al usuario y se redigirá automáticamente al menú de inicio del programa donde se muestran las funcionalidades del sistema.
+**2.a.** En caso de que la función no encuentre en el sistema una copia de seguridad con el nombre introducido por el usuario, el sistema mostrará un mensaje de error y se cargará de nuevo el menú principal.  
+**3.a.** En caso de haber ocurrido algún tipo de fallo en la funcionalidad del sistema, se mostrará un mensaje de error al usuario y se redigirá automáticamente al menú principal del programa donde se muestran las funcionalidades del sistema.  
 

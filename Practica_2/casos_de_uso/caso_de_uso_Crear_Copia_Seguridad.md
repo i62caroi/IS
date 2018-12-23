@@ -22,7 +22,7 @@
 
 **Postcondiciones:**
 
-* Se mostrará un mensaje de que la copia de seguridad ha sido sobreescrita o creada y comprimida correctamente y se redirigirá al menú de inicio.
+* Se mostrará un mensaje de que la copia de seguridad ha sido sobreescrita o creada y comprimida correctamente y se redirigirá al menú principal.
 
 
 **Flujo alternativo:**

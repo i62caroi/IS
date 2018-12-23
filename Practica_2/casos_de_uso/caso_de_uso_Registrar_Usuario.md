@@ -9,7 +9,7 @@
   
 **Precondiciones:**  
 
-1. En el fichero binario que contiene las credenciales ya existen unas pertenecientes al único profesor coordinador que puede entrar al sistema. Estas credenciales fueron introducidas manualmente por el administrador.
+1. En el fichero binario que contiene las credenciales ya existen unas pertenecientes al único profesor coordinador que puede entrar al sistema. Estas credenciales, al igual que el fichero, se crean automáticamente al ejecutar el programa.
 2. No debe existir un usuario ya registrado con el mismo *nickname* que el introducido por el nuevo usuario.  
   
   
@@ -23,9 +23,9 @@
   
 **Postcondiciones:**  
   
-* Una vez haya finalizado sin error alguno todo el proceso de registro, las credenciales del nuevo usuario (automáticamente profesor ayudante) se guardarán en un fichero binario, que ya contiene las credenciales de los demás usuarios (incluido el coordinador), y se redirigirá automáticamente al menú de inicio del programa donde se muestran las demás funcionalidades del sistema, dando por iniciada la sesión del usuario.  
+* Una vez haya finalizado sin error alguno todo el proceso de registro, las credenciales del nuevo usuario (automáticamente profesor ayudante) se guardarán en el fichero binario creado al ejecutar el programa, que ya contiene las credenciales de los demás usuarios (incluido el coordinador), y se redirigirá automáticamente al menú principal del programa donde se muestran las funcionalidades del sistema, dando por iniciada la sesión del usuario.  
 
 
 **Flujo alternativo:**
 
-**2.a.** En caso de existir ese *nickname*, el sistema muestra un mensaje diciendo que no lo puede utilizar y pediría uno nuevo.
+**2.a.** En caso de existir ese *nickname*, el sistema muestra un mensaje diciendo que no lo puede utilizar y cargaría de nuevo el menú inicial.
