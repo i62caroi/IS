@@ -210,7 +210,6 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 	
 	system("zip `ls -t *.bin | head -n 1`.zip `ls -t *.bin | head -n 1`");
 	system("rm `ls -t *.bin | head -n 1`");
-	//history | tail -2 | head -1
 	
 	cout<<"\n	Copia de seguridad "<<nombreF<<".zip creada."<<endl;
 }
