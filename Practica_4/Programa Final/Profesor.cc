@@ -150,7 +150,7 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 
 	ofstream f;
 
-	cout<<"	Introduzca el nombre de la nueva copia de seguridad: ";
+	cout<<"	Introduzca el nombre de la nueva copia de seguridad [fichero.bin]: ";
 	cin>>nombreF;
 	cin.ignore();
 
@@ -208,7 +208,9 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 
 	f.close();
 	
-	system("zip `ls -t | head -n 1`.zip `ls -t | head -n 1` & rm `ls -t | head -n 1`");
+	system("zip `ls -t *.bin | head -n 1`.zip `ls -t *.bin | head -n 1`");
+	system("rm `ls -t *.bin | head -n 1`");
+	//history | tail -2 | head -1
 	
 	cout<<"\n	Copia de seguridad "<<nombreF<<".zip creada."<<endl;
 }

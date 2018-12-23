@@ -261,6 +261,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 					}
 					else{
 						cout<<"	No tiene permiso para realizar esta acción."<<endl;
+						cout<<"\n	[Pulse intro]";
+						getchar();
 					}
 				
 					break;
@@ -273,6 +275,9 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 					}
 					else{
 						cout<<"	No tiene permiso para realizar esta acción."<<endl;
+						cout<<"\n	[Pulse intro]";
+						getchar();
+						
 					}
 				
 					break;
