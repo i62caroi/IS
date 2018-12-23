@@ -61,66 +61,73 @@ void Profesor::Guardar_fichero(list <Alumno> &lista){
 	char *l_ = new char[lider.size() + 1];
 
 	ofstream f;
-
-	cout<<"	Introduzca el nombre del fichero de guardado: ";
-	cin>>nombreF;
-	cin.ignore();
-
-	f.open(nombreF,ios::out | ios::binary);
-
-	for(pos = lista.begin(); pos != lista.end(); pos++){
-
-		nombre = pos->getNombre();
-		copy(nombre.begin(), nombre.end(), n_);
-		n_[nombre.size()] = '\0';
-		p.setNombre(n_);
-
-		apellidos = pos->getApellidos();
-		copy(apellidos.begin(), apellidos.end(), a_);
-		a_[apellidos.size()] = '\0';
-		p.setApellidos(a_);
-
-		email = pos->getEmail();
-		copy(email.begin(), email.end(), e_);
-		e_[email.size()] = '\0';
-		p.setEmail(e_);
-
-		dir = pos->getDireccion();
-		copy(dir.begin(), dir.end(), d_);
-		d_[dir.size()] = '\0';
-		p.setDireccion(d_);
-
-		dni = pos->getDni();
-		copy(dni.begin(), dni.end(), dni_);
-		dni_[dni.size()] = '\0';
-		p.setDni(dni_);
-
-		fecha = pos->getFecha_nacimiento();
-		copy(fecha.begin(), fecha.end(), f_);
-		f_[fecha.size()] = '\0';
-		p.setFecha_nacimiento(f_);
-
-		tlf = pos->getTelefono();
-		p.setTelefono(tlf);
-
-		curso = pos->getCurso_mas_alto();
-		p.setCurso_mas_alto(curso);
-
-		grupo = pos->getGrupo();
-		p.setGrupo(grupo);
-
-		lider = pos->getLider();
-		copy(lider.begin(), lider.end(), l_);
-		l_[lider.size()] = '\0';
-		p.setLider(l_);
-
-		f.write((char *)&p, sizeof(p));
-
-	}
-
-	f.close();
 	
-	cout<<"\n	Fichero guardado."<<endl;
+	if(!lista.empty()){
+
+		cout<<"	Introduzca el nombre del fichero de guardado: ";
+		cin>>nombreF;
+		cin.ignore();
+
+		f.open(nombreF,ios::out | ios::binary);
+
+		for(pos = lista.begin(); pos != lista.end(); pos++){
+
+			nombre = pos->getNombre();
+			copy(nombre.begin(), nombre.end(), n_);
+			n_[nombre.size()] = '\0';
+			p.setNombre(n_);
+
+			apellidos = pos->getApellidos();
+			copy(apellidos.begin(), apellidos.end(), a_);
+			a_[apellidos.size()] = '\0';
+			p.setApellidos(a_);
+
+			email = pos->getEmail();
+			copy(email.begin(), email.end(), e_);
+			e_[email.size()] = '\0';
+			p.setEmail(e_);
+
+			dir = pos->getDireccion();
+			copy(dir.begin(), dir.end(), d_);
+			d_[dir.size()] = '\0';
+			p.setDireccion(d_);
+
+			dni = pos->getDni();
+			copy(dni.begin(), dni.end(), dni_);
+			dni_[dni.size()] = '\0';
+			p.setDni(dni_);
+
+			fecha = pos->getFecha_nacimiento();
+			copy(fecha.begin(), fecha.end(), f_);
+			f_[fecha.size()] = '\0';
+			p.setFecha_nacimiento(f_);
+
+			tlf = pos->getTelefono();
+			p.setTelefono(tlf);
+
+			curso = pos->getCurso_mas_alto();
+			p.setCurso_mas_alto(curso);
+
+			grupo = pos->getGrupo();
+			p.setGrupo(grupo);
+
+			lider = pos->getLider();
+			copy(lider.begin(), lider.end(), l_);
+			l_[lider.size()] = '\0';
+			p.setLider(l_);
+
+			f.write((char *)&p, sizeof(p));
+
+		}
+
+		f.close();
+	
+		cout<<"\n	Fichero guardado."<<endl;
+	
+	}
+	else{
+		cout<<"\n	No hay alumnos en la agenda."<<endl;
+	}
 
 }
 
@@ -149,69 +156,77 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 	char *l_ = new char[lider.size() + 1];
 
 	ofstream f;
+	
+	if(!lista.empty()){
 
-	cout<<"	Introduzca el nombre de la nueva copia de seguridad [fichero.bin]: ";
-	cin>>nombreF;
-	cin.ignore();
+		cout<<"	Introduzca el nombre de la nueva copia de seguridad [fichero.bin]: ";
+		cin>>nombreF;
+		cin.ignore();
 
-	f.open(nombreF,ios::out | ios::binary);
+		f.open(nombreF,ios::out | ios::binary);
 
-	for(pos = lista.begin(); pos != lista.end(); pos++){
+		for(pos = lista.begin(); pos != lista.end(); pos++){
 
-		nombre = pos->getNombre();
-		copy(nombre.begin(), nombre.end(), n_);
-		n_[nombre.size()] = '\0';
-		p.setNombre(n_);
+			nombre = pos->getNombre();
+			copy(nombre.begin(), nombre.end(), n_);
+			n_[nombre.size()] = '\0';
+			p.setNombre(n_);
 
-		apellidos = pos->getApellidos();
-		copy(apellidos.begin(), apellidos.end(), a_);
-		a_[apellidos.size()] = '\0';
-		p.setApellidos(a_);
+			apellidos = pos->getApellidos();
+			copy(apellidos.begin(), apellidos.end(), a_);
+			a_[apellidos.size()] = '\0';
+			p.setApellidos(a_);
 
-		email = pos->getEmail();
-		copy(email.begin(), email.end(), e_);
-		e_[email.size()] = '\0';
-		p.setEmail(e_);
+			email = pos->getEmail();
+			copy(email.begin(), email.end(), e_);
+			e_[email.size()] = '\0';
+			p.setEmail(e_);
 
-		dir = pos->getDireccion();
-		copy(dir.begin(), dir.end(), d_);
-		d_[dir.size()] = '\0';
-		p.setDireccion(d_);
+			dir = pos->getDireccion();
+			copy(dir.begin(), dir.end(), d_);
+			d_[dir.size()] = '\0';
+			p.setDireccion(d_);
 
-		dni = pos->getDni();
-		copy(dni.begin(), dni.end(), dni_);
-		dni_[dni.size()] = '\0';
-		p.setDni(dni_);
+			dni = pos->getDni();
+			copy(dni.begin(), dni.end(), dni_);
+			dni_[dni.size()] = '\0';
+			p.setDni(dni_);
 
-		fecha = pos->getFecha_nacimiento();
-		copy(fecha.begin(), fecha.end(), f_);
-		f_[fecha.size()] = '\0';
-		p.setFecha_nacimiento(f_);
+			fecha = pos->getFecha_nacimiento();
+			copy(fecha.begin(), fecha.end(), f_);
+			f_[fecha.size()] = '\0';
+			p.setFecha_nacimiento(f_);
 
-		tlf = pos->getTelefono();
-		p.setTelefono(tlf);
+			tlf = pos->getTelefono();
+			p.setTelefono(tlf);
 
-		curso = pos->getCurso_mas_alto();
-		p.setCurso_mas_alto(curso);
+			curso = pos->getCurso_mas_alto();
+			p.setCurso_mas_alto(curso);
 
-		grupo = pos->getGrupo();
-		p.setGrupo(grupo);
+			grupo = pos->getGrupo();
+			p.setGrupo(grupo);
 
-		lider = pos->getLider();
-		copy(lider.begin(), lider.end(), l_);
-		l_[lider.size()] = '\0';
-		p.setLider(l_);
+			lider = pos->getLider();
+			copy(lider.begin(), lider.end(), l_);
+			l_[lider.size()] = '\0';
+			p.setLider(l_);
 
-		f.write((char *)&p, sizeof(p));
+			f.write((char *)&p, sizeof(p));
 
+		}
+
+		f.close();
+	
+		system("zip `ls -t *.bin | head -n 1`.zip `ls -t *.bin | head -n 1`");
+		/* `ls -t *.bin | head -n 1` se refiere al último fichero con extensión .bin modificado  */
+		system("rm `ls -t *.bin | head -n 1`");
+	
+		cout<<"\n	Copia de seguridad "<<nombreF<<".zip creada."<<endl;
+		
 	}
-
-	f.close();
-	
-	system("zip `ls -t *.bin | head -n 1`.zip `ls -t *.bin | head -n 1`"); //"ls -t *.bin | head -n 1" se refiere al último fichero con extensión .bin modificado 
-	system("rm `ls -t *.bin | head -n 1`");
-	
-	cout<<"\n	Copia de seguridad "<<nombreF<<".zip creada."<<endl;
+	else{
+		cout<<"\n	No hay alumnos en la agenda."<<endl;
+	}
 }
 
 

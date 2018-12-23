@@ -204,7 +204,7 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 1:
 	
 					a.Mostrar_alumno(lista);
-					cout<<"	[Pulse intro]";
+					cout<<"\n	[Pulse intro]";
 					getchar();
 			
 					break;
@@ -214,6 +214,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 		
 				
 					a.Anadir_alumno(lista);
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				
 					break;
 			
@@ -222,6 +224,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 			
 				
 					a.Editar_alumno(lista);
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				
 					break;
 			
@@ -229,6 +233,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 4:
 		
 					a.Eliminar_alumno(lista);
+					cout<<"\n	[Pulse intro]";
+					getchar();
 			
 					break;
 				
@@ -236,6 +242,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 5:
 				
 					a.Listar_alumnos(lista);
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				
 					break;
 				
@@ -243,6 +251,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 6:
 			
 					q.Cargar_fichero(lista);
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				
 					break;
 				
@@ -250,6 +260,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 				case 7:
 			
 					q.Guardar_fichero(lista);
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				
 					break;
 				
@@ -258,6 +270,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 			
 					if((strcmp(p.tipo, "coordinador")) == 0){
 						q.Crear_copia_seguridad(lista);
+						cout<<"\n	[Pulse intro]";
+						getchar();
 					}
 					else{
 						cout<<"	No tiene permiso para realizar esta acción."<<endl;
@@ -272,6 +286,8 @@ void menu_funciones(struct Datos_usuario p, list<Alumno> &lista){
 			
 					if((strcmp(p.tipo, "coordinador")) == 0){
 						//q.Cargar_copia_seguridad();
+						//cout<<"\n	[Pulse intro]";
+						//getchar();
 					}
 					else{
 						cout<<"	No tiene permiso para realizar esta acción."<<endl;

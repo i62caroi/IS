@@ -556,7 +556,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 		}
 	}
 	else{
-		cout<<"	La agenda está vacía."<<endl;
+		cout<<"\n	No hay alumnos en la agenda."<<endl;
 	}
 
 }
@@ -571,50 +571,57 @@ void Agenda::Eliminar_alumno(list <Alumno> &lista){
 	list<Alumno>::iterator pos2;
 	list<Alumno>::iterator pos3;
 	
-	cout<<"	Introduzca los apellidos del alumno: ";
-	getline(cin, apellidos);
-	cout<<"\n"<<endl;
+	if(!lista.empty()){
 	
-	if(Buscar_apellidos(lista, apellidos.c_str()) == 1){ //El alumno existe
-		for(pos = lista.begin(); pos !=lista.end(); pos++){
-			if((strcmp(pos->getApellidos(), apellidos.c_str())) == 0){
-				lista.erase(pos++);
-				cout<<"	Alumno eliminado."<<endl;
-			}
-		}
-	}
-	else{
-		if(Buscar_apellidos(lista, apellidos.c_str()) > 1){ // Hay varios alumnos con esos apellidos
-		
-			cout<<"\n	ALUMNOS CON ESOS APELLIDOS:\n"<<endl;
-				
-			for(pos2 = lista.begin(); pos2 != lista.end(); pos2++){
-				if((strcmp(pos2->getApellidos(), apellidos.c_str())) == 0){
-					cout<<"	Nombre: "<<pos2->getNombre()<<endl;
-					cout<<"	Apellidos: "<<pos2->getApellidos()<<endl;
-					cout<<"	DNI: "<<pos2->getDni()<<endl;
-					cout<<endl;
-				}
-			}
-				
-			cout<<"\n	Introduzca el DNI del alumno: ";
-			cin>>dni;
-			cin.ignore();
-			cout<<"\n"<<endl;	
-			
-			for(pos3 = lista.begin(); pos3 != lista.end(); pos3++){
-				if((strcmp(pos3->getDni(), dni.c_str())) == 0){
-					lista.erase(pos3++);
+		cout<<"	Introduzca los apellidos del alumno: ";
+		getline(cin, apellidos);
+		cout<<"\n"<<endl;
+	
+		if(Buscar_apellidos(lista, apellidos.c_str()) == 1){ //El alumno existe
+			for(pos = lista.begin(); pos !=lista.end(); pos++){
+				if((strcmp(pos->getApellidos(), apellidos.c_str())) == 0){
+					lista.erase(pos++);
 					cout<<"	Alumno eliminado."<<endl;
 				}
 			}
-		
 		}
 		else{
-			if(Buscar_apellidos(lista, apellidos.c_str()) == 0){
-				cout<<"	El alumno no existe."<<endl;
+			if(Buscar_apellidos(lista, apellidos.c_str()) > 1){ // Hay varios alumnos con esos apellidos
+		
+				cout<<"\n	ALUMNOS CON ESOS APELLIDOS:\n"<<endl;
+				
+				for(pos2 = lista.begin(); pos2 != lista.end(); pos2++){
+					if((strcmp(pos2->getApellidos(), apellidos.c_str())) == 0){
+						cout<<"	Nombre: "<<pos2->getNombre()<<endl;
+						cout<<"	Apellidos: "<<pos2->getApellidos()<<endl;
+						cout<<"	DNI: "<<pos2->getDni()<<endl;
+						cout<<endl;
+					}
+				}
+				
+				cout<<"\n	Introduzca el DNI del alumno: ";
+				cin>>dni;
+				cin.ignore();
+				cout<<"\n"<<endl;	
+			
+				for(pos3 = lista.begin(); pos3 != lista.end(); pos3++){
+					if((strcmp(pos3->getDni(), dni.c_str())) == 0){
+						lista.erase(pos3++);
+						cout<<"	Alumno eliminado."<<endl;
+					}
+				}
+		
+			}
+			else{
+				if(Buscar_apellidos(lista, apellidos.c_str()) == 0){
+					cout<<"	El alumno no existe."<<endl;
+				}
 			}
 		}
+	
+	}
+	else{
+		cout<<"\n	No hay alumnos en la agenda."<<endl;
 	}
 
 }
@@ -633,67 +640,36 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 	Alumno a;
 	list<Alumno>::iterator pos;
 	
-	cout<<"\n"<<endl;
-	cout<<"	[1] Mostrar alumno"<<endl;
-	cout<<"	[2] Mostrar grupo"<<endl;
-	cout<<endl;
-	cout<<"	Escoja una opción: ";
-	cin>>opcion;
-	cin.ignore();
-	cout<<"\n"<<endl;
+	if(!lista.empty()){
 	
-	if(opcion == 1){ // Mostrar alumno
-	
-		cout<<"	[1] Buscar por apellidos"<<endl;
-		cout<<"	[2] Buscar por DNI"<<endl;
+		cout<<"\n"<<endl;
+		cout<<"	[1] Mostrar alumno"<<endl;
+		cout<<"	[2] Mostrar grupo"<<endl;
 		cout<<endl;
 		cout<<"	Escoja una opción: ";
-		cin>>buscar;
+		cin>>opcion;
 		cin.ignore();
-		cout<<endl;
-		
-		if(buscar == 1){ // Buscar por apellidos
-		
-			cout<<"	Introduzca los apellidos: ";
-			getline(cin, apellidos);
+		cout<<"\n"<<endl;
+	
+		if(opcion == 1){ // Mostrar alumno
+	
+			cout<<"	[1] Buscar por apellidos"<<endl;
+			cout<<"	[2] Buscar por DNI"<<endl;
 			cout<<endl;
-						
-			for(pos = lista.begin(); pos != lista.end(); pos++){
-				
-				if((strcmp(pos->getApellidos(), apellidos.c_str())) == 0){
-				
-					cout<<"	Nombre: "<<pos->getNombre()<<endl;
-					cout<<"	Apellidos: "<<pos->getApellidos()<<endl;
-					cout<<"	email: "<<pos->getEmail()<<endl;
-					cout<<"	Dirección: "<<pos->getDireccion()<<endl;
-					cout<<"	DNI: "<<pos->getDni()<<endl;
-					cout<<"	Fecha nacimiento: "<<pos->getFecha_nacimiento()<<endl;
-					cout<<"	Teléfono: "<<pos->getTelefono()<<endl;
-					cout<<"	Curso más alto: "<<pos->getCurso_mas_alto()<<endl;
-					cout<<"	Grupo: "<<pos->getGrupo()<<endl;
-					cout<<"	Líder: "<<pos->getLider()<<endl;
-					cout<<"\n"<<endl;
-						
-					escritoAp++;
-				}
-			}
-			
-			if(escritoAp == 0){
-				cout<<"	No hay alumnos con esos apellidos."<<endl;
-			}
+			cout<<"	Escoja una opción: ";
+			cin>>buscar;
+			cin.ignore();
+			cout<<endl;
 		
-		}
-		else{
-			if(buscar == 2){ // Buscar por DNI
-			
-				cout<<"	Introduzca el DNI: ";
-				cin>>dni;
-				cin.ignore();
+			if(buscar == 1){ // Buscar por apellidos
+		
+				cout<<"	Introduzca los apellidos: ";
+				getline(cin, apellidos);
 				cout<<endl;
 						
 				for(pos = lista.begin(); pos != lista.end(); pos++){
-					
-					if((strcmp(pos->getDni(), dni.c_str())) == 0){
+				
+					if((strcmp(pos->getApellidos(), apellidos.c_str())) == 0){
 				
 						cout<<"	Nombre: "<<pos->getNombre()<<endl;
 						cout<<"	Apellidos: "<<pos->getApellidos()<<endl;
@@ -706,51 +682,89 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 						cout<<"	Grupo: "<<pos->getGrupo()<<endl;
 						cout<<"	Líder: "<<pos->getLider()<<endl;
 						cout<<"\n"<<endl;
-							
-						escritoDni++;
-					}
-				}
-				if(escritoDni == 0){
-					cout<<"	No hay ningún alumno con este DNI."<<endl;
-				}
-			
-			}
-		}
-	
-	}
-	else{
-		if(opcion == 2){ // Mostrar grupo
-		
-			cout<<"	Introduzca el grupo: ";
-			cin>>grupo;
-			cin.ignore();
-			cout<<endl;
-			
-			if(Buscar_grupo(lista, grupo) == true){
 						
-				cout<<"\n\n	Participantes del grupo "<<grupo<<":"<<endl;
-				cout<<endl;
-				
-				for(pos = lista.begin(); pos != lista.end(); pos++){
-				
-					if(pos->getGrupo() == grupo){
-		
-						if((strcmp(pos->getLider(), "no")) == 0){			
-							cout<<"	   "<<pos->getNombre()<<" "<<pos->getApellidos()<<endl;	
-						}
-						else{
-							cout<<"	   "<<pos->getNombre()<<" "<<pos->getApellidos()<<" (líder)"<<endl;
-						}
-					
+						escritoAp++;
 					}
-				
 				}
+			
+				if(escritoAp == 0){
+					cout<<"	No hay alumnos con esos apellidos."<<endl;
+				}
+		
 			}
 			else{
-				cout<<"	No hay alumnos asignados a este grupo."<<endl;
+				if(buscar == 2){ // Buscar por DNI
+			
+					cout<<"	Introduzca el DNI: ";
+					cin>>dni;
+					cin.ignore();
+					cout<<endl;
+						
+					for(pos = lista.begin(); pos != lista.end(); pos++){
+					
+						if((strcmp(pos->getDni(), dni.c_str())) == 0){
+				
+							cout<<"	Nombre: "<<pos->getNombre()<<endl;
+							cout<<"	Apellidos: "<<pos->getApellidos()<<endl;
+							cout<<"	email: "<<pos->getEmail()<<endl;
+							cout<<"	Dirección: "<<pos->getDireccion()<<endl;
+							cout<<"	DNI: "<<pos->getDni()<<endl;
+							cout<<"	Fecha nacimiento: "<<pos->getFecha_nacimiento()<<endl;
+							cout<<"	Teléfono: "<<pos->getTelefono()<<endl;
+							cout<<"	Curso más alto: "<<pos->getCurso_mas_alto()<<endl;
+							cout<<"	Grupo: "<<pos->getGrupo()<<endl;
+							cout<<"	Líder: "<<pos->getLider()<<endl;
+							cout<<"\n"<<endl;
+							
+							escritoDni++;
+						}
+					}
+					if(escritoDni == 0){
+						cout<<"	No hay ningún alumno con este DNI."<<endl;
+					}
+			
+				}
 			}
-		
+	
 		}
+		else{
+			if(opcion == 2){ // Mostrar grupo
+		
+				cout<<"	Introduzca el grupo: ";
+				cin>>grupo;
+				cin.ignore();
+				cout<<endl;
+			
+				if(Buscar_grupo(lista, grupo) == true){
+						
+					cout<<"\n\n	Participantes del grupo "<<grupo<<":"<<endl;
+					cout<<endl;
+				
+					for(pos = lista.begin(); pos != lista.end(); pos++){
+				
+						if(pos->getGrupo() == grupo){
+		
+							if((strcmp(pos->getLider(), "no")) == 0){			
+								cout<<"	   "<<pos->getNombre()<<" "<<pos->getApellidos()<<endl;	
+							}
+							else{
+								cout<<"	   "<<pos->getNombre()<<" "<<pos->getApellidos()<<" (líder)"<<endl;
+							}
+					
+						}
+				
+					}
+				}
+				else{
+					cout<<"	No hay alumnos asignados a este grupo."<<endl;
+				}
+		
+			}
+		}
+		
+	}
+	else{
+		cout<<"\n	No hay alumnos en la agenda."<<endl;
 	}
 
 }
