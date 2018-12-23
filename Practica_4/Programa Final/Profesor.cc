@@ -208,7 +208,7 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 
 	f.close();
 	
-	system("zip `ls -t *.bin | head -n 1`.zip `ls -t *.bin | head -n 1`");
+	system("zip `ls -t *.bin | head -n 1`.zip `ls -t *.bin | head -n 1`"); //"ls -t *.bin | head -n 1" se refiere al último fichero con extensión .bin modificado 
 	system("rm `ls -t *.bin | head -n 1`");
 	
 	cout<<"\n	Copia de seguridad "<<nombreF<<".zip creada."<<endl;
