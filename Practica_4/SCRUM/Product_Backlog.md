@@ -6,7 +6,10 @@
 |ID              |Ítems            |Estimación                 |Prioridad
 |----------------|-------------------------------|---------------------------|-----------------------|
 |13        |Definición de cabeceras           |2 horas          |0|
-|1				 |Buscar          				 |2 horas         			 |1|
+|1				 |Buscar apellidos         				 |1 horas         			 |1|
+|13				 |Buscar DNI         				 |1 horas         			 |1|
+|14				 |Buscar grupo         				 |1 horas         			 |1|
+|15				 |Buscar líder         				 |1 horas         			 |1|
 |4				 |Cargar fichero   		         |3 horas					 |2|
 |12				 |Cargar copia de seguridad		 |3 horas					 |3|
 |7				 |Crear copia de seguridad		 |3 horas					 |4|
