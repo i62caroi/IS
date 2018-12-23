@@ -19,7 +19,7 @@ En caso de no haber alumnos en la agenda, el sistema mostrará un mensaje por pa
 ### Añadir alumno
 
 El profesor informa al sistema de que va a añadir un alumno. El sistema comprueba si hay espacio en la agenda, en cuyo caso le pide al profesor el DNI del alumno para comprobar, antes de nada, si el alumno ya está registrado en el sistema: 
-  - Si no está registrado en el sistema, le pide los datos del nuevo alumno al profesor (nombre, apellidos, dni, ... , etc) y los va guardando uno a uno en el registro (agenda). Al introducir el grupo, comprueba si tiene ya líder, en cuyo caso el nuevo alumno será automáticamanete no líder. Si no tiene líder, el nuevo alumno puede, o no, ser líder.  
+  - Si no está registrado en el sistema, le pide los datos del nuevo alumno al profesor (nombre, apellidos, email, ... , etc) y los va guardando uno a uno en el registro (agenda). Al introducir el grupo, comprueba si tiene ya líder, en cuyo caso el nuevo alumno será automáticamanete no líder. Si no tiene líder, el nuevo alumno puede, o no, ser líder.  
   - En caso de existir una coincidencia, el sistema informa al profesor mediante un mensaje de que el alumno que desea insertar ya está registrado en la agenda.
 
 En caso de haber ya 150 alumnos registrados, el sistema informa al profesor mediante un mensaje de que la agenda está completa y no se puede añadir ningún alumno más.
@@ -30,7 +30,7 @@ En caso de haber ya 150 alumnos registrados, el sistema informa al profesor medi
 El profesor informa al sistema de que va a modificar los datos de un alumno. El sistema internamente se prepara y cuando está listo le pide al profesor que introduzca los apellidos del alumno cuyos datos desea modificar. Tras introducir los apellidos, el sistema verifica que los apellidos estén el sistema:  
   - En caso afirmativo, el sistema le pide al profesor los nuevos datos del alumno y los va guardando uno a uno en el registro (agenda). Al introducir el grupo, comprueba si tiene ya líder, en cuyo caso el nuevo alumno será automáticamanete no líder. Si no tiene líder, el nuevo alumno puede, o no, ser líder.  
   - En caso de no encontrar los apellidos, el sistema mostrará un mensaje por pantalla diciendo que el alumno no se encuentra registrado en el sistema.  
-  - En caso de que coincidan varias personas con los mismos apellidos, el sistema pedirá al profesor el DNI del alumno que desee modificar. Tras introducir los datos, el sistema le pedirá al profesor los nuevos datos del alumno y los irá guardando uno a uno en el registro. Al introducir el grupo, comprueba si tiene ya líder, en cuyo caso el nuevo alumno será automáticamanete no líder. Si no tiene líder, el nuevo alumno puede, o no, ser líder.  
+  - En caso de que coincidan varias personas con los mismos apellidos, el sistema pedirá al profesor el DNI del alumno que desee modificar. Tras introducirlo, el sistema le pedirá al profesor los nuevos datos del alumno y los irá guardando uno a uno en el registro. Al introducir el grupo, comprueba si tiene ya líder, en cuyo caso el nuevo alumno será automáticamanete no líder. Si no tiene líder, el nuevo alumno puede, o no, ser líder.  
   
   
 ### Cargar fichero
@@ -39,22 +39,22 @@ El profesor informa al sistema de que va a cargar un fichero binario. El sistema
   - En caso de que exista, el sistema lo abrirá y comprobará su contenido:
   	- Si contiene datos, los cargará en la agenda.
   	- Si, por el contrario, está vacío, el sistema mostrará un mensaje por pantalla diciendo que el fichero está vacío y no lo cargará.  
-  - En caso de que el fichero no exista, el sistema mostrará un mensaje por pantalla diciendo que el fichero indicado no existe y le volverá a pedir el nombre del fichero al profesor.  
+  - En caso de que el fichero no exista, el sistema mostrará un mensaje por pantalla diciendo que el fichero indicado no existe.  
   
 
 ### Eliminar alumno
 
-El profesor informa al sistema de que va a eliminar un alumno. El sistema internamente se prepara y cuando está listo le pide al profesor que introduzca los apellidos del alumno que desea eliminar. Tras introducir los apellidos, el sistema verifica que los apellidos están en el sistema: 
+El profesor informa al sistema de que va a eliminar un alumno. El sistema internamente se prepara y cuando está listo le pide al profesor que introduzca los apellidos del alumno que desea eliminar. Tras introducir los apellidos, el sistema verifica que los apellidos estén en el sistema: 
   - En caso afirmativo, borra al alumno del registro e informa mediante un mensaje por pantalla de que el alumno ha sido eliminado.  
   - En caso de no encontrar los apellidos, el sistema mostrará un mensaje por pantalla diciendo que el alumno no se encuentra registrado en el sistema. 
-  - En caso de que coincidan varias personas con los mismos apellidos, el sistema pedirá al profesor el DNI del alumno que desee eliminar. Tras introducir los datos, el sistema borrará al alumno del registro y mostrará un mensaje por pantalla informando de que el alumno ha sido eliminado.
+  - En caso de que coincidan varias personas con los mismos apellidos, el sistema pedirá al profesor el DNI del alumno que desee eliminar. Tras introducirlo, el sistema borrará al alumno del registro y mostrará un mensaje por pantalla informando de que el alumno ha sido eliminado.
   
   
 ### Listar alumnos
 
 El profesor informa al sistema de que va a listar a los alumnos. El sistema internamente comprueba si hay alumnos en la agenda y, en caso de que haya, le pide al profesor que escoja entre dos opciones:  
-* Lista reducida: en esta opción el sistema mostrará la información mínima de cada alumno. El sistema le pide al profesor que escoja un campo mediante el cual ordenar (*Nombre*, *Dni*, *Apellidos* o *Curso_mas_alto*). Un vez escogido el campo, el sistema le pide al profesor que escoja la forma de listar (ascendente o descendente). Un vez escogida la forma, el sistema le pide al profesor el tipo de fichero (Markdown o html) en el que quiere mostrar la información, además de por línea de comandos. Finalmente, el sistema mostrará la información mínima de los alumnos, ordenados por el campo escogido y de la forma indicada en el tipo de fichero seleccionado.  
-* Lista completa: en esta opción el sistema mostrará toda la información de todos los alumnos. El sistema le pide al profesor que escoja un campo mediante el cual ordenar (*Nombre*, *Dni*, *Apellidos* o *Curso_mas_alto*). Un vez escogido el campo, el sistema le pide al profesor que escoja la forma de listar (ascendente o descendente). Un vez escogida la forma, el sistema le pide al profesor el tipo de fichero (Markdown o html) en el que quiere mostrar la información, además de por línea de comandos. Finalmente, el sistema mostrará toda la información de los alumnos, ordenados por el campo escogido y de la forma indicada en el tipo de fichero seleccionado.  
+* Lista reducida: en esta opción el sistema mostrará la información mínima de cada alumno. El sistema le pide al profesor que escoja un campo mediante el cual ordenar (*Nombre*, *Dni*, *Apellidos* o *Curso_mas_alto*). Un vez escogido el campo, el sistema le pide al profesor que escoja la forma de listar (ascendente o descendente). Finalmente, el sistema mostrará la información mínima de los alumnos, ordenados por el campo escogido y de la forma indicada, a través de la consola y en un fichero markdown.  
+* Lista completa: en esta opción el sistema mostrará toda la información de todos los alumnos. El sistema le pide al profesor que escoja un campo mediante el cual ordenar (*Nombre*, *Dni*, *Apellidos* o *Curso_mas_alto*). Un vez escogido el campo, el sistema le pide al profesor que escoja la forma de listar (ascendente o descendente). Finalmente, el sistema mostrará toda la información de los alumnos, ordenados por el campo escogido y de la forma indicada, a través de la consola y en un fichero markdown.  
 
 En caso de no haber alumnos en la agenda, el sistema mostrará un mensaje por pantalla indicando que no hay alumnos para listar.
 
@@ -70,16 +70,16 @@ El profesor *coordinador* informa al sistema de que va a crear una copia de segu
 ### Registrar usuario
 
 El profesor informa al sistema de que quiere registrarse como nuevo usuario. El sistema le pide al profesor que introduzca el nickname que desee tener. Tras introducirlo, el sistema comprueba en el fichero que contiene las credenciales si ya existe un usuario con ese nickname:  
-  - En caso de no existir, el sistema le pide al profesor la contraseña y , tras ser introducida, guarda ambas credenciales en un fichero binario que las contiene todas. Cada nuevo usuario será automáticamente *ayudante*, pues el único profesor *coordinador* admitido ya tiene sus credenciales desde el principio, introducidas manualmente por el administrador.   
-  - En caso de que ya exista, el sistema informa al profesor mediante un mensaje de que ese nickname ya existe, por lo que debe escoger otro.  
+  - En caso de no existir, el sistema le pide al profesor la contraseña y , tras ser introducida, guarda ambas credenciales en un fichero binario que las contiene todas. Cada nuevo usuario será automáticamente *ayudante*, pues el único profesor *coordinador* admitido ya tiene sus credenciales desde el principio, generadas automáticamente al ejecutar el programa.   
+  - En caso de que ya exista, el sistema informa al profesor mediante un mensaje de que ese nickname ya existe.  
   
   
 ### Iniciar sesión
 
 El profesor informa al sistema de que va a iniciar sesión. El sistema se prepara internamente y le pide al profesor el nickname y la contraseña. Tras introducirlos, el sistema comprueba en el fichero que contiene las credenciales si existen:  
-  - En caso de que existan, el sistema debe ver si ambos son correctos o si, por el contrario, uno de ellos es erróneo.  
-    - Si ambos son correctos, el sistema inicia sesión, teniendo en cuenta qué tipo de profesor es.    
-    - Si uno de ellos no lo es, el sistema vuelve a pedir al profesor que los introduzca.  
+  - En caso de que existan, el sistema debe ver si son correctas.  
+    - Si son correctas, el sistema inicia sesión, teniendo en cuenta qué tipo de profesor es.    
+    - En caso contrario, el sistema informa mediante un mensaje de que las credenciales no son correctas.  
   - En caso de no existir, el sistema informa mediante un mensaje de que ese usuario no está registrado.  
   
   
@@ -89,10 +89,10 @@ El profesor *coordinador* informa al sistema de que va a cargar una copia de seg
   - En caso de que exista, el sistema lo descomprimirá, abrirá y comprobará su contenido:
   	- Si contiene datos, los cargará en la agenda.
   	- Si, por el contrario, está vacío, el sistema mostrará un mensaje por pantalla diciendo que el fichero está vacío y no lo cargará.  
-  - En caso de que el fichero no exista, el sistema mostrará un mensaje por pantalla diciendo que el fichero indicado no existe y le volverá a pedir el nombre del fichero al profesor. 
+  - En caso de que el fichero no exista, el sistema mostrará un mensaje por pantalla diciendo que el fichero indicado no existe. 
   
 
-### Guardar fichero
+### Guardar fichero  
 
 El profesor informa al sistema de que va a guardar los datos en un fichero. El sistema comprueba internamente si hay datos en la agenda y, en caso afirmativo, le pide al profesor el nombre del fichero donde se guardarán los datos. Tras introducir el nombre del fichero, el sistema comprueba si existe el fichero indicado:
   - En caso de que exista, el sistema lo sobreescribirá con los datos que tenía guardados en la agenda.  
@@ -100,6 +100,21 @@ El profesor informa al sistema de que va a guardar los datos en un fichero. El s
   - En caso de no haber datos en la agenda, el sistema mostrará un mensaje por pantalla indicando que no existen alumnos en el sistema.
 
 
-### Buscar
+### Buscar apellidos  
 
-El profesor escoge alguna de las funcionalidades que necesiten realizar una búsqueda interna: "Añadir alumno", "Editar alumno", "Eliminar alumno" o "Mostrar alumno/s". La función escogida le pide al profesor la información necesaria para buscar al alumno/s o grupo, y el sistema le pasa esta información, ya sea DNI, apellidos o identificador de grupo, a la agenda, encargada de realizar la búsqueda. Finalmente, la agenda solo devolverá si lo buscado se encuentra en el registro o no.
+El profesor escoge alguna de las funcionalidades que necesiten realizar una búsqueda interna de apellidos: "Editar alumno", "Eliminar alumno" o "Mostrar alumno/s". La función escogida le pide al profesor los apellidos y el sistema se los pasa a la agenda, encargada de realizar la búsqueda. Finalmente, la agenda devuelve cuántos alumnos tienen esos apellidos.  
+
+
+### Buscar DNI  
+
+El profesor escoge alguna de las funcionalidades que necesiten realizar una búsqueda interna de DNI: "Añadir alumno", "Editar alumno", "Eliminar alumno" o "Mostrar alumno/s". La función escogida le pide al profesor el DNI del alumno y el sistema se lo pasa a la agenda, encargada de realizar la búsqueda. Finalmente, la agenda devuelve si existe ese DNI; es decir, si existe el alumno o no.
+
+
+### Buscar grupo  
+
+El profesor escoge "Mostrar alumno/s" y, dentro de ella, escoge "Mostrar grupo". Esta función le pide al profesor el identificador de grupo y el sistema se lo pasa a la agenda, encargada de realizar la búsqueda. Finalmente, la agenda devuelve si existe ese grupo o no.
+
+
+### Buscar líder  
+
+El profesor escoge alguna de las funcionalidades que necesiten realizar una búsqueda interna de líder: "Añadir alumno" o "Editar alumno". La función escogida le pide al profesor el grupo del que quiere saber si tiene líder y el sistema se lo pasa a la agenda, encargada de realizar la búsqueda. Finalmente, la agenda devuelve si el grupo indicado tiene líder o no.
