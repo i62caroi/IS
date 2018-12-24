@@ -2,27 +2,11 @@
 #include <fstream>
 #include <string.h>
 #include <stdlib.h>
+#include "Alumno.h"
 using namespace std;
 
-const unsigned int MAX_1 = 50;
-const unsigned int MAX_2 = 200;
-const unsigned int MAX_3 = 10;
 
-struct Alumno{
-	char nombre[MAX_1];
-	char apellidos[MAX_2];
-	char email[MAX_3];
-	char direccion[MAX_2];
-	char dni[MAX_3];
-	char fecha_nacimiento[MAX_3];
-	int telefono;
-	int curso_mas_alto;
-	int grupo;
-	bool lider;
-};
-
-
-void escribirFich(struct Alumno a, char nombre[20]){
+void escribirFich(Alumno a, char nombre[20]){
 
 	ofstream file;
 	
@@ -34,8 +18,13 @@ void escribirFich(struct Alumno a, char nombre[20]){
 	
 }
 
-void leerFich(struct Alumno a, char nombre[20]){
+void leerFich(Alumno a){
 
+	char nombre[20];
+	cout<<"	Nombre del fichero a leer: ";
+	cin>>nombre;
+	cout<<endl;
+	
 	ifstream file;
 		
 	file.open(nombre, ios::in | ios::binary);
@@ -46,17 +35,17 @@ void leerFich(struct Alumno a, char nombre[20]){
 	
 		while(!file.eof()){
 	
-			cout<<"	Nombre: "<<a.nombre<<endl;
-			cout<<"	Apellidos: "<<a.apellidos<<endl;
-			cout<<"	email: "<<a.email<<endl;
-			cout<<"	Dirección: "<<a.direccion<<endl;
-			cout<<"	DNI: "<<a.dni<<endl;
-			cout<<"	Fecha nacimiento: "<<a.fecha_nacimiento<<endl;
-			cout<<"	Teléfono: "<<a.telefono<<endl;
-			cout<<"	Curso más alto: "<<a.curso_mas_alto<<endl;
-			cout<<"	Grupo: "<<a.grupo<<endl;
+			cout<<"	Nombre: "<<a.getNombre()<<endl;
+			cout<<"	Apellidos: "<<a.getApellidos()<<endl;
+			cout<<"	email: "<<a.getEmail()<<endl;
+			cout<<"	Dirección: "<<a.getDireccion()<<endl;
+			cout<<"	DNI: "<<a.getDni()<<endl;
+			cout<<"	Fecha nacimiento: "<<a.getFecha_nacimiento()<<endl;
+			cout<<"	Teléfono: "<<a.getTelefono()<<endl;
+			cout<<"	Curso más alto: "<<a.getCurso_mas_alto()<<endl;
+			cout<<"	Grupo: "<<a.getGrupo()<<endl;
 	
-			if(a.lider == 1){
+			if(a.getLider() == 1){
 				cout<<"	Líder: SÍ"<<endl;
 			}
 			else{
@@ -94,6 +83,12 @@ int main(){
 
 	int opcion = 0;
 	char nombre[20];
+	string nomb = "Álvaro";
+	string apellidos = "Gómez García";
+	string email = "i62gogaa";
+	string dir = "Avenida de Andalucía, 3";
+	string dni = "23785749K";
+	string fecha = "11-03-96";
 	
 	cout<<"	1. Escribir alumnos"<<endl;
 	cout<<"	2. Leer alumnos"<<endl;
@@ -110,18 +105,18 @@ int main(){
 			case 1:
 
 				//ALUMNO 1
-				strcpy(a1.nombre, "Álvaro");
-				strcpy(a1.apellidos, "Gómez García");
-				strcpy(a1.email, "i62gogaa");
-				strcpy(a1.direccion, "Avenida de Andalucía, 3");
-				strcpy(a1.dni, "23785749K");
-				strcpy(a1.fecha_nacimiento, "11-03-96");
-				a1.telefono = 683940376;
-				a1.curso_mas_alto = 3;
-				a1.grupo = 15;
-				a1.lider = 1;
+				a1.setNombre(nomb);
+				a1.setApellidos(apellidos);
+				a1.setEmail(email);
+				a1.setDireccion(dir);
+				a1.setDni(dni);
+				a1.setFecha_nacimiento(fecha);
+				a1.setTelefono(683940376);
+				a1.setCurso_mas_alto(3);
+				a1.setGrupo(15);
+				a1.setLider(1);
 	
-				//ALUMNO 2
+			/*	//ALUMNO 2
 				strcpy(a2.nombre, "Carlos");
 				strcpy(a2.apellidos, "Gómez García");
 				strcpy(a2.email, "i62gogac");
@@ -156,27 +151,23 @@ int main(){
 				a4.curso_mas_alto = 2;
 				a4.grupo = 24;
 				a4.lider = 1;
-
+*/
 
 				cout<<"	Nombre del fichero a escribir: ";
 				cin>>nombre;
 				cout<<endl;
 
 				escribirFich(a1, nombre);
-				escribirFich(a2, nombre);
+				/*escribirFich(a2, nombre);
 				escribirFich(a3, nombre);
 				escribirFich(a4, nombre);
-		
+		*/
 				break;
 				
 				
 			case 2:
 				
-				cout<<"	Nombre del fichero a leer: ";
-				cin>>nombre;
-				cout<<endl;
-				
-				leerFich(a, nombre);
+				leerFich(a);
 				break;
 				
 				
