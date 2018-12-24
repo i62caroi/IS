@@ -123,21 +123,71 @@ void Profesor::Guardar_fichero(list <Alumno> &lista){
 		f.close();
 	
 		cout<<"\n	Fichero guardado."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	
 	}
 	else{
 		cout<<"\n	No hay alumnos en la agenda."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 
 }
 
 
-/*
-void Profesor::Cargar_copia_seguridad(char tipo) {
-	// TODO - implement Profesor::Cargar_copia_seguridad
-	throw "Not yet implemented";
+
+void Profesor::Cargar_copia_seguridad(list <Alumno> &lista) {
+	
+	lista.clear(); // Limpiamos la lista
+
+	ifstream f;
+	Alumno p;
+	char nombre[30];
+	char cad[80];
+	char nomb[30];
+	string nomF, cadN;
+	int pos;
+	char file[30];
+
+	cout<<"	Introduzca el nombre de la copia de seguridad que desea cargar [fichero.zip]: ";
+	cin>>nombre;
+
+	strcpy(cad, "unzip ");
+	strcat(cad, nombre);
+	system(cad);
+
+	nomF = nombre;
+	pos = nomF.find(".zip");
+	cadN = nomF.substr(0, pos);
+	strcpy(file, cadN.c_str());
+
+
+	f.open(file,ios::in | ios::binary);
+	
+	if(f.is_open()){
+	
+		f.read((char *)&p, sizeof(p));
+
+		while(!f.eof()){
+	
+			lista.push_back(p);
+
+			f.read((char *)&p, sizeof(p));
+
+		}
+
+		f.close();
+	
+		cout<<"\n	Copia de seguridad cargada."<<endl;
+		
+	}
+	else{
+		cout<<"\n	El fichero no existe."<<endl;
+	}
+	
 }
-*/
+
 
 
 void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
@@ -147,6 +197,9 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 	string nombre, apellidos, email, dir, dni, fecha, lider;
 	int curso, tlf, grupo;
 	char nombreF[20];
+	char cad[80];
+	char rem[80];
+	
 	char *n_ = new char[nombre.size() + 1];
 	char *a_ = new char[apellidos.size() + 1];
 	char *e_ = new char[email.size() + 1];
@@ -159,9 +212,18 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 	
 	if(!lista.empty()){
 
-		cout<<"	Introduzca el nombre de la nueva copia de seguridad [fichero.bin]: ";
+		cout<<"	Introduzca el nombre de la nueva copia de seguridad: ";
 		cin>>nombreF;
 		cin.ignore();
+		
+		strcpy(cad, "zip ");
+		strcat(cad, nombreF);
+		strcat(cad, ".zip ");
+		strcat(cad, nombreF);
+		
+		strcpy(rem, "rm ");
+		strcat(rem, nombreF);
+		
 
 		f.open(nombreF,ios::out | ios::binary);
 
@@ -217,15 +279,18 @@ void Profesor::Crear_copia_seguridad(list<Alumno> &lista) {
 
 		f.close();
 	
-		system("zip `ls -t *.bin | head -n 1`.zip `ls -t *.bin | head -n 1`");
-		/* `ls -t *.bin | head -n 1` se refiere al último fichero con extensión .bin modificado  */
-		system("rm `ls -t *.bin | head -n 1`");
+		system(cad);
+		system(rem);
 	
-		cout<<"\n	Copia de seguridad "<<nombreF<<".zip creada."<<endl;
+		cout<<"\n	Copia de seguridad creada."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 		
 	}
 	else{
 		cout<<"\n	No hay alumnos en la agenda."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 }
 
@@ -246,6 +311,8 @@ void Profesor::Registrar_usuario(struct Datos_usuario p) {
 		file.close();
 		
 		cout<<"	Registro completado"<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 	
 		
@@ -283,6 +350,8 @@ void Profesor::Iniciar_sesion(struct Datos_usuario p, list <Alumno> &lista) {
 
 	if(existe != 1){
 		cout<<"\n	El usuario no existe o los campos introducidos son erróneos."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 	
 }

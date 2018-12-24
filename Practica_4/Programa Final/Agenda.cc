@@ -133,16 +133,22 @@ void Agenda::Anadir_alumno(list <Alumno> &lista){
 			lista.push_back(a);
 	
 			cout<<"\n	Alumno añadido."<<endl;
-			cout<<"\n"<<endl;
+			cout<<"\n	[Pulse intro]";
+			getchar();
+			cout<<endl;
 			
 		}
 		else{
 			cout<<"	El alumno ya existe."<<endl;
+			cout<<"\n	[Pulse intro]";
+			getchar();	
 		}
 	
 	}
 	else{
 		cout<<"	La agenda está completa. No se pueden añadir más alumnos."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 }
 
@@ -153,6 +159,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 	string nombre, apellidos, email, dir, dni, fecha, lider;
 	string cad;
 	int opcion, tlf, curso, grupo;
+	int edit = 0;
 	char *n_ = new char[nombre.size() + 1];
 	char *a_ = new char[apellidos.size() + 1];
 	char *e_ = new char[email.size() + 1];
@@ -217,6 +224,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								copy(nombre.begin(), nombre.end(), n_);
 								n_[nombre.size()] = '\0';
 								pos->setNombre(n_);
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -228,6 +236,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								copy(apellidos.begin(), apellidos.end(), a_);
 								a_[apellidos.size()] = '\0';
 								pos->setApellidos(a_);
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -240,6 +249,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								e_[email.size()] = '\0';
 								pos->setEmail(e_);
 								cin.ignore();
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -251,6 +261,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								copy(dir.begin(), dir.end(), d_);
 								d_[dir.size()] = '\0';
 								pos->setDireccion(d_);
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -263,6 +274,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								dni_[dni.size()] = '\0';
 								pos->setDni(dni_);
 								cin.ignore();
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -275,6 +287,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								f_[fecha.size()] = '\0';
 								pos->setFecha_nacimiento(f_);
 								cin.ignore();
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -286,6 +299,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								tlf = atoi(cad.c_str());
 								pos->setTelefono(tlf);
 								cin.ignore();
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -297,6 +311,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								curso = atoi(cad.c_str());
 								pos->setCurso_mas_alto(curso);
 								cin.ignore();
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -308,6 +323,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								grupo = atoi(cad.c_str());
 								pos->setGrupo(grupo);
 								cin.ignore();
+								edit++;
 								cout<<"\n"<<endl;
 								
 								break;
@@ -322,12 +338,14 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 								cin.ignore();
 								if(lider == "no"){ // No va a ser líder
 									pos->setLider(l_);
+									edit++;
 									cout<<"\n"<<endl;
 								}
 								else{
 									if(lider == "si"){ // Va a ser líder
 										if(Buscar_lider(lista, grupo) == false){ // Comprobamos si el grupo ya tiene líder
 											pos->setLider(l_);
+											edit++;
 											cout<<"\n"<<endl;
 										}
 										else{
@@ -412,6 +430,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										copy(nombre.begin(), nombre.end(), n_);
 										n_[nombre.size()] = '\0';
 										pos3->setNombre(n_);
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -423,6 +442,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										copy(apellidos.begin(), apellidos.end(), a_);
 										a_[apellidos.size()] = '\0';
 										pos3->setApellidos(a_);
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -435,6 +455,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										e_[email.size()] = '\0';
 										pos->setEmail(e_);
 										cin.ignore();
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -446,6 +467,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										copy(dir.begin(), dir.end(), d_);
 										d_[dir.size()] = '\0';
 										pos3->setDireccion(d_);
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -458,6 +480,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										dni_[dni.size()] = '\0';
 										pos3->setDni(dni_);
 										cin.ignore();
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -470,6 +493,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										f_[fecha.size()] = '\0';
 										pos3->setFecha_nacimiento(f_);
 										cin.ignore();
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -481,6 +505,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										tlf = atoi(cad.c_str());
 										pos3->setTelefono(tlf);
 										cin.ignore();
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -492,6 +517,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										curso = atoi(cad.c_str());
 										pos3->setCurso_mas_alto(curso);
 										cin.ignore();
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -503,6 +529,7 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										grupo = atoi(cad.c_str());
 										pos3->setGrupo(grupo);
 										cin.ignore();
+										edit++;
 										cout<<"\n"<<endl;
 								
 										break;
@@ -517,16 +544,18 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 										cin.ignore();
 										if(lider == "no"){ // No va a ser líder
 											pos3->setLider(l_);
+											edit++;
 											cout<<"\n"<<endl;
 										}
 										else{
 											if(lider == "si"){ // Va a ser líder
 												if(Buscar_lider(lista, grupo) == false){ // Comprobamos si el grupo ya tiene líder
 													pos3->setLider(l_);
+													edit++;  
 													cout<<"\n"<<endl;
 												}
 												else{
-													cout<<"	El grupo al que pertenece este alumno ya tiene líder, por lo que no puede serlo."<<endl;
+													cout<<"	El grupo al que pertenece este alumno ya tiene líder, por lo que no puede serlo.\n"<<endl;
 												}
 											}
 										}	
@@ -545,18 +574,30 @@ void Agenda::Editar_alumno(list <Alumno> &lista){
 				}
 				else{
 					cout<<"	El DNI es incorrecto."<<endl;
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				}
 			
 			}
 			else{
 				if((Buscar_apellidos(lista, apellidos.c_str())) == 0){
 					cout<<"	El alumno no existe."<<endl;
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				}
 			}
 		}
 	}
 	else{
 		cout<<"\n	No hay alumnos en la agenda."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
+	}
+	
+	if(edit > 0){
+		cout<<"	Alumno editado."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 
 }
@@ -608,6 +649,8 @@ void Agenda::Eliminar_alumno(list <Alumno> &lista){
 					if((strcmp(pos3->getDni(), dni.c_str())) == 0){
 						lista.erase(pos3++);
 						cout<<"	Alumno eliminado."<<endl;
+						cout<<"\n	[Pulse intro]";
+						getchar();
 					}
 				}
 		
@@ -615,6 +658,8 @@ void Agenda::Eliminar_alumno(list <Alumno> &lista){
 			else{
 				if(Buscar_apellidos(lista, apellidos.c_str()) == 0){
 					cout<<"	El alumno no existe."<<endl;
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				}
 			}
 		}
@@ -622,6 +667,8 @@ void Agenda::Eliminar_alumno(list <Alumno> &lista){
 	}
 	else{
 		cout<<"\n	No hay alumnos en la agenda."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 
 }
@@ -689,6 +736,12 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 			
 				if(escritoAp == 0){
 					cout<<"	No hay alumnos con esos apellidos."<<endl;
+					cout<<"\n	[Pulse intro]";
+					getchar();
+				}
+				else{
+					cout<<"\n	[Pulse intro]";
+					getchar();
 				}
 		
 			}
@@ -721,6 +774,12 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 					}
 					if(escritoDni == 0){
 						cout<<"	No hay ningún alumno con este DNI."<<endl;
+						cout<<"\n	[Pulse intro]";
+						getchar();
+					}
+					else{
+						cout<<"\n	[Pulse intro]";
+						getchar();
 					}
 			
 				}
@@ -758,6 +817,8 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 				else{
 					cout<<"	No hay alumnos asignados a este grupo."<<endl;
 				}
+				cout<<"\n	[Pulse intro]";
+				getchar();
 		
 			}
 		}
@@ -765,6 +826,8 @@ void Agenda::Mostrar_alumno(list<Alumno>&lista){
 	}
 	else{
 		cout<<"\n	No hay alumnos en la agenda."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 
 }
@@ -1201,12 +1264,16 @@ void Agenda::Listar_alumnos(list <Alumno> &lista){
 				
 			default:
 				cout<<"	Opción inválida."<<endl;
+				cout<<"\n	[Pulse intro]";
+				getchar();
 		
 		}
 	
 	}
 	else{
 		cout<<"\n	No hay alumnos en la agenda."<<endl;
+		cout<<"\n	[Pulse intro]";
+		getchar();
 	}
 
 }
