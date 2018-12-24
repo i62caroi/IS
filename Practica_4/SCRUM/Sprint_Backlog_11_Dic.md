@@ -10,7 +10,7 @@
 | Buscar grupo                   | Buscar grupo: Irene Casares                         |         X          |      X      |
 | Buscar líder                   | Buscar líder: Irene Casares                             |         X          |       X     |
 | Cargar fichero            | Cargar fichero: Antonio Bogallo                  |         X          |     X       |
-| Cargar copia de seguridad | Cargar copia de seguridad:                       |                   |            |
+| Cargar copia de seguridad | Cargar copia de seguridad: Irene Casares         |         X          |     X       |
 | Crear copia de seguridad  | Crear copia de seguridad: Irene Casares          |         X          |     X       |
 | Guardar fichero           | Guardar fichero: Antonio Bogallo e Irene Casares      |         X          |       X     |
 | Añadir alumno             | Comprobar alumno: Irene Casares                    |        X           |      X      |
