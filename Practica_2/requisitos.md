@@ -42,7 +42,7 @@
 * La información se mostrará por línea de comandos y mediante lenguaje markdown o html. 
 * Los datos serán guardados en un fichero binario.
 * El programa será lo más sencillo posible.
-* Inicialmente se dispondrá de un fichero binario donde se encontrarán las credenciales del profesor coordinador introducidas anteriormente a mano por el administrador. Los siguientes usuarios que se registren serán automáticamente de tipo ayudante pues solo puede haber un profesor coordinador.
+* Se dispondrá de un fichero binario donde se encontrarán las credenciales del profesor coordinador generadas al ejecutar el programa. Los siguientes usuarios que se registren serán automáticamente de tipo ayudante, pues solo puede haber un profesor coordinador.
 
 
 # Prioridad de los requisitos  
